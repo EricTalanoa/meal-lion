@@ -6,6 +6,7 @@
 - Offer a setting to hide total ingredient count, showing `Guess 1/X`. Hide unrevealed tile counts and other total-count hints in this mode.
 - 2026-10-18 (update): hidden totals are the default; the setting turns totals on. Even with totals hidden, tell the player when every ingredient has been revealed and when they are on their last guess.
 - 2026-10-18: ingredient reveal order is randomized every round. In daily mode everyone gets the same order for a given date (seeded shuffle, decided 2026-10-18); endless/preview rounds reshuffle each time.
+- 2026-10-18: daily dish changes at midnight US Eastern time (IANA zone America/New_York, so it follows EST/EDT daylight saving) for every player worldwide.
 - 2026-10-18: skip policy approved as built — a skip uses one guess and reveals the next ingredient; not allowed on the last guess.
 - 2026-10-18: suggestions include close matches for typos (shown as "Did you mean…?" when only close matches exist). The player still picks a dish before guessing.
 - Working title: Meal-lion, a meal/dinner wordplay. Name is not final.
@@ -23,7 +24,7 @@ The existing work is art, mockups, motion studies and standalone visual prototyp
 - Difficulty; extra hints by dish family, cuisine, cooking method or other categories. The taxonomy-inspired idea is exploratory, not implemented.
 - Final name; whether the chef is called Leo.
 - Accepted aliases (typing an exact case/accent-insensitive full name auto-selects; typos only suggest), overlapping dish variants, scoring, streaks, share format and loss behavior.
-- Daily reset timezone, start date, schedule, archive access and plan for reuse after the initial 45 meals.
+- Daily start date, schedule, archive access and plan for reuse after the initial 45 meals.
 - Endless selection rules, repeat avoidance, daily-answer exclusion and whether difficulty can be selected.
 - Persistence/storage, framework, backend, hosting and analytics.
 

@@ -88,3 +88,8 @@ Every AI must read this file before working and update it throughout the session
 - Branch: feat/three-meal-game; previous checkpoint 82fea86. Docs-only change.
 - User decision: everyone gets the same ingredient order for a given daily dish. Recorded in docs/PRODUCT.md. Implementation note for daily mode: pass a deterministic rng seeded from the schedule date + meal ID (and content version) to createGame's existing `rng` option; preview/endless keep Math.random.
 - Daily mode still needs: reset timezone, start date, schedule/reuse policy.
+
+### 2026-10-18 America/Los_Angeles — Claude — Daily reset timezone decision
+- Branch: feat/three-meal-game; previous checkpoint 96337bd. Docs-only change.
+- User decision: daily dish resets at midnight US Eastern (America/New_York, DST-aware) for all players. Recorded in docs/PRODUCT.md.
+- Still needed before building daily mode: start date (Dish #1) and what happens after the 45 meals run out.
