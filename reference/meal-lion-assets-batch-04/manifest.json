@@ -1,0 +1,141 @@
+{
+  "batch": 4,
+  "status": "draft key-pose animations",
+  "meals": [
+    {
+      "id": 13,
+      "name": "Macaroni and cheese",
+      "ingredients": [
+        "Macaroni",
+        "Cheddar",
+        "Milk",
+        "Butter",
+        "Flour"
+      ],
+      "art": "Macaroni in golden cheese sauce",
+      "file": "meals.png",
+      "columns": 3,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "id": 15,
+      "name": "Margherita pizza",
+      "ingredients": [
+        "Pizza dough",
+        "Tomato",
+        "Mozzarella",
+        "Basil"
+      ],
+      "art": "Pizza with mozzarella patches and basil",
+      "file": "meals.png",
+      "columns": 3,
+      "rows": 1,
+      "index": 1
+    },
+    {
+      "id": 17,
+      "name": "Mushroom risotto",
+      "ingredients": [
+        "Arborio rice",
+        "Mushroom",
+        "Onion",
+        "Vegetable stock",
+        "Butter",
+        "Parmesan"
+      ],
+      "art": "Creamy rice with mushrooms",
+      "file": "meals.png",
+      "columns": 3,
+      "rows": 1,
+      "index": 2
+    }
+  ],
+  "animations": [
+    {
+      "id": "cheese",
+      "title": "Grating cheese",
+      "description": "1 Leo proudly holds orange cheddar block beside silver box grater on board. 2 presses cheese downward against grater, focused face. 3 pulls cheese upward ready for next stroke, visible pile of shavings below grater, happy eyes. 4 lifts small bowl of grated cheese proudly, grater rests on table.",
+      "file": "leo-cheese.png",
+      "columns": 4,
+      "rows": 1,
+      "sequence": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "frameMs": 650
+    },
+    {
+      "id": "dough",
+      "title": "Stretching dough",
+      "description": "1 Leo places round pale pizza dough on floured board. 2 presses dough flat with both paws. 3 lifts and stretches dough between paws into wide thin oval, comically surprised face, dough stays below chin. 4 lays round stretched dough on board with proud grin, flour on one cheek.",
+      "file": "leo-dough.png",
+      "columns": 4,
+      "rows": 1,
+      "sequence": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "frameMs": 650
+    },
+    {
+      "id": "mushroom",
+      "title": "Slicing mushrooms",
+      "description": "1 Leo holds a brown button mushroom above chopping board, kitchen knife resting on board. 2 knife poised just over mushroom, other paw safely away. 3 knife down slicing mushroom, neat mushroom slices on board, focused smile. 4 knife rests on board, Leo holds little bowl of mushroom slices and smiles.",
+      "file": "leo-mushroom.png",
+      "columns": 4,
+      "rows": 1,
+      "sequence": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "frameMs": 650
+    },
+    {
+      "id": "rice",
+      "title": "Sprinkling rice",
+      "description": "1 Leo holds a little wooden scoop full of uncooked rice over a small pan. 2 tilts scoop so white rice grains fall into pan, concentrating. 3 empties last grains into pan with tiny happy smile. 4 scoop rests on table, Leo stirs rice in pan using wooden spoon, delighted grin.",
+      "file": "leo-rice.png",
+      "columns": 4,
+      "rows": 1,
+      "sequence": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "frameMs": 650
+    },
+    {
+      "id": "garlic",
+      "title": "Crushing garlic",
+      "description": "1 Leo presents a peeled garlic clove beside small mortar and pestle on table. 2 garlic inside mortar, Leo raises wooden pestle just above mortar with determined face. 3 presses pestle down into mortar crushing garlic, little garlic bits visible, tiny effort expression. 4 Leo raises pestle slightly with garlic paste on end, smiling proudly, mortar remains on table.",
+      "file": "leo-garlic.png",
+      "columns": 4,
+      "rows": 1,
+      "sequence": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "frameMs": 650
+    }
+  ]
+}

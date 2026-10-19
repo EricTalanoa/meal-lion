@@ -1,0 +1,11 @@
+# Agent instructions
+
+## Required Git and continuity workflow
+
+Before doing any work, read WORK_LOG.md and docs/GIT_AND_CONTINUITY.md, inspect Git status and recent commits, and reconcile the log with the actual files. Follow the Git setup instructions if this project does not yet have a repository. Use Git throughout development, with focused commits at completed, verified checkpoints. Preserve unrelated user changes; never silently overwrite, discard, or stage them.
+
+WORK_LOG.md is the shared source of current progress for every AI, including Codex and Claude. Update it at the start of work, after each meaningful change or verification result, whenever a decision/blocker changes, and before every handoff or final response. Do not wait until the session ends. Keep its current-state summary accurate and append dated session entries recording what changed, relevant files, checks and results, remaining work, and concrete next steps. Record incomplete work and failures honestly. Include the active branch and latest existing checkpoint commit when available; never invent a commit or mark untested work as verified. Commit the log with the work it describes. See the detailed workflow and template in docs/GIT_AND_CONTINUITY.md.
+
+Read START_HERE.md and docs/PRODUCT.md before making changes. This package is equally intended for Codex and Claude. Reuse the approved desktop B and mobile keyboard-aware direction. Preserve reference/ as source material; put implementations and processed assets in separate folders. Treat original gallery scripts as examples, not the final game architecture. Use assets/asset-map.json for normalized atlas locations; paths are relative to the handoff root. Never infer production readiness from generated status.
+
+Continue within the user's requested scope. For a build request, begin with a responsive three-meal vertical slice, then daily/endless modes and the broader roster. Clearly label unapproved gameplay defaults. Ask focused questions only for decisions that block the next step; do independent work meanwhile. Do not deploy, publish or create accounts without authorization. Verify actual behavior before claiming it works, and report anything not tested. Keep answers hidden until solve/reveal, native mobile keyboard usable, and motion optional. No particular AI vendor, framework or external service is required.

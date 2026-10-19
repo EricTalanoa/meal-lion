@@ -1,0 +1,476 @@
+{
+  "meals": 45,
+  "mealIllustrations": 20,
+  "ingredientLabels": 103,
+  "uniqueIngredientIcons": 50,
+  "animationGroups": 11,
+  "missingIngredientLabels": [
+    "Anchovy",
+    "Arborio rice",
+    "Bamboo shoots",
+    "Basil",
+    "Basmati rice",
+    "Bean sprouts",
+    "Beef stock",
+    "Black pepper",
+    "Canned tuna",
+    "Chicken stock",
+    "Chickpeas",
+    "Chili powder",
+    "Coconut milk",
+    "Corn tortilla",
+    "Eggplant",
+    "Fish sauce",
+    "Frankfurter",
+    "Gochujang",
+    "Green beans",
+    "Green curry paste",
+    "Gruyère",
+    "Guanciale",
+    "Hot dog bun",
+    "Japanese curry roux",
+    "Kidney beans",
+    "Lasagna sheets",
+    "Macaroni",
+    "Mayonnaise",
+    "Mozzarella",
+    "Mustard",
+    "Palm sugar",
+    "Paneer",
+    "Panko",
+    "Parmesan",
+    "Parsley",
+    "Pasta",
+    "Peanuts",
+    "Pecorino",
+    "Pepperoni",
+    "Pine nuts",
+    "Pita",
+    "Pizza dough",
+    "Puff pastry",
+    "Rice noodles",
+    "Romaine lettuce",
+    "Saffron",
+    "Sesame oil",
+    "Short-grain rice",
+    "Spinach",
+    "Tahini",
+    "Tamarind",
+    "Thai basil",
+    "Vegetable stock"
+  ],
+  "coverage": [
+    {
+      "id": 1,
+      "name": "Pancakes",
+      "ingredientCount": 4,
+      "mealArt": true,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 2,
+      "name": "French toast",
+      "ingredientCount": 4,
+      "mealArt": true,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 3,
+      "name": "Shakshuka",
+      "ingredientCount": 7,
+      "mealArt": true,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 4,
+      "name": "Eggs Benedict",
+      "ingredientCount": 5,
+      "mealArt": true,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 5,
+      "name": "Breakfast burrito",
+      "ingredientCount": 5,
+      "mealArt": true,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 6,
+      "name": "Avocado toast",
+      "ingredientCount": 3,
+      "mealArt": true,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 7,
+      "name": "Mushroom omelette",
+      "ingredientCount": 4,
+      "mealArt": true,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 8,
+      "name": "Quiche Lorraine",
+      "ingredientCount": 4,
+      "mealArt": true,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 9,
+      "name": "Potato rösti",
+      "ingredientCount": 3,
+      "mealArt": true,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 10,
+      "name": "Spaghetti carbonara",
+      "ingredientCount": 5,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Guanciale",
+        "Pecorino",
+        "Black pepper"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Spaghetti Bolognese",
+      "ingredientCount": 6,
+      "mealArt": true,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 12,
+      "name": "Pesto pasta",
+      "ingredientCount": 6,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Pasta",
+        "Basil",
+        "Pine nuts",
+        "Parmesan"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Macaroni and cheese",
+      "ingredientCount": 5,
+      "mealArt": true,
+      "missingIngredientIcons": [
+        "Macaroni"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Beef lasagna",
+      "ingredientCount": 8,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Lasagna sheets",
+        "Parmesan"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Margherita pizza",
+      "ingredientCount": 4,
+      "mealArt": true,
+      "missingIngredientIcons": [
+        "Pizza dough",
+        "Mozzarella",
+        "Basil"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Pepperoni pizza",
+      "ingredientCount": 4,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Pizza dough",
+        "Mozzarella",
+        "Pepperoni"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Mushroom risotto",
+      "ingredientCount": 6,
+      "mealArt": true,
+      "missingIngredientIcons": [
+        "Arborio rice",
+        "Vegetable stock",
+        "Parmesan"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Gnocchi with tomato sauce",
+      "ingredientCount": 6,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Basil",
+        "Parmesan"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Cheeseburger",
+      "ingredientCount": 6,
+      "mealArt": true,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 20,
+      "name": "Hot dog",
+      "ingredientCount": 3,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Hot dog bun",
+        "Frankfurter",
+        "Mustard"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "BLT sandwich",
+      "ingredientCount": 5,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Mayonnaise"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Grilled cheese",
+      "ingredientCount": 3,
+      "mealArt": true,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 23,
+      "name": "Tuna melt",
+      "ingredientCount": 4,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Canned tuna",
+        "Mayonnaise"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Chicken quesadilla",
+      "ingredientCount": 4,
+      "mealArt": false,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 25,
+      "name": "Beef tacos",
+      "ingredientCount": 6,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Corn tortilla"
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Falafel pita",
+      "ingredientCount": 7,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Pita",
+        "Chickpeas",
+        "Parsley",
+        "Tahini"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Fish and chips",
+      "ingredientCount": 4,
+      "mealArt": true,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 28,
+      "name": "Egg fried rice",
+      "ingredientCount": 6,
+      "mealArt": true,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 29,
+      "name": "Chicken biryani",
+      "ingredientCount": 8,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Basmati rice",
+        "Saffron"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Chicken paella",
+      "ingredientCount": 6,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Short-grain rice",
+        "Green beans",
+        "Saffron",
+        "Chicken stock"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Chili con carne",
+      "ingredientCount": 7,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Kidney beans",
+        "Chili powder"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Cottage pie",
+      "ingredientCount": 7,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Beef stock"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Chicken pot pie",
+      "ingredientCount": 8,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Puff pastry",
+        "Chicken stock"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "French onion soup",
+      "ingredientCount": 5,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Beef stock",
+        "Gruyère"
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Tomato soup",
+      "ingredientCount": 5,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Vegetable stock"
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Miso soup",
+      "ingredientCount": 5,
+      "mealArt": true,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 37,
+      "name": "Butter chicken",
+      "ingredientCount": 8,
+      "mealArt": true,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 38,
+      "name": "Thai green chicken curry",
+      "ingredientCount": 7,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Coconut milk",
+        "Green curry paste",
+        "Eggplant",
+        "Bamboo shoots",
+        "Thai basil",
+        "Fish sauce"
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Chana masala",
+      "ingredientCount": 7,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Chickpeas"
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Palak paneer",
+      "ingredientCount": 8,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Paneer",
+        "Spinach"
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Chicken katsu curry",
+      "ingredientCount": 9,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Panko",
+        "Japanese curry roux"
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Pad Thai",
+      "ingredientCount": 9,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Rice noodles",
+        "Bean sprouts",
+        "Peanuts",
+        "Tamarind",
+        "Fish sauce",
+        "Palm sugar"
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Greek salad",
+      "ingredientCount": 7,
+      "mealArt": true,
+      "missingIngredientIcons": []
+    },
+    {
+      "id": 44,
+      "name": "Chicken Caesar salad",
+      "ingredientCount": 9,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Romaine lettuce",
+        "Parmesan",
+        "Anchovy"
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Bibimbap",
+      "ingredientCount": 9,
+      "mealArt": false,
+      "missingIngredientIcons": [
+        "Spinach",
+        "Bean sprouts",
+        "Gochujang",
+        "Sesame oil"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,810 @@
+{
+  "version": 1,
+  "pathBase": "handoff root",
+  "status": "Draft art, not production-ready",
+  "background": {
+    "file": "reference/meal-lion-demo/assets/kitchen.png"
+  },
+  "chef": {
+    "file": "reference/meal-lion-demo/assets/chef-poses.png",
+    "columns": 4,
+    "rows": 1,
+    "poses": [
+      "neutral",
+      "blink",
+      "thinking",
+      "celebrate"
+    ]
+  },
+  "meals": [
+    {
+      "id": 3,
+      "name": "Shakshuka",
+      "file": "reference/meal-lion-demo/assets/pilot-meals.png",
+      "columns": 3,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "id": 1,
+      "name": "Pancakes",
+      "file": "reference/meal-lion-demo/assets/pilot-meals.png",
+      "columns": 3,
+      "rows": 1,
+      "index": 1
+    },
+    {
+      "id": 22,
+      "name": "Grilled cheese",
+      "file": "reference/meal-lion-demo/assets/pilot-meals.png",
+      "columns": 3,
+      "rows": 1,
+      "index": 2
+    },
+    {
+      "id": 11,
+      "name": "Spaghetti Bolognese",
+      "file": "reference/meal-lion-assets-batch-02/meals-seven.png",
+      "columns": 4,
+      "rows": 2,
+      "index": 0
+    },
+    {
+      "id": 43,
+      "name": "Greek salad",
+      "file": "reference/meal-lion-assets-batch-02/meals-seven.png",
+      "columns": 4,
+      "rows": 2,
+      "index": 1
+    },
+    {
+      "id": 28,
+      "name": "Egg fried rice",
+      "file": "reference/meal-lion-assets-batch-02/meals-seven.png",
+      "columns": 4,
+      "rows": 2,
+      "index": 2
+    },
+    {
+      "id": 36,
+      "name": "Miso soup",
+      "file": "reference/meal-lion-assets-batch-02/meals-seven.png",
+      "columns": 4,
+      "rows": 2,
+      "index": 3
+    },
+    {
+      "id": 19,
+      "name": "Cheeseburger",
+      "file": "reference/meal-lion-assets-batch-02/meals-seven.png",
+      "columns": 4,
+      "rows": 2,
+      "index": 4
+    },
+    {
+      "id": 37,
+      "name": "Butter chicken",
+      "file": "reference/meal-lion-assets-batch-02/meals-seven.png",
+      "columns": 4,
+      "rows": 2,
+      "index": 5
+    },
+    {
+      "id": 27,
+      "name": "Fish and chips",
+      "file": "reference/meal-lion-assets-batch-02/meals-seven.png",
+      "columns": 4,
+      "rows": 2,
+      "index": 6
+    },
+    {
+      "id": 2,
+      "name": "French toast",
+      "file": "reference/meal-lion-assets-batch-03/meals-breakfast.png",
+      "columns": 4,
+      "rows": 2,
+      "index": 0
+    },
+    {
+      "id": 4,
+      "name": "Eggs Benedict",
+      "file": "reference/meal-lion-assets-batch-03/meals-breakfast.png",
+      "columns": 4,
+      "rows": 2,
+      "index": 1
+    },
+    {
+      "id": 5,
+      "name": "Breakfast burrito",
+      "file": "reference/meal-lion-assets-batch-03/meals-breakfast.png",
+      "columns": 4,
+      "rows": 2,
+      "index": 2
+    },
+    {
+      "id": 6,
+      "name": "Avocado toast",
+      "file": "reference/meal-lion-assets-batch-03/meals-breakfast.png",
+      "columns": 4,
+      "rows": 2,
+      "index": 3
+    },
+    {
+      "id": 7,
+      "name": "Mushroom omelette",
+      "file": "reference/meal-lion-assets-batch-03/meals-breakfast.png",
+      "columns": 4,
+      "rows": 2,
+      "index": 4
+    },
+    {
+      "id": 8,
+      "name": "Quiche Lorraine",
+      "file": "reference/meal-lion-assets-batch-03/meals-breakfast.png",
+      "columns": 4,
+      "rows": 2,
+      "index": 5
+    },
+    {
+      "id": 9,
+      "name": "Potato rösti",
+      "file": "reference/meal-lion-assets-batch-03/meals-breakfast.png",
+      "columns": 4,
+      "rows": 2,
+      "index": 6
+    },
+    {
+      "id": 13,
+      "name": "Macaroni and cheese",
+      "file": "reference/meal-lion-assets-batch-04/meals.png",
+      "columns": 3,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "id": 15,
+      "name": "Margherita pizza",
+      "file": "reference/meal-lion-assets-batch-04/meals.png",
+      "columns": 3,
+      "rows": 1,
+      "index": 1
+    },
+    {
+      "id": 17,
+      "name": "Mushroom risotto",
+      "file": "reference/meal-lion-assets-batch-04/meals.png",
+      "columns": 3,
+      "rows": 1,
+      "index": 2
+    }
+  ],
+  "ingredients": [
+    {
+      "label": "Tomato",
+      "file": "reference/meal-lion-demo/assets/ingredients.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 0,
+      "preferred": true
+    },
+    {
+      "label": "Egg",
+      "file": "reference/meal-lion-demo/assets/ingredients.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 1,
+      "preferred": true
+    },
+    {
+      "label": "Bell pepper",
+      "file": "reference/meal-lion-demo/assets/ingredients.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 2,
+      "preferred": true
+    },
+    {
+      "label": "Onion",
+      "file": "reference/meal-lion-demo/assets/ingredients.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 3,
+      "preferred": false
+    },
+    {
+      "label": "Cumin",
+      "file": "reference/meal-lion-demo/assets/ingredients.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 4,
+      "preferred": true
+    },
+    {
+      "label": "Paprika",
+      "file": "reference/meal-lion-demo/assets/ingredients.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 5,
+      "preferred": true
+    },
+    {
+      "label": "Flour",
+      "file": "reference/meal-lion-demo/assets/pantry.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 0,
+      "preferred": true
+    },
+    {
+      "label": "Milk",
+      "file": "reference/meal-lion-demo/assets/pantry.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 1,
+      "preferred": true
+    },
+    {
+      "label": "Butter",
+      "file": "reference/meal-lion-demo/assets/pantry.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 2,
+      "preferred": true
+    },
+    {
+      "label": "Bread",
+      "file": "reference/meal-lion-demo/assets/pantry.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 3,
+      "preferred": true
+    },
+    {
+      "label": "Cheddar",
+      "file": "reference/meal-lion-demo/assets/pantry.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 4,
+      "preferred": true
+    },
+    {
+      "label": "Garlic",
+      "file": "reference/meal-lion-demo/assets/pantry.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 5,
+      "preferred": true
+    },
+    {
+      "label": "Spaghetti",
+      "displayLabel": "Spaghetti",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-01.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 0,
+      "preferred": true
+    },
+    {
+      "label": "Ground beef",
+      "displayLabel": "Ground beef",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-01.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 1,
+      "preferred": true
+    },
+    {
+      "label": "Carrot",
+      "displayLabel": "Carrot",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-01.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 2,
+      "preferred": true
+    },
+    {
+      "label": "Celery",
+      "displayLabel": "Celery",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-01.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 3,
+      "preferred": true
+    },
+    {
+      "label": "Cucumber",
+      "displayLabel": "Cucumber",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-01.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 4,
+      "preferred": true
+    },
+    {
+      "label": "Feta",
+      "displayLabel": "Feta",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-01.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 5,
+      "preferred": true
+    },
+    {
+      "label": "Olives",
+      "displayLabel": "Olives",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-02.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 0,
+      "preferred": true
+    },
+    {
+      "label": "Red onion",
+      "displayLabel": "Red onion",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-02.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 1,
+      "preferred": true
+    },
+    {
+      "label": "Olive oil",
+      "displayLabel": "Olive oil",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-02.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 2,
+      "preferred": true
+    },
+    {
+      "label": "Oregano",
+      "displayLabel": "Oregano",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-02.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 3,
+      "preferred": true
+    },
+    {
+      "label": "Rice",
+      "displayLabel": "Rice",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-02.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 4,
+      "preferred": true
+    },
+    {
+      "label": "Peas",
+      "displayLabel": "Peas",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-02.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 5,
+      "preferred": true
+    },
+    {
+      "label": "Scallion",
+      "displayLabel": "Scallion",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-03.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 0,
+      "preferred": true
+    },
+    {
+      "label": "Soy sauce",
+      "displayLabel": "Soy sauce",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-03.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 1,
+      "preferred": true
+    },
+    {
+      "label": "Miso paste",
+      "displayLabel": "Miso paste",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-03.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 2,
+      "preferred": true
+    },
+    {
+      "label": "Tofu",
+      "displayLabel": "Tofu",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-03.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 3,
+      "preferred": true
+    },
+    {
+      "label": "Wakame",
+      "displayLabel": "Wakame",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-03.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 4,
+      "preferred": true
+    },
+    {
+      "label": "Dashi",
+      "displayLabel": "Dashi",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-03.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 5,
+      "preferred": true
+    },
+    {
+      "label": "Burger bun",
+      "displayLabel": "Burger bun",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-04.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 0,
+      "preferred": true
+    },
+    {
+      "label": "Lettuce",
+      "displayLabel": "Lettuce",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-04.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 1,
+      "preferred": true
+    },
+    {
+      "label": "Pickle",
+      "displayLabel": "Pickle",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-04.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 2,
+      "preferred": true
+    },
+    {
+      "label": "Chicken",
+      "displayLabel": "Chicken",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-04.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 3,
+      "preferred": true
+    },
+    {
+      "label": "Cream",
+      "displayLabel": "Cream",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-04.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 4,
+      "preferred": true
+    },
+    {
+      "label": "Yogurt",
+      "displayLabel": "Yogurt",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-04.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 5,
+      "preferred": true
+    },
+    {
+      "label": "Garam masala",
+      "displayLabel": "Garam masala",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-05.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 0,
+      "preferred": true
+    },
+    {
+      "label": "Ginger",
+      "displayLabel": "Ginger",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-05.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 1,
+      "preferred": true
+    },
+    {
+      "label": "White fish",
+      "displayLabel": "White fish",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-05.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 2,
+      "preferred": true
+    },
+    {
+      "label": "Potato",
+      "displayLabel": "Potato",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-05.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 3,
+      "preferred": true
+    },
+    {
+      "label": "Beer",
+      "displayLabel": "Beer",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-05.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 4,
+      "preferred": true
+    },
+    {
+      "label": "Onion",
+      "displayLabel": "Yellow onion",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-05.png",
+      "columns": 3,
+      "rows": 2,
+      "index": 5,
+      "preferred": true
+    },
+    {
+      "label": "Cinnamon",
+      "displayLabel": "Cinnamon",
+      "file": "reference/meal-lion-assets-batch-03/ingredients-breakfast.png",
+      "columns": 3,
+      "rows": 3,
+      "index": 0,
+      "preferred": true
+    },
+    {
+      "label": "English muffin",
+      "displayLabel": "English muffin",
+      "file": "reference/meal-lion-assets-batch-03/ingredients-breakfast.png",
+      "columns": 3,
+      "rows": 3,
+      "index": 1,
+      "preferred": true
+    },
+    {
+      "label": "Ham",
+      "displayLabel": "Ham",
+      "file": "reference/meal-lion-assets-batch-03/ingredients-breakfast.png",
+      "columns": 3,
+      "rows": 3,
+      "index": 2,
+      "preferred": true
+    },
+    {
+      "label": "Avocado",
+      "displayLabel": "Avocado",
+      "file": "reference/meal-lion-assets-batch-03/ingredients-breakfast.png",
+      "columns": 3,
+      "rows": 3,
+      "index": 3,
+      "preferred": true
+    },
+    {
+      "label": "Mushroom",
+      "displayLabel": "Mushroom",
+      "file": "reference/meal-lion-assets-batch-03/ingredients-breakfast.png",
+      "columns": 3,
+      "rows": 3,
+      "index": 4,
+      "preferred": true
+    },
+    {
+      "label": "Shortcrust pastry",
+      "displayLabel": "Shortcrust pastry",
+      "file": "reference/meal-lion-assets-batch-03/ingredients-breakfast.png",
+      "columns": 3,
+      "rows": 3,
+      "index": 5,
+      "preferred": true
+    },
+    {
+      "label": "Bacon",
+      "displayLabel": "Bacon",
+      "file": "reference/meal-lion-assets-batch-03/ingredients-breakfast.png",
+      "columns": 3,
+      "rows": 3,
+      "index": 6,
+      "preferred": true
+    },
+    {
+      "label": "Lemon",
+      "displayLabel": "Lemon",
+      "file": "reference/meal-lion-assets-batch-03/ingredients-breakfast.png",
+      "columns": 3,
+      "rows": 3,
+      "index": 7,
+      "preferred": true
+    },
+    {
+      "label": "Flour tortilla",
+      "displayLabel": "Flour tortilla",
+      "file": "reference/meal-lion-assets-batch-03/ingredients-breakfast.png",
+      "columns": 3,
+      "rows": 3,
+      "index": 8,
+      "preferred": true
+    }
+  ],
+  "animations": [
+    {
+      "id": "onion",
+      "file": "reference/meal-lion-demo/assets/leo-onion.png",
+      "columns": 4,
+      "rows": 1,
+      "sequence": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "status": "draft key poses"
+    },
+    {
+      "id": "tomato",
+      "file": "reference/meal-lion-demo/assets/leo-tomato.png",
+      "columns": 4,
+      "rows": 1,
+      "sequence": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "status": "draft key poses"
+    },
+    {
+      "id": "egg",
+      "file": "reference/meal-lion-demo/assets/leo-egg.png",
+      "columns": 4,
+      "rows": 1,
+      "sequence": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "status": "draft key poses"
+    },
+    {
+      "id": "pancakes",
+      "file": "reference/meal-lion-demo/assets/leo-pilot-cooking.png",
+      "columns": 3,
+      "rows": 2,
+      "sequence": [
+        0,
+        1,
+        2
+      ],
+      "status": "draft key poses"
+    },
+    {
+      "id": "grilled-cheese",
+      "file": "reference/meal-lion-demo/assets/leo-pilot-cooking.png",
+      "columns": 3,
+      "rows": 2,
+      "sequence": [
+        3,
+        4,
+        5
+      ],
+      "status": "draft key poses"
+    },
+    {
+      "id": "milk",
+      "file": "reference/meal-lion-assets-batch-03/leo-milk.png",
+      "columns": 4,
+      "rows": 1,
+      "frames": [
+        "Hold milk",
+        "Pour milk",
+        "Whisk",
+        "Lift whisk"
+      ],
+      "frameMs": [
+        750,
+        750,
+        900,
+        1000
+      ],
+      "sequence": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "status": "draft key poses"
+    },
+    {
+      "id": "cheese",
+      "title": "Grating cheese",
+      "description": "1 Leo proudly holds orange cheddar block beside silver box grater on board. 2 presses cheese downward against grater, focused face. 3 pulls cheese upward ready for next stroke, visible pile of shavings below grater, happy eyes. 4 lifts small bowl of grated cheese proudly, grater rests on table.",
+      "file": "reference/meal-lion-assets-batch-04/leo-cheese.png",
+      "columns": 4,
+      "rows": 1,
+      "sequence": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "frameMs": 650,
+      "status": "draft key poses"
+    },
+    {
+      "id": "dough",
+      "title": "Stretching dough",
+      "description": "1 Leo places round pale pizza dough on floured board. 2 presses dough flat with both paws. 3 lifts and stretches dough between paws into wide thin oval, comically surprised face, dough stays below chin. 4 lays round stretched dough on board with proud grin, flour on one cheek.",
+      "file": "reference/meal-lion-assets-batch-04/leo-dough.png",
+      "columns": 4,
+      "rows": 1,
+      "sequence": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "frameMs": 650,
+      "status": "draft key poses"
+    },
+    {
+      "id": "mushroom",
+      "title": "Slicing mushrooms",
+      "description": "1 Leo holds a brown button mushroom above chopping board, kitchen knife resting on board. 2 knife poised just over mushroom, other paw safely away. 3 knife down slicing mushroom, neat mushroom slices on board, focused smile. 4 knife rests on board, Leo holds little bowl of mushroom slices and smiles.",
+      "file": "reference/meal-lion-assets-batch-04/leo-mushroom.png",
+      "columns": 4,
+      "rows": 1,
+      "sequence": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "frameMs": 650,
+      "status": "draft key poses"
+    },
+    {
+      "id": "rice",
+      "title": "Sprinkling rice",
+      "description": "1 Leo holds a little wooden scoop full of uncooked rice over a small pan. 2 tilts scoop so white rice grains fall into pan, concentrating. 3 empties last grains into pan with tiny happy smile. 4 scoop rests on table, Leo stirs rice in pan using wooden spoon, delighted grin.",
+      "file": "reference/meal-lion-assets-batch-04/leo-rice.png",
+      "columns": 4,
+      "rows": 1,
+      "sequence": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "frameMs": 650,
+      "status": "draft key poses"
+    },
+    {
+      "id": "garlic",
+      "title": "Crushing garlic",
+      "description": "1 Leo presents a peeled garlic clove beside small mortar and pestle on table. 2 garlic inside mortar, Leo raises wooden pestle just above mortar with determined face. 3 presses pestle down into mortar crushing garlic, little garlic bits visible, tiny effort expression. 4 Leo raises pestle slightly with garlic paste on end, smiling proudly, mortar remains on table.",
+      "file": "reference/meal-lion-assets-batch-04/leo-garlic.png",
+      "columns": 4,
+      "rows": 1,
+      "sequence": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "frameMs": 650,
+      "status": "draft key poses"
+    }
+  ]
+}

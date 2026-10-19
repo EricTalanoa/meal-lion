@@ -1,0 +1,241 @@
+{
+  "note": "Original files copied byte-for-byte. ZIP snapshots omitted because their contents are represented by the folders. Authoritative current guidance is outside reference/.",
+  "files": [
+    {
+      "source": "game-layouts/a-centered-kitchen.png",
+      "file": "reference/game-layouts/a-centered-kitchen.png"
+    },
+    {
+      "source": "game-layouts/b-split-kitchen.png",
+      "file": "reference/game-layouts/b-split-kitchen.png"
+    },
+    {
+      "source": "game-layouts/c-pocket-kitchen.png",
+      "file": "reference/game-layouts/c-pocket-kitchen.png"
+    },
+    {
+      "source": "game-layouts/layout-notes-and-prompts.txt",
+      "file": "reference/game-layouts/layout-notes-and-prompts.txt"
+    },
+    {
+      "source": "game-layouts/mobile-keyboard-states.png",
+      "file": "reference/game-layouts/mobile-keyboard-states.png"
+    },
+    {
+      "source": "game-layouts/selected-layout-and-mobile-behavior.md",
+      "file": "reference/game-layouts/selected-layout-and-mobile-behavior.md"
+    },
+    {
+      "source": "meal-lion-45-meal-plan.md",
+      "file": "reference/meal-lion-45-meal-plan.md"
+    },
+    {
+      "source": "meal-lion-45-meals.json",
+      "file": "reference/meal-lion-45-meals.json"
+    },
+    {
+      "source": "meal-lion-assets-batch-02/generation-prompts.txt",
+      "file": "reference/meal-lion-assets-batch-02/generation-prompts.txt"
+    },
+    {
+      "source": "meal-lion-assets-batch-02/index.html",
+      "file": "reference/meal-lion-assets-batch-02/index.html"
+    },
+    {
+      "source": "meal-lion-assets-batch-02/ingredients-01.png",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-01.png"
+    },
+    {
+      "source": "meal-lion-assets-batch-02/ingredients-02.png",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-02.png"
+    },
+    {
+      "source": "meal-lion-assets-batch-02/ingredients-03.png",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-03.png"
+    },
+    {
+      "source": "meal-lion-assets-batch-02/ingredients-04.png",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-04.png"
+    },
+    {
+      "source": "meal-lion-assets-batch-02/ingredients-05.png",
+      "file": "reference/meal-lion-assets-batch-02/ingredients-05.png"
+    },
+    {
+      "source": "meal-lion-assets-batch-02/manifest.json",
+      "file": "reference/meal-lion-assets-batch-02/manifest.json"
+    },
+    {
+      "source": "meal-lion-assets-batch-02/meals-seven.png",
+      "file": "reference/meal-lion-assets-batch-02/meals-seven.png"
+    },
+    {
+      "source": "meal-lion-assets-batch-03/index.html",
+      "file": "reference/meal-lion-assets-batch-03/index.html"
+    },
+    {
+      "source": "meal-lion-assets-batch-03/ingredients-breakfast.png",
+      "file": "reference/meal-lion-assets-batch-03/ingredients-breakfast.png"
+    },
+    {
+      "source": "meal-lion-assets-batch-03/leo-milk.png",
+      "file": "reference/meal-lion-assets-batch-03/leo-milk.png"
+    },
+    {
+      "source": "meal-lion-assets-batch-03/manifest.json",
+      "file": "reference/meal-lion-assets-batch-03/manifest.json"
+    },
+    {
+      "source": "meal-lion-assets-batch-03/meals-breakfast.png",
+      "file": "reference/meal-lion-assets-batch-03/meals-breakfast.png"
+    },
+    {
+      "source": "meal-lion-assets-batch-03/README.md",
+      "file": "reference/meal-lion-assets-batch-03/README.md"
+    },
+    {
+      "source": "meal-lion-assets-batch-04/index.html",
+      "file": "reference/meal-lion-assets-batch-04/index.html"
+    },
+    {
+      "source": "meal-lion-assets-batch-04/leo-cheese.png",
+      "file": "reference/meal-lion-assets-batch-04/leo-cheese.png"
+    },
+    {
+      "source": "meal-lion-assets-batch-04/leo-dough.png",
+      "file": "reference/meal-lion-assets-batch-04/leo-dough.png"
+    },
+    {
+      "source": "meal-lion-assets-batch-04/leo-garlic.png",
+      "file": "reference/meal-lion-assets-batch-04/leo-garlic.png"
+    },
+    {
+      "source": "meal-lion-assets-batch-04/leo-mushroom.png",
+      "file": "reference/meal-lion-assets-batch-04/leo-mushroom.png"
+    },
+    {
+      "source": "meal-lion-assets-batch-04/leo-rice.png",
+      "file": "reference/meal-lion-assets-batch-04/leo-rice.png"
+    },
+    {
+      "source": "meal-lion-assets-batch-04/manifest.json",
+      "file": "reference/meal-lion-assets-batch-04/manifest.json"
+    },
+    {
+      "source": "meal-lion-assets-batch-04/meals.png",
+      "file": "reference/meal-lion-assets-batch-04/meals.png"
+    },
+    {
+      "source": "meal-lion-assets-batch-04/README.md",
+      "file": "reference/meal-lion-assets-batch-04/README.md"
+    },
+    {
+      "source": "meal-lion-demo/app.js",
+      "file": "reference/meal-lion-demo/app.js"
+    },
+    {
+      "source": "meal-lion-demo/assets/chef-poses.png",
+      "file": "reference/meal-lion-demo/assets/chef-poses.png"
+    },
+    {
+      "source": "meal-lion-demo/assets/INGREDIENT-ASSETS.md",
+      "file": "reference/meal-lion-demo/assets/INGREDIENT-ASSETS.md"
+    },
+    {
+      "source": "meal-lion-demo/assets/ingredient-prompts.txt",
+      "file": "reference/meal-lion-demo/assets/ingredient-prompts.txt"
+    },
+    {
+      "source": "meal-lion-demo/assets/ingredients.png",
+      "file": "reference/meal-lion-demo/assets/ingredients.png"
+    },
+    {
+      "source": "meal-lion-demo/assets/kitchen.png",
+      "file": "reference/meal-lion-demo/assets/kitchen.png"
+    },
+    {
+      "source": "meal-lion-demo/assets/leo-egg.png",
+      "file": "reference/meal-lion-demo/assets/leo-egg.png"
+    },
+    {
+      "source": "meal-lion-demo/assets/leo-onion.png",
+      "file": "reference/meal-lion-demo/assets/leo-onion.png"
+    },
+    {
+      "source": "meal-lion-demo/assets/leo-pilot-cooking.png",
+      "file": "reference/meal-lion-demo/assets/leo-pilot-cooking.png"
+    },
+    {
+      "source": "meal-lion-demo/assets/leo-tomato.png",
+      "file": "reference/meal-lion-demo/assets/leo-tomato.png"
+    },
+    {
+      "source": "meal-lion-demo/assets/pantry.png",
+      "file": "reference/meal-lion-demo/assets/pantry.png"
+    },
+    {
+      "source": "meal-lion-demo/assets/pilot-meals.png",
+      "file": "reference/meal-lion-demo/assets/pilot-meals.png"
+    },
+    {
+      "source": "meal-lion-demo/assets/pilot-prompts.txt",
+      "file": "reference/meal-lion-demo/assets/pilot-prompts.txt"
+    },
+    {
+      "source": "meal-lion-demo/generation-prompts.txt",
+      "file": "reference/meal-lion-demo/generation-prompts.txt"
+    },
+    {
+      "source": "meal-lion-demo/index.html",
+      "file": "reference/meal-lion-demo/index.html"
+    },
+    {
+      "source": "meal-lion-demo/ingredients.html",
+      "file": "reference/meal-lion-demo/ingredients.html"
+    },
+    {
+      "source": "meal-lion-demo/pilot.css",
+      "file": "reference/meal-lion-demo/pilot.css"
+    },
+    {
+      "source": "meal-lion-demo/pilot.html",
+      "file": "reference/meal-lion-demo/pilot.html"
+    },
+    {
+      "source": "meal-lion-demo/pilot.js",
+      "file": "reference/meal-lion-demo/pilot.js"
+    },
+    {
+      "source": "meal-lion-demo/PILOT.md",
+      "file": "reference/meal-lion-demo/PILOT.md"
+    },
+    {
+      "source": "meal-lion-demo/README.md",
+      "file": "reference/meal-lion-demo/README.md"
+    },
+    {
+      "source": "meal-lion-demo/style.css",
+      "file": "reference/meal-lion-demo/style.css"
+    },
+    {
+      "source": "meal-lion-food-detective.png",
+      "file": "reference/meal-lion-food-detective.png"
+    },
+    {
+      "source": "meal-lion-pixel-kitchen-prompt.txt",
+      "file": "reference/meal-lion-pixel-kitchen-prompt.txt"
+    },
+    {
+      "source": "meal-lion-pixel-kitchen.png",
+      "file": "reference/meal-lion-pixel-kitchen.png"
+    },
+    {
+      "source": "meal-lion-recipe-book.png",
+      "file": "reference/meal-lion-recipe-book.png"
+    },
+    {
+      "source": "meal-lion-retro-diner.png",
+      "file": "reference/meal-lion-retro-diner.png"
+    }
+  ]
+}

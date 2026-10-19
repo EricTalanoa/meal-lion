@@ -1,0 +1,686 @@
+{
+  "version": 1,
+  "meals": [
+    {
+      "id": 1,
+      "name": "Pancakes",
+      "ingredients": [
+        "Flour",
+        "Egg",
+        "Milk",
+        "Butter"
+      ],
+      "art": "Pancake stack with butter pat"
+    },
+    {
+      "id": 2,
+      "name": "French toast",
+      "ingredients": [
+        "Bread",
+        "Egg",
+        "Milk",
+        "Cinnamon"
+      ],
+      "art": "Golden toast slices with cinnamon"
+    },
+    {
+      "id": 3,
+      "name": "Shakshuka",
+      "ingredients": [
+        "Egg",
+        "Tomato",
+        "Bell pepper",
+        "Onion",
+        "Garlic",
+        "Cumin",
+        "Paprika"
+      ],
+      "art": "Eggs nestled in tomato sauce in a skillet"
+    },
+    {
+      "id": 4,
+      "name": "Eggs Benedict",
+      "ingredients": [
+        "English muffin",
+        "Egg",
+        "Ham",
+        "Butter",
+        "Lemon"
+      ],
+      "art": "Poached eggs and hollandaise on muffin halves"
+    },
+    {
+      "id": 5,
+      "name": "Breakfast burrito",
+      "ingredients": [
+        "Flour tortilla",
+        "Egg",
+        "Potato",
+        "Cheddar",
+        "Bacon"
+      ],
+      "art": "Cut burrito showing breakfast filling"
+    },
+    {
+      "id": 6,
+      "name": "Avocado toast",
+      "ingredients": [
+        "Bread",
+        "Avocado",
+        "Lemon"
+      ],
+      "art": "Toast with avocado fan"
+    },
+    {
+      "id": 7,
+      "name": "Mushroom omelette",
+      "ingredients": [
+        "Egg",
+        "Mushroom",
+        "Butter",
+        "Cheddar"
+      ],
+      "art": "Folded omelette with mushroom filling"
+    },
+    {
+      "id": 8,
+      "name": "Quiche Lorraine",
+      "ingredients": [
+        "Shortcrust pastry",
+        "Egg",
+        "Cream",
+        "Bacon"
+      ],
+      "art": "Slice showing bacon custard and pastry"
+    },
+    {
+      "id": 9,
+      "name": "Potato rösti",
+      "ingredients": [
+        "Potato",
+        "Onion",
+        "Butter"
+      ],
+      "art": "Golden shredded-potato cake"
+    },
+    {
+      "id": 10,
+      "name": "Spaghetti carbonara",
+      "ingredients": [
+        "Spaghetti",
+        "Egg",
+        "Guanciale",
+        "Pecorino",
+        "Black pepper"
+      ],
+      "art": "Glossy spaghetti with guanciale"
+    },
+    {
+      "id": 11,
+      "name": "Spaghetti Bolognese",
+      "ingredients": [
+        "Spaghetti",
+        "Ground beef",
+        "Tomato",
+        "Onion",
+        "Carrot",
+        "Celery"
+      ],
+      "art": "Spaghetti topped with chunky meat sauce"
+    },
+    {
+      "id": 12,
+      "name": "Pesto pasta",
+      "ingredients": [
+        "Pasta",
+        "Basil",
+        "Pine nuts",
+        "Parmesan",
+        "Garlic",
+        "Olive oil"
+      ],
+      "art": "Green pesto-coated pasta"
+    },
+    {
+      "id": 13,
+      "name": "Macaroni and cheese",
+      "ingredients": [
+        "Macaroni",
+        "Cheddar",
+        "Milk",
+        "Butter",
+        "Flour"
+      ],
+      "art": "Macaroni in golden cheese sauce"
+    },
+    {
+      "id": 14,
+      "name": "Beef lasagna",
+      "ingredients": [
+        "Lasagna sheets",
+        "Ground beef",
+        "Tomato",
+        "Onion",
+        "Milk",
+        "Butter",
+        "Flour",
+        "Parmesan"
+      ],
+      "art": "Layered slice with meat sauce and béchamel"
+    },
+    {
+      "id": 15,
+      "name": "Margherita pizza",
+      "ingredients": [
+        "Pizza dough",
+        "Tomato",
+        "Mozzarella",
+        "Basil"
+      ],
+      "art": "Pizza with mozzarella patches and basil"
+    },
+    {
+      "id": 16,
+      "name": "Pepperoni pizza",
+      "ingredients": [
+        "Pizza dough",
+        "Tomato",
+        "Mozzarella",
+        "Pepperoni"
+      ],
+      "art": "Pizza with pepperoni rounds"
+    },
+    {
+      "id": 17,
+      "name": "Mushroom risotto",
+      "ingredients": [
+        "Arborio rice",
+        "Mushroom",
+        "Onion",
+        "Vegetable stock",
+        "Butter",
+        "Parmesan"
+      ],
+      "art": "Creamy rice with mushrooms"
+    },
+    {
+      "id": 18,
+      "name": "Gnocchi with tomato sauce",
+      "ingredients": [
+        "Potato",
+        "Flour",
+        "Egg",
+        "Tomato",
+        "Basil",
+        "Parmesan"
+      ],
+      "art": "Ridged gnocchi in red sauce"
+    },
+    {
+      "id": 19,
+      "name": "Cheeseburger",
+      "ingredients": [
+        "Burger bun",
+        "Ground beef",
+        "Cheddar",
+        "Lettuce",
+        "Tomato",
+        "Pickle"
+      ],
+      "art": "Bun, beef patty, cheese and salad layers"
+    },
+    {
+      "id": 20,
+      "name": "Hot dog",
+      "ingredients": [
+        "Hot dog bun",
+        "Frankfurter",
+        "Mustard"
+      ],
+      "art": "Sausage in bun with mustard zigzag"
+    },
+    {
+      "id": 21,
+      "name": "BLT sandwich",
+      "ingredients": [
+        "Bread",
+        "Bacon",
+        "Lettuce",
+        "Tomato",
+        "Mayonnaise"
+      ],
+      "art": "Triangular sandwich with visible bacon and salad"
+    },
+    {
+      "id": 22,
+      "name": "Grilled cheese",
+      "ingredients": [
+        "Bread",
+        "Cheddar",
+        "Butter"
+      ],
+      "art": "Toasted sandwich with cheese pull"
+    },
+    {
+      "id": 23,
+      "name": "Tuna melt",
+      "ingredients": [
+        "Bread",
+        "Canned tuna",
+        "Mayonnaise",
+        "Cheddar"
+      ],
+      "art": "Tuna sandwich with melted cheese"
+    },
+    {
+      "id": 24,
+      "name": "Chicken quesadilla",
+      "ingredients": [
+        "Flour tortilla",
+        "Chicken",
+        "Cheddar",
+        "Onion"
+      ],
+      "art": "Toasted tortilla wedges with chicken filling"
+    },
+    {
+      "id": 25,
+      "name": "Beef tacos",
+      "ingredients": [
+        "Corn tortilla",
+        "Ground beef",
+        "Onion",
+        "Tomato",
+        "Lettuce",
+        "Cumin"
+      ],
+      "art": "Open corn tortillas with beef and salad"
+    },
+    {
+      "id": 26,
+      "name": "Falafel pita",
+      "ingredients": [
+        "Pita",
+        "Chickpeas",
+        "Onion",
+        "Garlic",
+        "Parsley",
+        "Cumin",
+        "Tahini"
+      ],
+      "art": "Pita with falafel balls and tahini"
+    },
+    {
+      "id": 27,
+      "name": "Fish and chips",
+      "ingredients": [
+        "White fish",
+        "Potato",
+        "Flour",
+        "Beer"
+      ],
+      "art": "Battered fish with thick-cut chips"
+    },
+    {
+      "id": 28,
+      "name": "Egg fried rice",
+      "ingredients": [
+        "Rice",
+        "Egg",
+        "Peas",
+        "Carrot",
+        "Scallion",
+        "Soy sauce"
+      ],
+      "art": "Rice with egg and colorful vegetables"
+    },
+    {
+      "id": 29,
+      "name": "Chicken biryani",
+      "ingredients": [
+        "Basmati rice",
+        "Chicken",
+        "Yogurt",
+        "Onion",
+        "Ginger",
+        "Garlic",
+        "Garam masala",
+        "Saffron"
+      ],
+      "art": "Chicken and saffron-tinted long-grain rice"
+    },
+    {
+      "id": 30,
+      "name": "Chicken paella",
+      "ingredients": [
+        "Short-grain rice",
+        "Chicken",
+        "Green beans",
+        "Tomato",
+        "Saffron",
+        "Chicken stock"
+      ],
+      "art": "Wide pan of golden rice and chicken"
+    },
+    {
+      "id": 31,
+      "name": "Chili con carne",
+      "ingredients": [
+        "Ground beef",
+        "Kidney beans",
+        "Tomato",
+        "Onion",
+        "Garlic",
+        "Chili powder",
+        "Cumin"
+      ],
+      "art": "Beef-and-bean chili bowl"
+    },
+    {
+      "id": 32,
+      "name": "Cottage pie",
+      "ingredients": [
+        "Ground beef",
+        "Potato",
+        "Carrot",
+        "Onion",
+        "Peas",
+        "Beef stock",
+        "Butter"
+      ],
+      "art": "Mashed-potato crust over beef filling"
+    },
+    {
+      "id": 33,
+      "name": "Chicken pot pie",
+      "ingredients": [
+        "Chicken",
+        "Puff pastry",
+        "Carrot",
+        "Peas",
+        "Onion",
+        "Chicken stock",
+        "Milk",
+        "Flour"
+      ],
+      "art": "Golden pastry lid with creamy chicken filling"
+    },
+    {
+      "id": 34,
+      "name": "French onion soup",
+      "ingredients": [
+        "Onion",
+        "Beef stock",
+        "Bread",
+        "Gruyère",
+        "Butter"
+      ],
+      "art": "Soup crock with cheese-covered toast"
+    },
+    {
+      "id": 35,
+      "name": "Tomato soup",
+      "ingredients": [
+        "Tomato",
+        "Onion",
+        "Garlic",
+        "Vegetable stock",
+        "Cream"
+      ],
+      "art": "Smooth red soup with cream swirl"
+    },
+    {
+      "id": 36,
+      "name": "Miso soup",
+      "ingredients": [
+        "Miso paste",
+        "Tofu",
+        "Wakame",
+        "Dashi",
+        "Scallion"
+      ],
+      "art": "Small bowl with tofu and seaweed"
+    },
+    {
+      "id": 37,
+      "name": "Butter chicken",
+      "ingredients": [
+        "Chicken",
+        "Tomato",
+        "Butter",
+        "Cream",
+        "Yogurt",
+        "Garam masala",
+        "Ginger",
+        "Garlic"
+      ],
+      "art": "Chicken in creamy orange curry"
+    },
+    {
+      "id": 38,
+      "name": "Thai green chicken curry",
+      "ingredients": [
+        "Chicken",
+        "Coconut milk",
+        "Green curry paste",
+        "Eggplant",
+        "Bamboo shoots",
+        "Thai basil",
+        "Fish sauce"
+      ],
+      "art": "Green coconut curry with chicken and eggplant"
+    },
+    {
+      "id": 39,
+      "name": "Chana masala",
+      "ingredients": [
+        "Chickpeas",
+        "Tomato",
+        "Onion",
+        "Garlic",
+        "Ginger",
+        "Garam masala",
+        "Cumin"
+      ],
+      "art": "Chickpeas in tomato curry"
+    },
+    {
+      "id": 40,
+      "name": "Palak paneer",
+      "ingredients": [
+        "Paneer",
+        "Spinach",
+        "Onion",
+        "Tomato",
+        "Garlic",
+        "Ginger",
+        "Cream",
+        "Garam masala"
+      ],
+      "art": "Paneer cubes in green spinach sauce"
+    },
+    {
+      "id": 41,
+      "name": "Chicken katsu curry",
+      "ingredients": [
+        "Chicken",
+        "Panko",
+        "Egg",
+        "Flour",
+        "Rice",
+        "Japanese curry roux",
+        "Onion",
+        "Carrot",
+        "Potato"
+      ],
+      "art": "Sliced breaded chicken beside rice and curry"
+    },
+    {
+      "id": 42,
+      "name": "Pad Thai",
+      "ingredients": [
+        "Rice noodles",
+        "Egg",
+        "Tofu",
+        "Bean sprouts",
+        "Peanuts",
+        "Tamarind",
+        "Fish sauce",
+        "Palm sugar",
+        "Scallion"
+      ],
+      "art": "Rice noodles with sprouts and peanuts"
+    },
+    {
+      "id": 43,
+      "name": "Greek salad",
+      "ingredients": [
+        "Tomato",
+        "Cucumber",
+        "Feta",
+        "Olives",
+        "Red onion",
+        "Olive oil",
+        "Oregano"
+      ],
+      "art": "Chunky salad topped with feta"
+    },
+    {
+      "id": 44,
+      "name": "Chicken Caesar salad",
+      "ingredients": [
+        "Chicken",
+        "Romaine lettuce",
+        "Bread",
+        "Parmesan",
+        "Anchovy",
+        "Egg",
+        "Lemon",
+        "Olive oil",
+        "Garlic"
+      ],
+      "art": "Romaine, chicken, croutons and Parmesan"
+    },
+    {
+      "id": 45,
+      "name": "Bibimbap",
+      "ingredients": [
+        "Rice",
+        "Ground beef",
+        "Egg",
+        "Spinach",
+        "Carrot",
+        "Bean sprouts",
+        "Gochujang",
+        "Sesame oil",
+        "Soy sauce"
+      ],
+      "art": "Rice bowl with separate colorful toppings and egg"
+    }
+  ],
+  "ingredientLabels": [
+    "Anchovy",
+    "Arborio rice",
+    "Avocado",
+    "Bacon",
+    "Bamboo shoots",
+    "Basil",
+    "Basmati rice",
+    "Bean sprouts",
+    "Beef stock",
+    "Beer",
+    "Bell pepper",
+    "Black pepper",
+    "Bread",
+    "Burger bun",
+    "Butter",
+    "Canned tuna",
+    "Carrot",
+    "Celery",
+    "Cheddar",
+    "Chicken",
+    "Chicken stock",
+    "Chickpeas",
+    "Chili powder",
+    "Cinnamon",
+    "Coconut milk",
+    "Corn tortilla",
+    "Cream",
+    "Cucumber",
+    "Cumin",
+    "Dashi",
+    "Egg",
+    "Eggplant",
+    "English muffin",
+    "Feta",
+    "Fish sauce",
+    "Flour",
+    "Flour tortilla",
+    "Frankfurter",
+    "Garam masala",
+    "Garlic",
+    "Ginger",
+    "Gochujang",
+    "Green beans",
+    "Green curry paste",
+    "Ground beef",
+    "Gruyère",
+    "Guanciale",
+    "Ham",
+    "Hot dog bun",
+    "Japanese curry roux",
+    "Kidney beans",
+    "Lasagna sheets",
+    "Lemon",
+    "Lettuce",
+    "Macaroni",
+    "Mayonnaise",
+    "Milk",
+    "Miso paste",
+    "Mozzarella",
+    "Mushroom",
+    "Mustard",
+    "Olive oil",
+    "Olives",
+    "Onion",
+    "Oregano",
+    "Palm sugar",
+    "Paneer",
+    "Panko",
+    "Paprika",
+    "Parmesan",
+    "Parsley",
+    "Pasta",
+    "Peanuts",
+    "Peas",
+    "Pecorino",
+    "Pepperoni",
+    "Pickle",
+    "Pine nuts",
+    "Pita",
+    "Pizza dough",
+    "Potato",
+    "Puff pastry",
+    "Red onion",
+    "Rice",
+    "Rice noodles",
+    "Romaine lettuce",
+    "Saffron",
+    "Scallion",
+    "Sesame oil",
+    "Short-grain rice",
+    "Shortcrust pastry",
+    "Soy sauce",
+    "Spaghetti",
+    "Spinach",
+    "Tahini",
+    "Tamarind",
+    "Thai basil",
+    "Tofu",
+    "Tomato",
+    "Vegetable stock",
+    "Wakame",
+    "White fish",
+    "Yogurt"
+  ]
+}

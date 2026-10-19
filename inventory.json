@@ -1,0 +1,402 @@
+{
+  "created": "2026-10-18",
+  "algorithm": "SHA-256",
+  "note": "Inventory excludes itself.",
+  "files": [
+    {
+      "file": ".gitignore",
+      "bytes": 377,
+      "sha256": "d5e11ef6aee20556780dc2a3dab547e156df988f8db2719fe15a6b4bba704848"
+    },
+    {
+      "file": "AGENTS.md",
+      "bytes": 2372,
+      "sha256": "8770dab3b4fb3a86168b7ebad4093ea72249e09e0be716e81d5844008a1f4988"
+    },
+    {
+      "file": "assets/asset-map.json",
+      "bytes": 19949,
+      "sha256": "62070d5519333dae66aebc7c205d58d82467ee493673c5a768e6f642cabbed9a"
+    },
+    {
+      "file": "assets/coverage.json",
+      "bytes": 9458,
+      "sha256": "dade7fab53077c78244280bbee6ccf2005a9f7b98719fe0cfbfc19cf3c0edd3c"
+    },
+    {
+      "file": "assets/COVERAGE.md",
+      "bytes": 2730,
+      "sha256": "5602c8d4839c1fcb9b8287d609d31a59c4b49faef71e84631636411364b9bf60"
+    },
+    {
+      "file": "CLAUDE.md",
+      "bytes": 2372,
+      "sha256": "8770dab3b4fb3a86168b7ebad4093ea72249e09e0be716e81d5844008a1f4988"
+    },
+    {
+      "file": "docs/ASSETS.md",
+      "bytes": 2679,
+      "sha256": "43db5451982ad29ba78ecdcf471e8c1aa59182dc4501ff28e8ebb60b6b8e2884"
+    },
+    {
+      "file": "docs/DESIGN.md",
+      "bytes": 1978,
+      "sha256": "9309a23eacfe5b49dee15ef02de9242701b491f25ee9af60811c0b8a6bde6ca5"
+    },
+    {
+      "file": "docs/GIT_AND_CONTINUITY.md",
+      "bytes": 5543,
+      "sha256": "a019e39b92a19970fe8821b2227106401cd1bb1e68628e5ec4a8d6a9cd6e7e17"
+    },
+    {
+      "file": "docs/IMPLEMENTATION.md",
+      "bytes": 2262,
+      "sha256": "cc89a69599db141f633a64df9034d7e863d39c91b39d98726ac94b15bdc37583"
+    },
+    {
+      "file": "docs/PRODUCT.md",
+      "bytes": 2128,
+      "sha256": "2a836c4bfe9c438f97f39ac07bc4bf701867597bd377ae6e7a655340811ee0bc"
+    },
+    {
+      "file": "docs/QA.md",
+      "bytes": 1710,
+      "sha256": "4925d911e6b39ccd4a549aa096d3ed962e03ac9c506ef6b6f31343e1c5ffc2e6"
+    },
+    {
+      "file": "index.html",
+      "bytes": 2125,
+      "sha256": "92ab8cc821e29d924603c020905dd81464ffde7a06362e7e6c00597cdee912e4"
+    },
+    {
+      "file": "KICKOFF_PROMPT.md",
+      "bytes": 1184,
+      "sha256": "024b3c9566873a81e0b8a34c46ff86ef9407fc362de13c7be7f63b9c1cb8ee11"
+    },
+    {
+      "file": "README.md",
+      "bytes": 1351,
+      "sha256": "ff048a7e45a8be283f09c5eef94f8eedf4f1ac465dc60a47fec0e1fd00761a50"
+    },
+    {
+      "file": "reference/game-layouts/a-centered-kitchen.png",
+      "bytes": 1589938,
+      "sha256": "9c1485e107f60924599ca9352c353684b7949709a9fa531ba4ae91f972913470"
+    },
+    {
+      "file": "reference/game-layouts/b-split-kitchen.png",
+      "bytes": 1727393,
+      "sha256": "650269010812d7366f2440e2a4c2161b1e8b3d9dd41a5a4e71f9833d6442d4da"
+    },
+    {
+      "file": "reference/game-layouts/c-pocket-kitchen.png",
+      "bytes": 1575262,
+      "sha256": "f54d770d4e7a99550e75be5852c1bd856f2c1d61a9da88421ddd0c37f3e15233"
+    },
+    {
+      "file": "reference/game-layouts/layout-notes-and-prompts.txt",
+      "bytes": 7350,
+      "sha256": "1fbc08e84369acc828480c2df3de4432020739cd46f17cbf6dd33a7a230a7d53"
+    },
+    {
+      "file": "reference/game-layouts/mobile-keyboard-states.png",
+      "bytes": 1682927,
+      "sha256": "b350f1f3e87308ea9a34cbe4f0326e9d683008695998c99a617badce34932834"
+    },
+    {
+      "file": "reference/game-layouts/selected-layout-and-mobile-behavior.md",
+      "bytes": 5682,
+      "sha256": "aa40a26b250bd81ae78534a9b88818ec9d0a7743a9db08a9292b54dea1b22ac1"
+    },
+    {
+      "file": "reference/meal-lion-45-meal-plan.md",
+      "bytes": 16180,
+      "sha256": "30e371810b0da4b878ebe541d19fcdabae099fa077d12e7efdecd55da46c1cfe"
+    },
+    {
+      "file": "reference/meal-lion-45-meals.json",
+      "bytes": 13225,
+      "sha256": "3e474f1ca10dce950a51bdfc95f6ad869d0e9eed773ddf11457c131604675ea8"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-02/generation-prompts.txt",
+      "bytes": 4622,
+      "sha256": "e4883732ce937a06c3be5b81ad1db27d914b0d1bdefbda23694e15b5e8281c76"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-02/index.html",
+      "bytes": 10172,
+      "sha256": "ad02734cef02444c4fb0f1c933192d565affcb87d94d5cc2d4840525724e3a25"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-02/ingredients-01.png",
+      "bytes": 1572729,
+      "sha256": "d2a94b0128c86d4a4432cd07ed493a152a84d99fa535329981a3bba0690df412"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-02/ingredients-02.png",
+      "bytes": 1656113,
+      "sha256": "e716a24f323d24645a931b77c317e20d4ab170c48d9e3e76f86b96a828f9508b"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-02/ingredients-03.png",
+      "bytes": 1521767,
+      "sha256": "7ea76e3d07cd6679c7d24be7f74c33c845debb9418bf1c8c534048284236508c"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-02/ingredients-04.png",
+      "bytes": 1627645,
+      "sha256": "45706ed28e88c577a4092c6ff0ec51da93e3e2634b26f331d69e67f1844d121c"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-02/ingredients-05.png",
+      "bytes": 1595488,
+      "sha256": "f48a8a9c7e388344691755f309d18782a1ba264b83d6fbf51642cda6d0b9b6e2"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-02/manifest.json",
+      "bytes": 8662,
+      "sha256": "b11ceda82403019bd6d7532b2cc55d2bb7dfd3fa6fb3e98d63590d1f9155587a"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-02/meals-seven.png",
+      "bytes": 1305991,
+      "sha256": "34486d2a7465c2a4892f0af82ab0482dacde75dbde48abb93f8d648d03ea8ab6"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-03/index.html",
+      "bytes": 5707,
+      "sha256": "f978fe4de572d616139f9c3a89d63cc23a4bbba233ea3f94b1afe409f07e5870"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-03/ingredients-breakfast.png",
+      "bytes": 1389782,
+      "sha256": "5a5c73ed19232396868261cc5000ed76da76f94d27b21bd1a434a66ace8a96d2"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-03/leo-milk.png",
+      "bytes": 1213632,
+      "sha256": "0d4e5d6c7324ddd4eb9b078754adaa6120cfb8e3207a4c4b470e5d479c3fdbce"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-03/manifest.json",
+      "bytes": 4228,
+      "sha256": "fd8a60a617e96d0327f8e5e0dcc3ebea9fcd7da318584d7fdf36914d1c03735c"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-03/meals-breakfast.png",
+      "bytes": 1417126,
+      "sha256": "70e5e238e6de975654be2e2577e4580712abab7f315e6abf0998ba57721e9c09"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-03/README.md",
+      "bytes": 3694,
+      "sha256": "59f211877eee7230e25d206c0a7e7493e66a2fe2cb70921f4848955fce3e5e8a"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-04/index.html",
+      "bytes": 4624,
+      "sha256": "e4e4aa9cf40087f831ff2390da983b7b2fb452ea1786164015e67ef0623dffae"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-04/leo-cheese.png",
+      "bytes": 1280005,
+      "sha256": "1d2982c9449991ec826f629534b28da15a88c9a2f9f63fe415f71711fb0f2e1c"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-04/leo-dough.png",
+      "bytes": 1243358,
+      "sha256": "7bc7aac4075f431e3288d98679d1b94e96bab3de8d122a9a3598957115cd84ba"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-04/leo-garlic.png",
+      "bytes": 1218116,
+      "sha256": "3fe9a0685db796c2367b9be4b12070730eaf84f4ecd4c14c22f395e9fa675f5a"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-04/leo-mushroom.png",
+      "bytes": 1229461,
+      "sha256": "2dba107ee73c59299a4f3ee6117b423e9cc5c563946030d46b82965f08e83c0f"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-04/leo-rice.png",
+      "bytes": 1236867,
+      "sha256": "643c7e3b4b71c60f49373f5b279926c0242cf533b31b6504310dd32956c3ed5f"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-04/manifest.json",
+      "bytes": 3971,
+      "sha256": "ee196e088db1b25b317b1d0d180f022a62b57418cbd1b4d6f8f0192888d1bda1"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-04/meals.png",
+      "bytes": 1518233,
+      "sha256": "5dc29dd1c6aa964a8c5f499db932539ee7536e83190facdc7464935a5ed27a5f"
+    },
+    {
+      "file": "reference/meal-lion-assets-batch-04/README.md",
+      "bytes": 6229,
+      "sha256": "ab1857cd7f5a994873a5b518267f19e33fc6a6b7e0cfdc5752c3f2c65f5047ca"
+    },
+    {
+      "file": "reference/meal-lion-demo/app.js",
+      "bytes": 5409,
+      "sha256": "09ad56d6fa35a9d7def5f8b73291b2511dfba1b955fe6734bbe67ccbf0613c84"
+    },
+    {
+      "file": "reference/meal-lion-demo/assets/chef-poses.png",
+      "bytes": 1099825,
+      "sha256": "ae75cb2f018a8e3e0f2b25d9892858c6efea8e0a2c3782f1660c8d76e43a08bc"
+    },
+    {
+      "file": "reference/meal-lion-demo/assets/INGREDIENT-ASSETS.md",
+      "bytes": 1134,
+      "sha256": "3f4916dfd186c7696c2e71c84f64c5143d63835d53b45d75b567ef033ea1919b"
+    },
+    {
+      "file": "reference/meal-lion-demo/assets/ingredient-prompts.txt",
+      "bytes": 4412,
+      "sha256": "00086dee89f25577a7a4b370e4ec40f941c4060873cdfce53d1995a05207f94b"
+    },
+    {
+      "file": "reference/meal-lion-demo/assets/ingredients.png",
+      "bytes": 1395103,
+      "sha256": "690c0d82bd48b2740aa77d2608b4dd1b6c75640a698040ff67403db216f29ced"
+    },
+    {
+      "file": "reference/meal-lion-demo/assets/kitchen.png",
+      "bytes": 1438923,
+      "sha256": "a128c33e40f494bb960763bdde8d3a81ba0f6db15cbe5cf66d4ff0e6e52f3f61"
+    },
+    {
+      "file": "reference/meal-lion-demo/assets/leo-egg.png",
+      "bytes": 1181796,
+      "sha256": "2142adfe527ee9b8c6c804c5cc0888ce67025b996d1d441aec728b84eb16231d"
+    },
+    {
+      "file": "reference/meal-lion-demo/assets/leo-onion.png",
+      "bytes": 1315146,
+      "sha256": "c638ae20b12fa868f2b039b46d1ca6ebd96ae04d912755ce93493cd362a52fca"
+    },
+    {
+      "file": "reference/meal-lion-demo/assets/leo-pilot-cooking.png",
+      "bytes": 1864169,
+      "sha256": "4ba6ca942a68d8b23b9de52a4e98e397300510949cae3ed585ce689f4f4c2861"
+    },
+    {
+      "file": "reference/meal-lion-demo/assets/leo-tomato.png",
+      "bytes": 1198194,
+      "sha256": "1c53575adac992b411f915b36618a575dd37e7f772a989c7710037b2978a31ff"
+    },
+    {
+      "file": "reference/meal-lion-demo/assets/pantry.png",
+      "bytes": 1358044,
+      "sha256": "3c8f6b88739b9180e0f55c8c24a3f01e8bf8fb3b3e1a9306de4f83ba5f9b4812"
+    },
+    {
+      "file": "reference/meal-lion-demo/assets/pilot-meals.png",
+      "bytes": 1017622,
+      "sha256": "d5d6a573d47e9bfa9b181ee5b2cd8cfeb74e4f37eb2f3ef482080397c0110aa9"
+    },
+    {
+      "file": "reference/meal-lion-demo/assets/pilot-prompts.txt",
+      "bytes": 2976,
+      "sha256": "13e61ef0dde5b8ef5ee2811e918e2b9d917d26567abd313c14ded8a891bd9946"
+    },
+    {
+      "file": "reference/meal-lion-demo/generation-prompts.txt",
+      "bytes": 2150,
+      "sha256": "b70b42e089386758db1e50000b595adabd9adbec2b1ba690404ae761ae3f7717"
+    },
+    {
+      "file": "reference/meal-lion-demo/index.html",
+      "bytes": 1862,
+      "sha256": "b888e67257293395d04ec84eb521d375bb397a63189eee2dd5f39e279e3edbda"
+    },
+    {
+      "file": "reference/meal-lion-demo/ingredients.html",
+      "bytes": 5091,
+      "sha256": "3dc8026d884cfc4527f824ddec7a20cfe35af6c664c4cdad220b0f7651dd1c79"
+    },
+    {
+      "file": "reference/meal-lion-demo/pilot.css",
+      "bytes": 1039,
+      "sha256": "5a74c2d8aebb9f373ae5ea15af428d6ad17b2d163a00d1679d7b58c8990df403"
+    },
+    {
+      "file": "reference/meal-lion-demo/pilot.html",
+      "bytes": 2374,
+      "sha256": "4221c0a955d70677b1fbaaa240ccb37fbb19a7bfac76dcb6ba7744898aa71070"
+    },
+    {
+      "file": "reference/meal-lion-demo/pilot.js",
+      "bytes": 6549,
+      "sha256": "a10ac01630cb93705b71cc9de9864795e6c993d13a1c023c757b6fda8f719e31"
+    },
+    {
+      "file": "reference/meal-lion-demo/PILOT.md",
+      "bytes": 1694,
+      "sha256": "41249b0e363f91f2061c2fb45d290b9eef609c1ddb8558592dd46741bb4272da"
+    },
+    {
+      "file": "reference/meal-lion-demo/README.md",
+      "bytes": 2330,
+      "sha256": "1602a7cc930d824aec6df6613b93603e1e8ae23f921b622b60fb3aed99a103fb"
+    },
+    {
+      "file": "reference/meal-lion-demo/style.css",
+      "bytes": 4138,
+      "sha256": "9120e9e97a3bb7c8553ac5d50ee0255266fb69c2a0623d9880a66fba73cf4ce2"
+    },
+    {
+      "file": "reference/meal-lion-food-detective.png",
+      "bytes": 1699290,
+      "sha256": "a3207353a8ab5776cb89c0594abdf1ff5c9a69359a195a349e698f77e1ddefd9"
+    },
+    {
+      "file": "reference/meal-lion-pixel-kitchen-prompt.txt",
+      "bytes": 2541,
+      "sha256": "44d9b34223cd4d0ce769c3016e335812f6f23021e2627ca68436c85c48e614b3"
+    },
+    {
+      "file": "reference/meal-lion-pixel-kitchen.png",
+      "bytes": 1601095,
+      "sha256": "4724c5400ffc5344ce5c2b2dafb4c96f858138aac8a4023053b1582533152868"
+    },
+    {
+      "file": "reference/meal-lion-recipe-book.png",
+      "bytes": 2570338,
+      "sha256": "224f35a6d879837e2878346b80a4711b578d23c161ef18c0e206083c70434ea3"
+    },
+    {
+      "file": "reference/meal-lion-retro-diner.png",
+      "bytes": 1600964,
+      "sha256": "88796137c0fcbe96dbfbca642f63709c4effcb52784596cced35403355348e1a"
+    },
+    {
+      "file": "SOURCE_MAP.json",
+      "bytes": 7929,
+      "sha256": "86a17c27d146ed702def4db711e5b257b40586e8a5eff306e92d0d021b8101a9"
+    },
+    {
+      "file": "START_HERE.md",
+      "bytes": 1316,
+      "sha256": "e8f7eaa05ec429a64d84a1a58c6a2a0bbef2990aa037f114b632de9404dd32c4"
+    },
+    {
+      "file": "tools/serve.cjs",
+      "bytes": 826,
+      "sha256": "0808dd628b7a5fd94926c8b579c8b0f6f3cd872f6fd0a2faff1cfe1ae62cd202"
+    },
+    {
+      "file": "tools/verify.cjs",
+      "bytes": 1586,
+      "sha256": "6954eb6cae6033bd3de1300cf1090aebfabd150a6c139da54e7a882e9ca016c8"
+    },
+    {
+      "file": "WORK_LOG.md",
+      "bytes": 3472,
+      "sha256": "86003e0c2cbae7285cd85a85d00a2f4dad5b0285b49cb6bf2502e4327c57d979"
+    }
+  ]
+}

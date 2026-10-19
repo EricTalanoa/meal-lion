@@ -1,0 +1,24 @@
+Generated with built-in image generation; transparent_background=true.
+Finished meal reference: ../meal-lion-demo/assets/pilot-meals.png
+
+Meal-lion finished-meal transparent pixel art atlas, match supplied reference style: crisp chunky 16-bit pixels, navy outlines, pale blue plates, limited warm shading, three-quarter overhead angle. EXACTLY 4 columns by 2 rows, eight equal square cells with generous transparent gutters. Seven dishes in reading order; final bottom right cell entirely empty transparent. Top row: 1 spaghetti Bolognese, yellow spaghetti with chunky red minced-beef tomato sauce on blue plate; 2 Greek salad, tomato cucumber olives purple onion and white feta on blue plate; 3 egg fried rice, bowl of rice with yellow egg green peas orange carrot; 4 miso soup, small dark Japanese bowl with cloudy broth white tofu cubes dark green wakame scallions. Bottom row: 1 cheeseburger with bun beef patty cheddar lettuce tomato pickle on plate; 2 butter chicken, bowl of orange creamy chicken curry, no rice or bread; 3 fish and chips, one golden battered fish fillet with thick potato chips on blue plate; 4 blank. All seven fully inside their own cell, even scale, no overlaps, no text, no grid, no characters, no environment, no glows or shadows. True alpha transparency. Landscape 2:1.
+
+---
+
+Meal-lion transparent ingredient atlas. Exact regular 3 columns by 2 rows, six equal square cells, each icon centered with 18 percent transparent margins. Crisp chunky 16-bit pixel art, navy outlines, limited shading matching existing Meal-lion food sprites, legible at 48 pixels. No writing, grid, backdrop, glow or shadows; true transparent alpha. Top row: bundle dry golden spaghetti; mound uncooked ground beef in small tray; whole orange carrot with green top. Bottom row: two celery stalks; dark green cucumber with two cut rounds; white crumbly feta cheese block with crumbles.
+
+---
+
+Meal-lion transparent ingredient atlas. Exact regular 3 columns by 2 rows, six equal square cells, each icon centered with 18 percent transparent margins. Crisp chunky 16-bit pixel art, navy outlines, limited shading matching existing Meal-lion food sprites, legible at 48 pixels. No writing, grid, backdrop, glow or shadows; true transparent alpha. Top row: small dish of purple-black olives; red onion whole and cut half with purple rings; glass olive-oil bottle golden liquid green stopper. Bottom row: small bunch of oregano sprigs with oval leaves; small blue bowl of uncooked white rice grains; green pea pod split open with loose peas.
+
+---
+
+Meal-lion transparent ingredient atlas. Exact regular 3 columns by 2 rows, six equal square cells, each icon centered with 18 percent transparent margins. Crisp chunky 16-bit pixel art, navy outlines, limited shading matching existing Meal-lion food sprites, legible at 48 pixels. No writing, grid, backdrop, glow or shadows; true transparent alpha. Top row: bunch of scallions with white bulbs and green stalks; dark soy sauce glass bottle with red cap; small open tub of tan miso paste with spoonful. Bottom row: clean white tofu block with cubes, smoother than feta; handful dark green wakame seaweed; small clear jug of pale amber dashi broth beside tiny dried kelp piece.
+
+---
+
+Meal-lion transparent ingredient atlas. Exact regular 3 columns by 2 rows, six equal square cells, each icon centered with 18 percent transparent margins. Crisp chunky 16-bit pixel art, navy outlines, limited shading matching existing Meal-lion food sprites, legible at 48 pixels. No writing, grid, backdrop, glow or shadows; true transparent alpha. Top row: plain split sesame burger bun, no filling; green lettuce head with loose leaf; whole pickled cucumber with two pickle slices. Bottom row: uncooked pink chicken breast fillet on small tray; small glass pouring jug of thick white cream; small open blue-rimmed yogurt pot with white yogurt and spoon, no label.
+
+---
+
+Meal-lion transparent ingredient atlas. Exact regular 3 columns by 2 rows, six equal square cells, each icon centered with 18 percent transparent margins. Crisp chunky 16-bit pixel art, navy outlines, limited shading matching existing Meal-lion food sprites, legible at 48 pixels. No writing, grid, backdrop, glow or shadows; true transparent alpha. Top row: wooden scoop of brown garam masala powder with small cinnamon clove accents; knobby ginger root and cut yellow slice; raw white fish fillet pale ivory with blue-gray skin edge on small tray. Bottom row: two brown whole potatoes one halved; amber cooking beer bottle with blank cream label and closed cap; yellow-brown onion and cut half with pale cream rings.

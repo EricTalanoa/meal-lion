@@ -1,0 +1,21 @@
+# Local dependencies and generated build output
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+.vite/
+
+# Credentials and local environment (keep sanitized example files)
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Local noise and redundant delivery archives
+*.log
+*.zip
+.DS_Store
+Thumbs.db
+
+# Keep source artwork, mockups, manifests, agent instructions and WORK_LOG.md tracked.

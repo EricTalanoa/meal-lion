@@ -1,0 +1,441 @@
+{
+  "batch": 2,
+  "status": "draft artwork; no new animations in this batch",
+  "meals": [
+    {
+      "id": 11,
+      "name": "Spaghetti Bolognese",
+      "ingredients": [
+        "Spaghetti",
+        "Ground beef",
+        "Tomato",
+        "Onion",
+        "Carrot",
+        "Celery"
+      ],
+      "art": "Spaghetti topped with chunky meat sauce",
+      "asset": {
+        "file": "meals-seven.png",
+        "columns": 4,
+        "rows": 2,
+        "index": 0
+      }
+    },
+    {
+      "id": 43,
+      "name": "Greek salad",
+      "ingredients": [
+        "Tomato",
+        "Cucumber",
+        "Feta",
+        "Olives",
+        "Red onion",
+        "Olive oil",
+        "Oregano"
+      ],
+      "art": "Chunky salad topped with feta",
+      "asset": {
+        "file": "meals-seven.png",
+        "columns": 4,
+        "rows": 2,
+        "index": 1
+      }
+    },
+    {
+      "id": 28,
+      "name": "Egg fried rice",
+      "ingredients": [
+        "Rice",
+        "Egg",
+        "Peas",
+        "Carrot",
+        "Scallion",
+        "Soy sauce"
+      ],
+      "art": "Rice with egg and colorful vegetables",
+      "asset": {
+        "file": "meals-seven.png",
+        "columns": 4,
+        "rows": 2,
+        "index": 2
+      }
+    },
+    {
+      "id": 36,
+      "name": "Miso soup",
+      "ingredients": [
+        "Miso paste",
+        "Tofu",
+        "Wakame",
+        "Dashi",
+        "Scallion"
+      ],
+      "art": "Small bowl with tofu and seaweed",
+      "asset": {
+        "file": "meals-seven.png",
+        "columns": 4,
+        "rows": 2,
+        "index": 3
+      }
+    },
+    {
+      "id": 19,
+      "name": "Cheeseburger",
+      "ingredients": [
+        "Burger bun",
+        "Ground beef",
+        "Cheddar",
+        "Lettuce",
+        "Tomato",
+        "Pickle"
+      ],
+      "art": "Bun, beef patty, cheese and salad layers",
+      "asset": {
+        "file": "meals-seven.png",
+        "columns": 4,
+        "rows": 2,
+        "index": 4
+      }
+    },
+    {
+      "id": 37,
+      "name": "Butter chicken",
+      "ingredients": [
+        "Chicken",
+        "Tomato",
+        "Butter",
+        "Cream",
+        "Yogurt",
+        "Garam masala",
+        "Ginger",
+        "Garlic"
+      ],
+      "art": "Chicken in creamy orange curry",
+      "asset": {
+        "file": "meals-seven.png",
+        "columns": 4,
+        "rows": 2,
+        "index": 5
+      }
+    },
+    {
+      "id": 27,
+      "name": "Fish and chips",
+      "ingredients": [
+        "White fish",
+        "Potato",
+        "Flour",
+        "Beer"
+      ],
+      "art": "Battered fish with thick-cut chips",
+      "asset": {
+        "file": "meals-seven.png",
+        "columns": 4,
+        "rows": 2,
+        "index": 6
+      }
+    }
+  ],
+  "ingredients": [
+    {
+      "label": "Spaghetti",
+      "asset": {
+        "file": "ingredients-01.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 0
+      },
+      "canonicalLabel": "Spaghetti"
+    },
+    {
+      "label": "Ground beef",
+      "asset": {
+        "file": "ingredients-01.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 1
+      },
+      "canonicalLabel": "Ground beef"
+    },
+    {
+      "label": "Carrot",
+      "asset": {
+        "file": "ingredients-01.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 2
+      },
+      "canonicalLabel": "Carrot"
+    },
+    {
+      "label": "Celery",
+      "asset": {
+        "file": "ingredients-01.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 3
+      },
+      "canonicalLabel": "Celery"
+    },
+    {
+      "label": "Cucumber",
+      "asset": {
+        "file": "ingredients-01.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 4
+      },
+      "canonicalLabel": "Cucumber"
+    },
+    {
+      "label": "Feta",
+      "asset": {
+        "file": "ingredients-01.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 5
+      },
+      "canonicalLabel": "Feta"
+    },
+    {
+      "label": "Olives",
+      "asset": {
+        "file": "ingredients-02.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 0
+      },
+      "canonicalLabel": "Olives"
+    },
+    {
+      "label": "Red onion",
+      "asset": {
+        "file": "ingredients-02.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 1
+      },
+      "canonicalLabel": "Red onion"
+    },
+    {
+      "label": "Olive oil",
+      "asset": {
+        "file": "ingredients-02.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 2
+      },
+      "canonicalLabel": "Olive oil"
+    },
+    {
+      "label": "Oregano",
+      "asset": {
+        "file": "ingredients-02.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 3
+      },
+      "canonicalLabel": "Oregano"
+    },
+    {
+      "label": "Rice",
+      "asset": {
+        "file": "ingredients-02.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 4
+      },
+      "canonicalLabel": "Rice"
+    },
+    {
+      "label": "Peas",
+      "asset": {
+        "file": "ingredients-02.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 5
+      },
+      "canonicalLabel": "Peas"
+    },
+    {
+      "label": "Scallion",
+      "asset": {
+        "file": "ingredients-03.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 0
+      },
+      "canonicalLabel": "Scallion"
+    },
+    {
+      "label": "Soy sauce",
+      "asset": {
+        "file": "ingredients-03.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 1
+      },
+      "canonicalLabel": "Soy sauce"
+    },
+    {
+      "label": "Miso paste",
+      "asset": {
+        "file": "ingredients-03.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 2
+      },
+      "canonicalLabel": "Miso paste"
+    },
+    {
+      "label": "Tofu",
+      "asset": {
+        "file": "ingredients-03.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 3
+      },
+      "canonicalLabel": "Tofu"
+    },
+    {
+      "label": "Wakame",
+      "asset": {
+        "file": "ingredients-03.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 4
+      },
+      "canonicalLabel": "Wakame"
+    },
+    {
+      "label": "Dashi",
+      "asset": {
+        "file": "ingredients-03.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 5
+      },
+      "canonicalLabel": "Dashi"
+    },
+    {
+      "label": "Burger bun",
+      "asset": {
+        "file": "ingredients-04.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 0
+      },
+      "canonicalLabel": "Burger bun"
+    },
+    {
+      "label": "Lettuce",
+      "asset": {
+        "file": "ingredients-04.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 1
+      },
+      "canonicalLabel": "Lettuce"
+    },
+    {
+      "label": "Pickle",
+      "asset": {
+        "file": "ingredients-04.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 2
+      },
+      "canonicalLabel": "Pickle"
+    },
+    {
+      "label": "Chicken",
+      "asset": {
+        "file": "ingredients-04.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 3
+      },
+      "canonicalLabel": "Chicken"
+    },
+    {
+      "label": "Cream",
+      "asset": {
+        "file": "ingredients-04.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 4
+      },
+      "canonicalLabel": "Cream"
+    },
+    {
+      "label": "Yogurt",
+      "asset": {
+        "file": "ingredients-04.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 5
+      },
+      "canonicalLabel": "Yogurt"
+    },
+    {
+      "label": "Garam masala",
+      "asset": {
+        "file": "ingredients-05.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 0
+      },
+      "canonicalLabel": "Garam masala"
+    },
+    {
+      "label": "Ginger",
+      "asset": {
+        "file": "ingredients-05.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 1
+      },
+      "canonicalLabel": "Ginger"
+    },
+    {
+      "label": "White fish",
+      "asset": {
+        "file": "ingredients-05.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 2
+      },
+      "canonicalLabel": "White fish"
+    },
+    {
+      "label": "Potato",
+      "asset": {
+        "file": "ingredients-05.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 3
+      },
+      "canonicalLabel": "Potato"
+    },
+    {
+      "label": "Beer",
+      "asset": {
+        "file": "ingredients-05.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 4
+      },
+      "canonicalLabel": "Beer"
+    },
+    {
+      "label": "Yellow onion",
+      "asset": {
+        "file": "ingredients-05.png",
+        "columns": 3,
+        "rows": 2,
+        "index": 5
+      },
+      "canonicalLabel": "Onion"
+    }
+  ]
+}

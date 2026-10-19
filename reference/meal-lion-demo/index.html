@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Meal-lion · Motion kitchen</title><link rel="stylesheet" href="style.css"></head>
+<body><header class="topbar"><span>MEAL-LION / MOTION STUDY 01</span><button id="motion" aria-pressed="false">Pause motion</button></header>
+<section class="kitchen" aria-label="Animated pixel kitchen with a lion chef"><canvas id="scene" width="1200" height="400" aria-label="Lion chef and steaming pot"></canvas><div class="brand"><h1>MEAL-LION</h1><p>THE DAILY DISH</p><span>One meal. Six clues. What’s cooking?</span></div><span class="scene-label" id="sceneLabel">THE KITCHEN IS WARMING UP</span></section>
+<main><div class="eyebrow">INTERACTIVE ANIMATION DEMO <span>● LIVE KITCHEN</span></div><div class="heading"><h2>A little mystery.<br>A lovely meal.</h2><p>Try a reaction below.<br>Watch your chef bring it to life.</p></div>
+<div class="clue-heading"><span>DISH #042</span><span id="count">INGREDIENTS 1 / 6</span></div><div id="clues" class="clues" aria-label="Revealed ingredients"></div>
+<p class="status" id="status" aria-live="polite">Chef Leo is ready. Let’s find out what’s cooking.</p>
+<div class="controls"><button data-action="ingredient"><span>01</span>Reveal ingredient <b>↗</b></button><button data-action="wrong"><span>02</span>Wrong guess <b>?</b></button><button data-action="win"><span>03</span>Correct guess <b>✦</b></button><button data-action="reset"><span>04</span>Reset kitchen <b>↺</b></button></div>
+<div class="note"><span id="state">IDLE LOOP</span><p>This is a motion prototype. These buttons preview game events; the daily puzzle comes next.</p></div></main><footer>BUILT FOR A LITTLE DAILY DELIGHT <span>MEAL-LION · PIXEL KITCHEN</span></footer><script src="app.js"></script></body></html>
