@@ -8,9 +8,9 @@ Every AI must read this file before working and update it throughout the session
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
 - Available: 45-meal roster, 20 meal illustrations, 50 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
 - Not implemented: production guessing game, daily schedule, endless mode, persistence, final rules, deployment. Existing pilot is a visual review demo and exposes answers.
-- Repository/branch/checkpoint: local repository initialized in the handoff root on main; baseline commit pending. Existing configured Git identity reused. No remote configured.
+- Repository/branch/checkpoint: local repository initialized in the handoff root on main; baseline checkpoint 25962a4 created and verified; kickoff documentation checkpoint follows. Existing configured Git identity reused. No remote configured.
 - Open decisions: attempt/reveal rules, clue ordering, aliases, timezone/schedule, scoring, storage and stack. See docs/PRODUCT.md.
-- Next: read the guides, inspect destination Git state, create/reuse the project repository and baseline, then build the approved responsive three-meal slice when requested.
+- Next: settle the proposed first-slice rules, document the build scope, then implement the responsive three-meal game.
 
 ## Session history
 
@@ -37,4 +37,14 @@ Every AI must read this file before working and update it throughout the session
 - Checks: original package verifier passed before this log edit (79 file hashes, JSON, local links, asset references/grid bounds, roster bounds). Node v24.14.1 and Git 2.42.0 available. These are package checks, not gameplay or device validation.
 - Proposed rules awaiting user response: six guesses, first ingredient free, wrong guesses reveal another ingredient, manual reveal costs one guess. These are not approved product decisions.
 - Next: commit baseline, inspect approved mockups and asset data, settle first-slice rules and write the implementation scope. No product code changed.
+
+
+### 2026-10-18 20:41 America/Los_Angeles — Codex — Baseline checkpoint verified
+
+- Branch: main. Latest existing checkpoint: 25962a4 (Add Meal-lion design and asset handoff). Git status was clean after commit; no remote.
+- Inspected both approved desktop B and mobile keyboard-state images. Preserve the split kitchen/guess panel and collapse the mobile stage while typing.
+- Proposed implementation: modular browser JavaScript with native HTML controls, no backend; full-roster suggestions, three playable meals, hidden answer art until result, guess history, replay/reset, reduced motion and keyboard-aware layout. Daily scheduling and endless mode follow this slice.
+- Awaiting response to the proposed attempt/reveal rules. No product implementation or browser/device validation has occurred.
+- Initial staging hit sandbox permissions; authorized escalated Git staging and commit succeeded. No unresolved Git blocker.
+- Original inventory remains unchanged; WORK_LOG.md hash now intentionally differs because development has begun.
 
