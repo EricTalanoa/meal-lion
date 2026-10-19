@@ -4,13 +4,13 @@ Every AI must read this file before working and update it throughout the session
 
 ## Current state
 
-- Current milestone: implementing the responsive three-meal slice with user-approved ingredient-based guess limits and settings.
+- Current milestone: responsive three-meal slice is playable at game/ (Shakshuka, Pancakes, Grilled cheese) with ingredient-based guess limits and session settings. Browser-verified in emulation; real-device keyboards untested.
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
 - Available: 45-meal roster, 20 meal illustrations, 50 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
-- Not implemented: production guessing game, daily schedule, endless mode, persistence, final rules, deployment. Existing pilot is a visual review demo and exposes answers.
+- Implemented: game/ (index.html, style.css, app.mjs, art.mjs, state.mjs). Not implemented: daily schedule, endless mode, persistence, aliases, final rules, deployment. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
 - Repository/branch/checkpoint: local repository initialized in the handoff root on main; baseline checkpoint 25962a4 created and verified; kickoff documentation checkpoint follows. Existing configured Git identity reused. No remote configured.
 - Confirmed rules: ingredient-count guess budget, one free clue (zero optional), optional hidden total. Open decisions: skip policy, clue ordering, aliases, timezone/schedule, scoring and storage. See docs/PRODUCT.md.
-- Next: implement and test the three-meal game; validate browser behavior and document device gaps.
+- Next: real iOS Safari / Android Chrome keyboard QA of game/; user review of the slice and prototype defaults; then daily scheduling (needs timezone/start-date decision) and endless mode.
 
 ### 2026-10-18 America/Los_Angeles — Codex — Approved rules / implementation start
 - Branch: feat/three-meal-game; latest checkpoint 8f5e6e4. Working tree was clean before this task.
@@ -57,3 +57,14 @@ Every AI must read this file before working and update it throughout the session
 
 
 - State checkpoint: wrote tests first and observed the missing-module failure; implemented immutable transitions in game/state.mjs. All 18 tests passed, including 3/4/7/9 budgets with both starting-clue settings, final-turn wins/losses, invalid/duplicate input, and skip limits. UI and device behavior not yet tested.
+
+### 2026-10-18 America/Los_Angeles — Claude — Resume: Task 2 playable interface
+- Branch: feat/three-meal-game; latest checkpoint 31cf46c (state + tests). Working tree clean at start; reconciled log with files (game/state.mjs, tests/game.test.mjs present; 18/18 tests pass on rerun).
+- Active task: Task 2 of docs/superpowers/plans/2026-10-18-three-meal-game.md — game/index.html, style.css, app.mjs, art.mjs; then browser verification and commit.
+- Built game/index.html, game/style.css, game/app.mjs, game/art.mjs on top of the existing game/state.mjs (unchanged). Desktop B split layout; phone layout with a sticky bottom composer; on input focus at <=760px the app pins to the visual viewport (--vvh/--vvtop from visualViewport), the kitchen collapses to a strip, history/skip hide, suggestions scroll, composer sits last. Valid submit on touch/narrow blurs the input and restores the kitchen.
+- Art: kitchen + chef poses + routed ingredient strips (onion/tomato/egg/milk/cheddar->cheese/garlic etc. per docs/ASSETS.md); neutral chef with flying icon otherwise. Meal-specific pancake/grilled-cheese strips and finished-meal art play only after the round ends to avoid leaking answers. Lettered fallback for ingredients without icons.
+- Prototype defaults (labelled in UI footer and docs/PRODUCT.md): clues reveal in roster order; exact case/accent-insensitive full-name typing auto-selects, otherwise a suggestion must be picked; Enter on a highlighted suggestion selects, a second Enter submits; tried dishes show "tried" and can't be reselected; settings are in-memory only (lost on reload); "Daily" and "Endless" tabs are shown disabled as "soon". No category match badges (unapproved idea in mockup).
+- tools/serve.cjs: added .mjs MIME type and a PORT env override (port 8766 was occupied on this machine by an unrelated Python http.server, which was left running). Added .claude/launch.json (port 8777) for the desktop preview. README run instructions and root index.html link updated.
+- Checks run: node --test tests/game.test.mjs 18/18 pass; node --check on all game modules and serve.cjs. In the built-in browser (Chromium): wrong guess via click; empty/unselected submit shows error without consuming; duplicate (typed exact + Enter) rejected without consuming; non-roster text cannot submit; keyboard ArrowDown/Enter select then Enter submit; skip reveals and consumes; skip disabled on last attempt; win on 4/7; Pancakes with zero-start + hidden total shows Guess 1/X, count "0", no placeholder tiles, then a full 4/4 loss; next/again/restart and wrap after round 3; answer names absent from DOM during play for all three rounds (stale result text cleared on new round); 375x812 emulation browsing + typing states, tap-select keeps focus, submit exits typing; simulated 430px visual viewport keeps composer visible; 1366x800 no horizontal overflow; pause/play motion toggles aria-pressed; no console errors. tools/verify.cjs: only expected integrity mismatches for docs/PRODUCT.md, tools/serve.cjs, WORK_LOG.md (development edits).
+- Not tested: real iOS/Android native keyboards, rotation/landscape, safe-area insets on notched devices, screen readers (only DOM/ARIA attributes inspected), Firefox/Safari engines, slow networks/missing-asset fallback, long 9-10 ingredient meals in the UI (state tests cover budgets 3/4/7/9).
+- Next steps: user plays the slice and reviews defaults; device keyboard QA; then daily mode (decide timezone/start date) and endless mode per docs/IMPLEMENTATION.md.

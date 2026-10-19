@@ -24,19 +24,19 @@
 ### Task 1: Game state
 Files: game/state.mjs, tests/game.test.mjs.
 Interfaces: createGame(meal, {startWithClue}), submitGuess(state, mealId, roster), skipClue(state), publicProgress(state, hideTotal).
-- [ ] Write tests for first/final attempts, budgets 3/4/7/9, zero start, skip boundaries, invalid/duplicate input, terminal immutability, hidden progress.
-- [ ] Run `node --test tests/game.test.mjs` and observe missing-module failure.
-- [ ] Implement immutable transitions with `{state, error}` result; keep invalid guesses unchanged.
-- [ ] Run tests to green and commit with log.
+- [x] Write tests for first/final attempts, budgets 3/4/7/9, zero start, skip boundaries, invalid/duplicate input, terminal immutability, hidden progress.
+- [x] Run `node --test tests/game.test.mjs` and observe missing-module failure.
+- [x] Implement immutable transitions with `{state, error}` result; keep invalid guesses unchanged.
+- [x] Run tests to green and commit with log.
 
 ### Task 2: Playable responsive interface
 Files: game/index.html, game/style.css, game/app.mjs, game/art.mjs, README.md.
 Consumes Task 1 interfaces. Art module exports createArt(map), returning async prepare(), drawStage(canvas, ingredient, elapsed, won), drawIngredient(canvas, label), drawMeal(canvas, id).
-- [ ] Build split layout with existing kitchen/chef, clue cards, search suggestions, explicit submission, history and results.
-- [ ] Add session settings, next/restart controls, mobile focus/visualViewport handling, reduced-motion/pause/replay, loading/error feedback.
-- [ ] Verify actual browser wrong/invalid/duplicate/correct/final guesses, next round, settings, hidden totals and selection behavior.
-- [ ] Inspect desktop and narrow viewport screenshots, missing assets, keyboard focus and overflow. Record actual-device keyboard gap.
-- [ ] Run state tests and module syntax checks, review diff, update run instructions/log, commit.
+- [x] Build split layout with existing kitchen/chef, clue cards, search suggestions, explicit submission, history and results.
+- [x] Add session settings, next/restart controls, mobile focus/visualViewport handling, reduced-motion/pause/replay, loading/error feedback.
+- [x] Verify actual browser wrong/invalid/duplicate/correct/final guesses, next round, settings, hidden totals and selection behavior.
+- [x] Inspect desktop and narrow viewport screenshots, missing assets, keyboard focus and overflow. Record actual-device keyboard gap.
+- [x] Run state tests and module syntax checks, review diff, update run instructions/log, commit.
 
 ## Execution record
 - Inline implementation in the existing dedicated clean project branch; WORK_LOG.md is the user-required shared ledger.

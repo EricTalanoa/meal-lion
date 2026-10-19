@@ -9,6 +9,8 @@ This is a portable collection of the current design, content, assets and prototy
 Contents: 45 proposed meals; 20 meal illustrations; 50/103 unique ingredient icons; 11 custom animation groups; approved desktop/mobile mockups; alternative concepts; generation prompts; playable visual demos; asset map; implementation instructions and QA checklist.
 
 Open HTML files directly, or with Node installed run: node tools/serve.cjs
-Then visit http://127.0.0.1:8766/ . This server is for local review only. No dependencies or account required.
+Then visit http://127.0.0.1:8766/ . Use `PORT=8777 node tools/serve.cjs` if 8766 is busy. This server is for local review only. No dependencies or account required.
+
+Playable three-meal slice: http://127.0.0.1:8766/game/ (needs the server; ES modules and fetch do not run from file://). Tests: `node --test tests/game.test.mjs`.
 
 To hand off: give the other agent this entire folder or extract the ZIP, and paste KICKOFF_PROMPT.md. No files outside this folder are needed for the included galleries.

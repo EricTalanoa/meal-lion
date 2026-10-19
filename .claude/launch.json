@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "meal-lion",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["tools/serve.cjs"],
+      "port": 8777
+    }
+  ]
+}

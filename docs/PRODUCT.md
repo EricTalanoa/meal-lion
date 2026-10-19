@@ -17,9 +17,9 @@ The existing work is art, mockups, motion studies and standalone visual prototyp
 
 ## Proposals that still need decisions
 - Manual reveal/skip policy remains a prototype default: a skip uses one attempt and reveals the next ingredient; unavailable on the last attempt to avoid spending the final chance without guessing. Wrong guesses reveal the next ingredient while attempts remain.
-- Clue ordering and difficulty; extra hints by dish family, cuisine, cooking method or other categories. The taxonomy-inspired idea is exploratory, not implemented.
+- Clue ordering and difficulty (the slice reveals in roster JSON order as a prototype default); extra hints by dish family, cuisine, cooking method or other categories. The taxonomy-inspired idea is exploratory, not implemented.
 - Final name; whether the chef is called Leo.
-- Accepted aliases, spelling tolerance, overlapping dish variants, scoring, streaks, share format and loss behavior.
+- Accepted aliases, spelling tolerance (the slice only auto-selects an exact case/accent-insensitive full-name match; otherwise a suggestion must be picked), overlapping dish variants, scoring, streaks, share format and loss behavior.
 - Daily reset timezone, start date, schedule, archive access and plan for reuse after the initial 45 meals.
 - Endless selection rules, repeat avoidance, daily-answer exclusion and whether difficulty can be selected.
 - Persistence/storage, framework, backend, hosting and analytics.
