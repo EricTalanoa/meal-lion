@@ -55,3 +55,13 @@ test('last-guess and all-revealed cues track the budget',()=>{
   }
   assert.equal(isLastGuess(createGame(meal(1))),true);
 });
+test('clue order is a shuffled permutation of the meal ingredients',()=>{
+  const m=meal(7);
+  let seed=7; const rng=()=>((seed=(seed*16807)%2147483647)-1)/2147483646;
+  const s=createGame(m,{rng});
+  assert.deepEqual([...s.clues].sort(),[...m.ingredients].sort());
+  assert.notDeepEqual(s.clues,m.ingredients);
+  assert.deepEqual(m.ingredients,meal(7).ingredients, 'meal data is not mutated');
+  const orders=new Set(Array.from({length:30},()=>createGame(m).clues.join()));
+  assert.ok(orders.size>1,'default rng varies between rounds');
+});

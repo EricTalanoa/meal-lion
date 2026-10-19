@@ -1,5 +1,15 @@
-export function createGame(meal, {startWithClue = true} = {}) {
-  return {meal, budget:meal.ingredients.length, revealed:startWithClue ? 1 : 0, history:[], status:'playing'};
+// User decision 2026-10-18: clue order is reshuffled every round. `clues` is the reveal order.
+export function createGame(meal, {startWithClue = true, rng = Math.random} = {}) {
+  return {meal, clues:shuffle(meal.ingredients, rng), budget:meal.ingredients.length, revealed:startWithClue ? 1 : 0, history:[], status:'playing'};
+}
+
+function shuffle(items, rng) {
+  const out = [...items];
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
 }
 
 export function publicProgress(state, hideTotal) {

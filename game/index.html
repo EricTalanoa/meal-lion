@@ -58,8 +58,8 @@
       <button type="submit" class="primary" id="guessBtn">Guess</button>
     </form>
     <div class="matches" id="matchesWrap" hidden>
-      <h2>Matching dishes</h2>
-      <ul id="suggestions" role="listbox" aria-label="Matching dishes"></ul>
+      <h2 id="matchesTitle">Matching dishes</h2>
+      <ul id="suggestions" role="listbox" aria-labelledby="matchesTitle"></ul>
     </div>
     <p class="hint" id="hint">Select a dish, then tap Guess.</p>
     <p class="error" id="error" role="alert"></p>
@@ -88,7 +88,7 @@
     </section>
   </section>
 
-  <footer class="foot"><span>Prototype rules — skip policy and clue order are unapproved defaults.</span><button type="button" class="link" id="restartBtn">Restart all three</button></footer>
+  <footer class="foot"><span>Preview build — daily and endless modes are not built yet.</span><button type="button" class="link" id="restartBtn">Restart all three</button></footer>
 </div>
 
 <p class="sr" id="announce" aria-live="polite"></p>

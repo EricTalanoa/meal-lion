@@ -5,6 +5,9 @@
 - Start with one free ingredient by default; offer a setting to start with zero. Starting-clue changes apply to the next round.
 - Offer a setting to hide total ingredient count, showing `Guess 1/X`. Hide unrevealed tile counts and other total-count hints in this mode.
 - 2026-10-18 (update): hidden totals are the default; the setting turns totals on. Even with totals hidden, tell the player when every ingredient has been revealed and when they are on their last guess.
+- 2026-10-18: ingredient reveal order is randomized every round. (Open for daily mode: should everyone get the same shuffled order for a date, e.g. seeded by date, or a personal shuffle?)
+- 2026-10-18: skip policy approved as built — a skip uses one guess and reveals the next ingredient; not allowed on the last guess.
+- 2026-10-18: suggestions include close matches for typos (shown as "Did you mean…?" when only close matches exist). The player still picks a dish before guessing.
 - Working title: Meal-lion, a meal/dinner wordplay. Name is not final.
 - Guess the meal from ingredients revealed one by one.
 - Daily: one shared different meal per day. Endless mode also wanted.
@@ -17,10 +20,9 @@
 The existing work is art, mockups, motion studies and standalone visual prototypes. There is no complete guessing game, daily scheduler, endless mode, persistence, account system or production deployment. The three-meal pilot exposes answers for visual review.
 
 ## Proposals that still need decisions
-- Manual reveal/skip policy remains a prototype default: a skip uses one attempt and reveals the next ingredient; unavailable on the last attempt to avoid spending the final chance without guessing. Wrong guesses reveal the next ingredient while attempts remain.
-- Clue ordering and difficulty (the slice reveals in roster JSON order as a prototype default); extra hints by dish family, cuisine, cooking method or other categories. The taxonomy-inspired idea is exploratory, not implemented.
+- Difficulty; extra hints by dish family, cuisine, cooking method or other categories. The taxonomy-inspired idea is exploratory, not implemented.
 - Final name; whether the chef is called Leo.
-- Accepted aliases, spelling tolerance (the slice only auto-selects an exact case/accent-insensitive full-name match; otherwise a suggestion must be picked), overlapping dish variants, scoring, streaks, share format and loss behavior.
+- Accepted aliases (typing an exact case/accent-insensitive full name auto-selects; typos only suggest), overlapping dish variants, scoring, streaks, share format and loss behavior.
 - Daily reset timezone, start date, schedule, archive access and plan for reuse after the initial 45 meals.
 - Endless selection rules, repeat avoidance, daily-answer exclusion and whether difficulty can be selected.
 - Persistence/storage, framework, backend, hosting and analytics.

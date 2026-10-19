@@ -1,9 +1,9 @@
 import {createGame, submitGuess, skipClue, publicProgress, isLastGuess, allRevealed} from './state.mjs';
 import {createArt} from './art.mjs';
+import {searchDishes, fold} from './search.mjs';
 
 // Stable roster IDs for the slice: Shakshuka, Pancakes, Grilled cheese.
 const ROUNDS = [3, 1, 22];
-// Prototype default: clues reveal in roster order. Not an approved reveal sequence.
 const MAX_SUGGESTIONS = 8;
 
 const $ = id => document.getElementById(id);
@@ -11,7 +11,7 @@ const el = {
   stage: $('stage'), caption: $('caption'), replay: $('replayBtn'), motion: $('motionBtn'),
   clues: $('clues'), clueCount: $('clueCount'), round: $('roundLabel'), progress: $('progress'),
   composer: $('composer'), input: $('guess'), clear: $('clearBtn'), guessBtn: $('guessBtn'),
-  matches: $('matchesWrap'), list: $('suggestions'), hint: $('hint'), error: $('error'), skip: $('skipBtn'),
+  matches: $('matchesWrap'), matchesTitle: $('matchesTitle'), list: $('suggestions'), hint: $('hint'), error: $('error'), skip: $('skipBtn'),
   result: $('result'), plate: $('plate'), resultEyebrow: $('resultEyebrow'), resultTitle: $('resultTitle'),
   resultText: $('resultText'), resultIngredients: $('resultIngredients'), next: $('nextBtn'), again: $('againBtn'),
   history: $('history'), allShown: $('allShown'), historyEmpty: $('historyEmpty'), announce: $('announce'),
@@ -28,7 +28,6 @@ let roster = [], art = null, roundIndex = 0, game = null;
 let selection = null, options = [], active = -1;
 let scene = {mood: 'idle', ingredient: null, mealId: null}, sceneStart = 0, clock = 0, last = 0, frame = 0;
 
-const fold = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
 const meal = id => roster.find(m => m.id === id);
 
 async function boot() {
@@ -60,7 +59,7 @@ function startRound(index) {
   render();
 }
 
-const clue = i => game.meal.ingredients[i];
+const clue = i => game.clues[i];
 // Spoken/caption cues for the two moments players need to notice even with totals hidden.
 const cues = () => (allRevealed(game) ? ' That’s every ingredient.' : '') + (isLastGuess(game) ? ' Last guess!' : '');
 
@@ -152,15 +151,9 @@ function loop(t) {
 
 // ---------- suggestions ----------
 function search(text) {
-  const q = fold(text);
-  if (!q) return [];
-  const scored = [];
-  for (const m of roster) {
-    const name = fold(m.name);
-    const rank = name.startsWith(q) ? 0 : name.split(/[\s-]+/).some(w => w.startsWith(q)) ? 1 : name.includes(q) ? 2 : -1;
-    if (rank >= 0) scored.push([rank, m]);
-  }
-  return scored.sort((a, b) => a[0] - b[0] || a[1].name.localeCompare(b[1].name)).slice(0, MAX_SUGGESTIONS).map(s => s[1]);
+  const results = searchDishes(roster, text, MAX_SUGGESTIONS);
+  el.matchesTitle.textContent = results.length && results.every(r => r.close) ? 'Did you mean…?' : 'Matching dishes';
+  return results.map(r => r.meal);
 }
 
 function renderSuggestions() {
