@@ -2,6 +2,7 @@ import {createGame, submitGuess, skipClue, publicProgress, isLastGuess, allRevea
 import {createArt} from './art.mjs';
 import {searchDishes, fold} from './search.mjs';
 import {easternDate, dayNumber, mealIdForDay, nextReset, dailyClueRng} from './schedule.mjs';
+import {dailyRecord, replayDaily, readRecord, writeRecord} from './persist.mjs';
 
 // Practice rounds use stable roster IDs: Shakshuka, Pancakes, Grilled cheese.
 const ROUNDS = [3, 1, 22];
@@ -10,6 +11,8 @@ const LOCAL = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname);
 const nowParam = LOCAL && new URLSearchParams(location.search).get('now');
 const offset = nowParam && !isNaN(Date.parse(nowParam)) ? Date.parse(nowParam) - Date.now() : 0;
 const now = () => new Date(Date.now() + offset);
+// User decision 2026-10-18: today's daily progress is kept in this browser across reloads.
+const store = (() => { try { return window.localStorage; } catch { return null; } })();
 const MAX_SUGGESTIONS = 8;
 
 const $ = id => document.getElementById(id);
@@ -75,7 +78,11 @@ function setMode(next) {
   document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === mode)));
   el.restart.hidden = mode !== 'practice';
   if (games[mode]) { game = games[mode]; resetComposer(); resumeScene(); render(); }
-  else if (mode === 'daily') begin(meal(daily.id), {rng: dailyClueRng(daily.date, daily.id)});
+  else if (mode === 'daily') {
+    const saved = replayDaily(readRecord(store), daily, meal(daily.id), roster);
+    if (saved) { game = games.daily = saved; resetComposer(); clearResult(); resumeScene(); render(); }
+    else begin(meal(daily.id), {rng: dailyClueRng(daily.date, daily.id)});
+  }
   else startRound(0);
 }
 
@@ -94,11 +101,20 @@ function resumeScene() {
 function begin(dish, options) {
   game = games[mode] = createGame(dish, {startWithClue: settings.startWithClue, ...options});
   resetComposer();
-  // Don't keep the previous answer in hidden DOM or on the plate canvas.
-  for (const node of [el.resultEyebrow, el.resultTitle, el.resultText, el.resultIngredients]) node.textContent = '';
-  el.plate.getContext('2d').clearRect(0, 0, el.plate.width, el.plate.height);
+  clearResult();
+  save();
   resumeScene();
   render();
+}
+
+// Don't keep a previous answer in hidden DOM or on the plate canvas.
+function clearResult() {
+  for (const node of [el.resultEyebrow, el.resultTitle, el.resultText, el.resultIngredients]) node.textContent = '';
+  el.plate.getContext('2d').clearRect(0, 0, el.plate.width, el.plate.height);
+}
+
+function save() {
+  if (mode === 'daily' && game && daily?.id === game.meal.id) writeRecord(store, dailyRecord(game, daily));
 }
 
 const clue = i => game.clues[i];
@@ -246,6 +262,7 @@ function apply(result, entryText) {
   if (result.error) { showError(result.error); return false; }
   const before = game.revealed;
   game = result.state;
+  save();
   resetComposer();
   if (game.status === 'won') setScene('won', null, `Yes! It’s ${game.meal.name}.`);
   else if (game.status === 'lost') setScene('lost', null, `Out of guesses — it was ${game.meal.name}.`);

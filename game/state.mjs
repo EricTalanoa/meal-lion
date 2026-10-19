@@ -1,6 +1,6 @@
 // User decision 2026-10-18: clue order is reshuffled every round. `clues` is the reveal order.
 export function createGame(meal, {startWithClue = true, rng = Math.random} = {}) {
-  return {meal, clues:shuffle(meal.ingredients, rng), budget:meal.ingredients.length, revealed:startWithClue ? 1 : 0, history:[], status:'playing'};
+  return {meal, clues:shuffle(meal.ingredients, rng), startWithClue, budget:meal.ingredients.length, revealed:startWithClue ? 1 : 0, history:[], status:'playing'};
 }
 
 function shuffle(items, rng) {

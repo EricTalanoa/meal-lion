@@ -8,6 +8,7 @@
 - 2026-10-18: ingredient reveal order is randomized every round. In daily mode everyone gets the same order for a given date (seeded shuffle, decided 2026-10-18); endless/preview rounds reshuffle each time.
 - 2026-10-18: daily dish changes at midnight US Eastern time (IANA zone America/New_York, so it follows EST/EDT daylight saving) for every player worldwide.
 - 2026-10-18: daily Dish #1 launches on the day the app is completed; until then the start date is a placeholder in game/schedule.json. More dishes will be added before launch and over time, so no reuse policy is needed now. The daily schedule is append-only: adding dishes must never change the dish already assigned to an earlier date.
+- 2026-10-18: today's daily progress and result are saved in the player's browser on that device (localStorage), so a reload keeps them. Only the current day is kept; practice rounds and settings are not saved. No accounts or cross-device sync.
 - 2026-10-18: skip policy approved as built — a skip uses one guess and reveals the next ingredient; not allowed on the last guess.
 - 2026-10-18: suggestions include close matches for typos (shown as "Did you mean…?" when only close matches exist). The player still picks a dish before guessing.
 - Working title: Meal-lion, a meal/dinner wordplay. Name is not final.
