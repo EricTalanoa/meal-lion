@@ -39,16 +39,31 @@ function closeness(query, name) {
   return total;
 }
 
-export function searchDishes(roster, text, limit = 8) {
+// How well a query matches one name: 0-2 for a real prefix/word/substring match, 10+ for a
+// typo-tolerant match, -1 for no match.
+function score(q, name) {
+  const rank = name.startsWith(q) ? 0 : words(name).some(w => w.startsWith(q)) ? 1 : name.includes(q) ? 2 : -1;
+  if (rank >= 0) return rank;
+  const d = q.length >= 4 ? closeness(q, name) : -1;
+  return d >= 0 ? 10 + d : -1;
+}
+
+// `aliases` maps roster ID -> other names players might type (User decision 2026-10-19:
+// they are never accepted, only suggested as our dish name, like a typo).
+export function searchDishes(roster, text, limit = 8, aliases = {}) {
   const q = fold(text);
   if (!q) return [];
   const scored = [];
   for (const meal of roster) {
-    const name = fold(meal.name);
-    const rank = name.startsWith(q) ? 0 : words(name).some(w => w.startsWith(q)) ? 1 : name.includes(q) ? 2 : -1;
-    if (rank >= 0) { scored.push({meal, close: false, score: rank}); continue; }
-    const d = q.length >= 4 ? closeness(q, name) : -1;
-    if (d > 0) scored.push({meal, close: true, score: 10 + d});
+    const own = score(q, fold(meal.name));
+    if (own >= 0 && own < 10) { scored.push({meal, close: false, score: own}); continue; }
+    // Alias hits rank between real matches and plain typos (5-7 direct, 10+ with a typo).
+    let best = own;
+    for (const alias of aliases[meal.id] || []) {
+      const a = score(q, fold(alias));
+      if (a >= 0) { const s = a < 10 ? 5 + a : a; if (best < 0 || s < best) best = s; }
+    }
+    if (best >= 0) scored.push({meal, close: true, score: best});
   }
   return scored.sort((a, b) => a.score - b.score || a.meal.name.localeCompare(b.meal.name)).slice(0, limit);
 }

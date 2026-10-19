@@ -10,6 +10,10 @@
 - 2026-10-18: daily Dish #1 launches on the day the app is completed; until then the start date is a placeholder in game/schedule.json. More dishes will be added before launch and over time, so no reuse policy is needed now. The daily schedule is append-only: adding dishes must never change the dish already assigned to an earlier date.
 - 2026-10-18: today's daily progress and result are saved in the player's browser on that device (localStorage), so a reload keeps them. Only the current day is kept; practice rounds and settings are not saved. No accounts or cross-device sync.
 - 2026-10-19: endless mode uses a shuffled deck — every dish once in random order before any repeat, then reshuffle, never the same dish twice in a row across reshuffles. Today's daily dish is never served in endless. Endless is not saved: each visit starts a fresh shuffle. Endless replaces the three-meal Practice tab (tabs: Daily dish, Endless).
+- 2026-10-19: alternative dish names are not accepted as guesses. Typing one (e.g. "mac n cheese") suggests our dish name under "Did you mean…?", like a typo; the player picks it before guessing. Alias list lives in game/aliases.json.
+- 2026-10-19: settings are not saved (they reset on reload).
+- 2026-10-19: "correct in a row" streaks, counted separately. Daily streak = consecutive days the daily dish was solved, saved on this device; a loss or a missed day resets it. Endless streak = consecutive endless solves this visit; a loss resets it, not saved.
+- 2026-10-19: planned host is Netlify (static site). Not deployed; deploying needs the user's explicit go-ahead.
 - 2026-10-18: skip policy approved as built — a skip uses one guess and reveals the next ingredient; not allowed on the last guess.
 - 2026-10-18: suggestions include close matches for typos (shown as "Did you mean…?" when only close matches exist). The player still picks a dish before guessing.
 - Working title: Meal-lion, a meal/dinner wordplay. Name is not final.
@@ -26,9 +30,9 @@ The existing work is art, mockups, motion studies and standalone visual prototyp
 ## Proposals that still need decisions
 - Difficulty; extra hints by dish family, cuisine, cooking method or other categories. The taxonomy-inspired idea is exploratory, not implemented.
 - Final name; whether the chef is called Leo.
-- Accepted aliases (typing an exact case/accent-insensitive full name auto-selects; typos only suggest), overlapping dish variants, scoring, streaks, share format and loss behavior.
+- Overlapping dish variants, scoring, share format and loss behavior.
 - Daily archive access (playing past dates).
-- Endless difficulty selection; endless stats/streaks.
-- Persistence/storage, framework, backend, hosting and analytics.
+- Endless difficulty selection.
+- Backend (none so far) and analytics. Deployment to Netlify still needs explicit go-ahead and account access.
 
 Use stable numeric meal IDs from the supplied roster. Do not mistake ingredient order in the JSON for an approved reveal sequence. Keep selection of a suggestion separate from submitting a guess. Finished meal images and recipe names must not leak the answer before results.

@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "note": "Other names players might type. Not accepted as guesses: they only suggest our dish name under Did you mean. Keys are roster IDs.",
+  "aliases": {
+    "1": [
+      "hotcakes",
+      "flapjacks",
+      "griddle cakes"
+    ],
+    "2": [
+      "eggy bread",
+      "pain perdu"
+    ],
+    "3": [
+      "eggs in purgatory",
+      "shakshouka"
+    ],
+    "4": [
+      "eggs benny"
+    ],
+    "6": [
+      "avo toast"
+    ],
+    "7": [
+      "omelet",
+      "mushroom omelet"
+    ],
+    "8": [
+      "bacon quiche"
+    ],
+    "9": [
+      "hash browns",
+      "hash brown",
+      "rosti"
+    ],
+    "11": [
+      "spag bol",
+      "spaghetti with meat sauce",
+      "meat sauce pasta",
+      "bolognaise"
+    ],
+    "12": [
+      "pasta pesto",
+      "pasta al pesto"
+    ],
+    "13": [
+      "mac and cheese",
+      "mac n cheese",
+      "mac & cheese",
+      "macaroni cheese",
+      "mac cheese"
+    ],
+    "14": [
+      "lasagne"
+    ],
+    "15": [
+      "cheese pizza",
+      "pizza margherita"
+    ],
+    "18": [
+      "gnocchi pomodoro"
+    ],
+    "19": [
+      "hamburger",
+      "burger"
+    ],
+    "20": [
+      "hotdog",
+      "frankfurter",
+      "wiener"
+    ],
+    "21": [
+      "bacon lettuce tomato"
+    ],
+    "22": [
+      "toastie",
+      "cheese toastie",
+      "grilled cheese sandwich",
+      "cheese melt"
+    ],
+    "24": [
+      "quesadilla"
+    ],
+    "25": [
+      "taco",
+      "tacos de carne"
+    ],
+    "26": [
+      "falafel wrap",
+      "falafel sandwich"
+    ],
+    "27": [
+      "fish n chips",
+      "fish & chips",
+      "fish chips"
+    ],
+    "28": [
+      "fried rice"
+    ],
+    "29": [
+      "biriyani",
+      "biryani rice"
+    ],
+    "31": [
+      "chilli con carne",
+      "chilli",
+      "chili"
+    ],
+    "32": [
+      "shepherds pie",
+      "shepherd's pie"
+    ],
+    "34": [
+      "onion soup"
+    ],
+    "37": [
+      "murgh makhani",
+      "chicken makhani"
+    ],
+    "38": [
+      "green curry",
+      "thai green curry"
+    ],
+    "39": [
+      "chole",
+      "chickpea curry"
+    ],
+    "40": [
+      "saag paneer",
+      "spinach paneer"
+    ],
+    "41": [
+      "katsu curry",
+      "katsu"
+    ],
+    "43": [
+      "horiatiki"
+    ],
+    "44": [
+      "caesar salad"
+    ]
+  }
+}

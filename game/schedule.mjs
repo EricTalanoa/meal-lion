@@ -16,7 +16,7 @@ export function easternDate(instant = new Date()) {
 }
 
 const utcDay = date => { const [y, m, d] = date.split('-').map(Number); return Date.UTC(y, m - 1, d); };
-const addDays = (date, n) => new Date(utcDay(date) + n * DAY).toISOString().slice(0, 10);
+export const addDays = (date, n) => new Date(utcDay(date) + n * DAY).toISOString().slice(0, 10);
 
 // Dish number for a date: the start date is Dish #1. Zero or less means "not started yet".
 export function dayNumber(schedule, date) {

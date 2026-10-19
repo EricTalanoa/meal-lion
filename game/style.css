@@ -111,6 +111,11 @@ li[aria-selected=true] .mark::after { content: ''; width: 10px; height: 10px; bo
 .full { color: var(--muted); font-size: 14px; }
 .result-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 
+.streak, .countdown { white-space: nowrap; }
+.streak { font: 800 14px var(--pixel); color: #ffd38b; letter-spacing: .08em; text-transform: uppercase; }
+.streak:empty, .streak-line:empty { display: none; }
+.streak::before { content: '🔥 '; }
+.streak-line { font: 700 14px var(--pixel); color: #ffd38b; }
 .countdown { font: 800 14px var(--pixel); color: var(--cyan); letter-spacing: .08em; text-transform: uppercase; }
 .countdown:empty { display: none; }
 .build { margin-left: auto; }

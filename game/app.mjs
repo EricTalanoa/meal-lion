@@ -4,6 +4,7 @@ import {searchDishes, fold} from './search.mjs';
 import {easternDate, dayNumber, mealIdForDay, nextReset, dailyClueRng} from './schedule.mjs';
 import {dailyRecord, replayDaily, readRecord, writeRecord} from './persist.mjs';
 import {newDeck, drawDish} from './endless.mjs';
+import {recordDaily, dailyStreakNow, nextEndlessStreak, readStreak, writeStreak} from './streak.mjs';
 
 const LOCAL = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname);
 // QA only, local hosts only: ?now=2026-11-01T03:59:50Z runs the clock from that instant.
@@ -22,7 +23,7 @@ const el = {
   matches: $('matchesWrap'), matchesTitle: $('matchesTitle'), list: $('suggestions'), hint: $('hint'), error: $('error'), skip: $('skipBtn'),
   result: $('result'), plate: $('plate'), resultEyebrow: $('resultEyebrow'), resultTitle: $('resultTitle'),
   resultText: $('resultText'), resultIngredients: $('resultIngredients'), resultNext: $('resultNext'),
-  countdown: $('countdown'), newDay: $('newDayBtn'), next: $('nextBtn'),
+  countdown: $('countdown'), newDay: $('newDayBtn'), streak: $('streakLabel'), resultStreak: $('resultStreak'), next: $('nextBtn'),
   history: $('history'), allShown: $('allShown'), historyEmpty: $('historyEmpty'), announce: $('announce'),
   settings: $('settings'), help: $('help'), optClue: $('optClue'), optHide: $('optHide'), optMotion: $('optMotion'),
 };
@@ -33,13 +34,14 @@ const settings = {startWithClue: true, hideTotal: true, still: matchMedia('(pref
 const coarse = matchMedia('(pointer: coarse)');
 const narrow = matchMedia('(max-width: 760px)');
 
-let roster = [], art = null, schedule = null, game = null;
+let roster = [], aliases = {}, art = null, schedule = null, game = null;
 // Each mode keeps its own game in memory so switching tabs doesn't lose progress.
 let mode = 'daily', daily = null;
 const games = {daily: null, endless: null};
 // Endless is not saved (User decision 2026-10-19): a fresh deck every visit.
 let deck = null;
-const endless = {played: 0, solved: 0};
+const endless = {played: 0, streak: 0};
+let streak = null;
 let selection = null, options = [], active = -1;
 let scene = {mood: 'idle', ingredient: null, mealId: null}, sceneStart = 0, clock = 0, last = 0, frame = 0;
 
@@ -47,10 +49,12 @@ const meal = id => roster.find(m => m.id === id);
 
 async function boot() {
   try {
-    const [r, map, sched] = await Promise.all(['../reference/meal-lion-45-meals.json', '../assets/asset-map.json', 'schedule.json']
+    const [r, map, sched, alias] = await Promise.all(['../reference/meal-lion-45-meals.json', '../assets/asset-map.json', 'schedule.json', 'aliases.json']
       .map(u => fetch(u).then(res => { if (!res.ok) throw new Error(u); return res.json(); })));
     roster = r.meals;
     schedule = sched;
+    streak = readStreak(store);
+    aliases = alias.aliases;
     art = createArt(map);
     const missing = await art.prepare();
     if (missing.length) console.warn('Missing artwork', missing);
@@ -139,7 +143,7 @@ function say(text) { el.announce.textContent = ''; requestAnimationFrame(() => {
 function render() {
   const playing = game.status === 'playing';
   const hide = settings.hideTotal && playing;
-  el.round.textContent = mode === 'daily' ? `Daily dish #${daily.n}` : `Endless · dish ${endless.played} · ${endless.solved} solved`;
+  el.round.textContent = mode === 'daily' ? `Daily dish #${daily.n}` : `Endless · dish ${endless.played} · streak ${endless.streak}`;
   const last = isLastGuess(game);
   el.progress.textContent = playing ? publicProgress(game, settings.hideTotal) + (last ? ' · Last guess!' : '')
     : game.status === 'won' ? `Solved on guess ${game.history.length}/${game.budget}` : `Out of guesses · ${game.budget}/${game.budget}`;
@@ -181,6 +185,7 @@ function render() {
   el.composer.hidden = el.hint.hidden = !playing;
   el.result.hidden = playing;
   el.replay.disabled = !scene.ingredient && scene.mood === 'idle';
+  el.streak.textContent = daily?.id ? `Daily streak ${dailyStreakNow(streak, easternDate(now()))}` : '';
   el.motion.textContent = settings.still ? 'Play motion' : 'Pause motion';
   el.motion.setAttribute('aria-pressed', String(settings.still));
   if (!playing) renderResult();
@@ -195,6 +200,9 @@ function renderResult() {
   // 25 of 45 dishes have no finished-meal art yet; hide the plate rather than show a blank.
   el.plate.hidden = !art.drawMeal(el.plate, game.meal.id);
   el.next.textContent = mode === 'daily' ? 'Play endless' : 'Next dish';
+  el.resultStreak.textContent = mode === 'daily'
+    ? `Daily streak: ${dailyStreakNow(streak, daily.date)} in a row · best ${streak.best}`
+    : `Endless streak: ${endless.streak} in a row`;
   tick();
 }
 
@@ -215,7 +223,7 @@ function loop(t) {
 
 // ---------- suggestions ----------
 function search(text) {
-  const results = searchDishes(roster, text, MAX_SUGGESTIONS);
+  const results = searchDishes(roster, text, MAX_SUGGESTIONS, aliases);
   el.matchesTitle.textContent = results.length && results.every(r => r.close) ? 'Did you mean…?' : 'Matching dishes';
   return results.map(r => r.meal);
 }
@@ -265,7 +273,11 @@ function apply(result, entryText) {
   if (result.error) { showError(result.error); return false; }
   const before = game.revealed;
   game = result.state;
-  if (mode === 'endless' && game.status === 'won') endless.solved++;
+  if (game.status !== 'playing') {
+    const won = game.status === 'won';
+    if (mode === 'endless') endless.streak = nextEndlessStreak(endless.streak, won);
+    else { streak = recordDaily(streak, daily.date, won); writeStreak(store, streak); }
+  }
   save();
   resetComposer();
   if (game.status === 'won') setScene('won', null, `Yes! It’s ${game.meal.name}.`);
@@ -280,7 +292,12 @@ function apply(result, entryText) {
 el.composer.addEventListener('submit', e => {
   e.preventDefault();
   if (game.status !== 'playing') return;
-  if (!selection) { showError(el.input.value.trim() ? 'Choose a dish from the list first.' : 'Type a dish name, then pick it from the list.'); el.input.focus(); return; }
+  if (!selection) {
+    const close = el.input.value.trim() && searchDishes(roster, el.input.value, 1, aliases)[0];
+    showError(!el.input.value.trim() ? 'Type a dish name, then pick it from the list.'
+      : close?.close ? `Did you mean ${close.meal.name}? Pick it from the list.` : 'Choose a dish from the list first.');
+    el.input.focus(); return;
+  }
   const name = meal(selection).name;
   if (apply(submitGuess(game, selection, roster), `Not ${name}. `) && game.status === 'playing') {
     // Valid submission: dismiss the native keyboard on touch devices so the kitchen returns.
