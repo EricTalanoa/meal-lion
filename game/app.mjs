@@ -36,7 +36,7 @@ const settings = {startWithClue: true, hideTotal: true, still: matchMedia('(pref
 const coarse = matchMedia('(pointer: coarse)');
 const narrow = matchMedia('(max-width: 760px)');
 
-let roster = [], aliases = {}, art = null, schedule = null, game = null;
+let roster = [], aliases = {}, art = null, schedule = null, game = null, booting = true;
 // Each mode keeps its own game in memory so switching tabs doesn't lose progress.
 let mode = 'daily', daily = null;
 const games = {daily: null, endless: null};
@@ -58,12 +58,21 @@ async function boot() {
     schedule = sched;
     streak = readStreak(store);
     aliases = alias.aliases;
-    art = createArt(map);
-    const missing = await art.prepare();
-    if (missing.length) console.warn('Missing artwork', missing);
+    art = createArt(map, '../', {onLoad: redrawArt});
+    await art.prepare();
     loadDaily();
     deck = newDeck(roster.map(m => m.id));
     setMode(daily.id ? 'daily' : 'endless');
+    // Hold canvas drawing until the first screen's images (revealed clue icons, a reaction
+    // strip) arrive, so nothing flashes a fallback on a normal load. Drawing once to a scratch
+    // canvas requests exactly those files. Later images load on first use.
+    const scratch = document.createElement('canvas');
+    for (let i = 0; i < game.revealed; i++) art.drawIngredient(scratch, clue(i));
+    art.drawStage(scratch, {...scene, elapsed: 0, still: settings.still});
+    const missing = await art.settled();
+    booting = false;
+    render(); kick();
+    if (missing.length) console.warn('Missing artwork', missing);
     setInterval(tick, 1000); tick();
     if (missing.length) el.caption.textContent = 'Some artwork failed to load; the game still works.';
     document.body.dataset.ready = 'true';
@@ -161,7 +170,7 @@ function render() {
     if (i < game.revealed) {
       const c = document.createElement('canvas');
       c.width = c.height = 96; c.setAttribute('aria-hidden', 'true');
-      art.drawIngredient(c, clue(i));
+      if (!booting) art.drawIngredient(c, clue(i));
       const label = document.createElement('span'); label.textContent = clue(i);
       li.className = 'clue'; li.append(c, label);
     } else if (!hide) {
@@ -210,11 +219,20 @@ function renderResult() {
   tick();
 }
 
+// An image finished loading: redraw anything that may have used a fallback. Coalesced so a
+// burst of loads redraws once.
+let redrawQueued = false;
+function redrawArt() {
+  if (booting || !game || redrawQueued) return;
+  redrawQueued = true;
+  setTimeout(() => { redrawQueued = false; render(); kick(); });
+}
+
 // ---------- stage loop ----------
 function kick() { if (!frame) { last = 0; frame = requestAnimationFrame(loop); } }
 function loop(t) {
   frame = 0;
-  if (!art || !game) return;
+  if (!art || !game || booting) return;
   if (last && !settings.still) clock += Math.min((t - last) / 1000, 0.05);
   last = t;
   const elapsed = clock - sceneStart;

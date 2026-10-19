@@ -9,28 +9,36 @@ const FRAME = 0.7; // seconds per key pose
 const CHEF = {neutral:0, blink:1, thinking:2, celebrate:3};
 const W = 1200, H = 400;
 
-export function createArt(map, base = '../') {
+// Images load on first use so startup only waits for what the first screen draws. While a
+// file is pending, draws fall back (plain backdrop, neutral chef, lettered icon) and
+// `onLoad` fires once it arrives so the caller can redraw. Finished-meal art is only
+// requested by the end-of-round draws, so it is never fetched while a round is in play.
+export function createArt(map, base = '../', {onLoad = () => {}} = {}) {
   const images = new Map();
-  const files = new Set([map.background.file, map.chef.file, ...map.meals.map(m => m.file), ...map.ingredients.map(i => i.file), ...map.animations.map(a => a.file)]);
+  const loaded = new Map();
   const icons = new Map();
   for (const item of map.ingredients) if (!icons.has(item.label) || item.preferred) icons.set(item.label, item);
   const anims = new Map(map.animations.map(a => [a.id, a]));
 
-  function img(file) {
+  // Resolves with the image, or null if it failed. Uses load events rather than decode(),
+  // which can stall in background tabs.
+  function load(file) {
     if (!images.has(file)) {
-      const el = new Image();
-      el.src = base + file;
-      images.set(file, el.decode().then(() => el, () => null));
+      images.set(file, new Promise(resolve => {
+        const el = new Image();
+        el.onload = () => resolve(el);
+        el.onerror = () => resolve(null);
+        el.src = base + file;
+      }).then(el => { loaded.set(file, el); onLoad(file); return el; }));
     }
     return images.get(file);
   }
-  const loaded = new Map();
-  async function load(file) { const el = await img(file); loaded.set(file, el); return el; }
+  const failed = () => [...loaded].filter(([, el]) => !el).map(([f]) => f);
 
   // Cells may be fractional (e.g. 2172/4); keep float source rects rather than rounding per cell.
   function cell(c, file, cols, rows, index, x, y, w, h) {
     const el = loaded.get(file);
-    if (!el) return false;
+    if (!el) { load(file); return false; }
     const sw = el.naturalWidth / cols, sh = el.naturalHeight / rows;
     c.imageSmoothingEnabled = false;
     c.drawImage(el, (index % cols) * sw, Math.floor(index / cols) * sh, sw, sh, x, y, w, h);
@@ -50,10 +58,15 @@ export function createArt(map, base = '../') {
   }
 
   return {
-    // Load everything once; resolves with the list of files that failed.
+    // Loads the kitchen and chef; resolves with the files that failed.
     async prepare() {
-      const results = await Promise.all([...files].map(async f => [f, await load(f)]));
-      return results.filter(([, el]) => !el).map(([f]) => f);
+      await Promise.all([load(map.background.file), load(map.chef.file)]);
+      return failed();
+    },
+    // Waits for every image requested so far (including ones requested while waiting).
+    async settled() {
+      for (let n = -1; n !== images.size;) { n = images.size; await Promise.all(images.values()); }
+      return failed();
     },
     hasIcon: label => icons.has(label),
 

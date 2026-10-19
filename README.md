@@ -11,7 +11,7 @@ Contents: 45 proposed meals; 20 meal illustrations; 50/103 unique ingredient ico
 Open HTML files directly, or with Node installed run: node tools/serve.cjs
 Then visit http://127.0.0.1:8766/ . Use `PORT=8777 node tools/serve.cjs` if 8766 is busy. This server is for local review only. No dependencies or account required.
 
-Playable game (Daily dish + Endless): http://127.0.0.1:8766/game/ (needs the server; ES modules and fetch do not run from file://). Tests: `node --test tests/game.test.mjs tests/search.test.mjs tests/schedule.test.mjs tests/persist.test.mjs tests/endless.test.mjs tests/streak.test.mjs` (or `node --test tests/*.test.mjs` in bash).
+Playable game (Daily dish + Endless): http://127.0.0.1:8766/game/ (needs the server; ES modules and fetch do not run from file://). Tests: `node --test tests/game.test.mjs tests/search.test.mjs tests/schedule.test.mjs tests/persist.test.mjs tests/endless.test.mjs tests/streak.test.mjs tests/art.test.mjs tests/build.test.mjs` (or `node --test tests/*.test.mjs` in bash).
 
 Sound: game/audio.mjs synthesizes effects and the music loop with Web Audio (no audio files). Toggle with ♪ Music in the header or in Settings.
 
@@ -19,7 +19,7 @@ Alternative dish names (suggestions only, never accepted as guesses): game/alias
 
 ## Publishing (Netlify — prepared, not deployed)
 
-`node tools/build.cjs` copies only what the game loads (game/, the roster JSON, the asset map and the 24 images it references, ~33 MB) into dist/ (gitignored). netlify.toml runs that build, publishes dist/, redirects / to /game/, and sets security headers (CSP, nosniff) plus a JavaScript content type for .mjs. Preview the published set locally with the CSP applied: `ROOT=dist CSP="<policy from netlify.toml>" PORT=8778 node tools/serve.cjs`, or the `meal-lion-dist` entry in .claude/launch.json.
+`node tools/build.cjs` copies only what the game loads (game/, the roster JSON, a published asset map and the 24 images it references) into dist/ (gitignored). Images are published as the lossless WebP copies in assets/web/ (21.4 MB instead of 32.9 MB of PNGs); after changing or adding art, run `python tools/optimize-images.py` (free, needs Pillow: `pip install pillow`) to refresh them, otherwise the build publishes the original PNG with a warning. The game only waits for the kitchen, chef and the first screen's clue icons (~2.4 MB) and loads the rest on first use. netlify.toml runs that build, publishes dist/, redirects / to /game/, and sets security headers (CSP, nosniff) plus a JavaScript content type for .mjs. Preview the published set locally with the CSP applied: `ROOT=dist CSP="<policy from netlify.toml>" PORT=8778 node tools/serve.cjs`, or the `meal-lion-dist` entry in .claude/launch.json.
 
 To go live (owner's decision, not done yet): create a Netlify site linked to this repository (build settings come from netlify.toml), or run `netlify deploy --dir=dist` after a build. Set game/schedule.json startDate to launch day first. The localhost-only `?now=` test clock is inert on the live site.
 
