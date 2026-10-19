@@ -5,7 +5,7 @@
 - Start with one free ingredient by default; offer a setting to start with zero. Starting-clue changes apply to the next round.
 - Offer a setting to hide total ingredient count, showing `Guess 1/X`. Hide unrevealed tile counts and other total-count hints in this mode.
 - 2026-10-18 (update): hidden totals are the default; the setting turns totals on. Even with totals hidden, tell the player when every ingredient has been revealed and when they are on their last guess.
-- 2026-10-18: ingredient reveal order is randomized every round. (Open for daily mode: should everyone get the same shuffled order for a date, e.g. seeded by date, or a personal shuffle?)
+- 2026-10-18: ingredient reveal order is randomized every round. In daily mode everyone gets the same order for a given date (seeded shuffle, decided 2026-10-18); endless/preview rounds reshuffle each time.
 - 2026-10-18: skip policy approved as built — a skip uses one guess and reveals the next ingredient; not allowed on the last guess.
 - 2026-10-18: suggestions include close matches for typos (shown as "Did you mean…?" when only close matches exist). The player still picks a dish before guessing.
 - Working title: Meal-lion, a meal/dinner wordplay. Name is not final.

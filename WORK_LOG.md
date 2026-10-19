@@ -9,7 +9,7 @@ Every AI must read this file before working and update it throughout the session
 - Available: 45-meal roster, 20 meal illustrations, 50 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
 - Implemented: game/ (index.html, style.css, app.mjs, art.mjs, state.mjs). Not implemented: daily schedule, endless mode, persistence, aliases, final rules, deployment. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
 - Repository/branch/checkpoint: local repository initialized in the handoff root on main; baseline checkpoint 25962a4 created and verified; kickoff documentation checkpoint follows. Existing configured Git identity reused. No remote configured.
-- Confirmed rules: ingredient-count guess budget, one free clue (zero optional), hidden total by default (showing totals is optional), with explicit 'all ingredients revealed' and 'last guess' cues; reveal order shuffled every round; skip policy approved; typo-tolerant suggestions. Open decisions: aliases, daily shuffle sharing, timezone/schedule, scoring and storage. See docs/PRODUCT.md.
+- Confirmed rules: ingredient-count guess budget, one free clue (zero optional), hidden total by default (showing totals is optional), with explicit 'all ingredients revealed' and 'last guess' cues; reveal order shuffled every round; skip policy approved; typo-tolerant suggestions. Open decisions: aliases, timezone/schedule, scoring and storage. See docs/PRODUCT.md.
 - Next: real iOS Safari / Android Chrome keyboard QA of game/; user review of the slice and prototype defaults; then daily scheduling (needs timezone/start-date decision) and endless mode.
 
 ### 2026-10-18 America/Los_Angeles — Codex — Approved rules / implementation start
@@ -83,3 +83,8 @@ Every AI must read this file before working and update it throughout the session
 - game/search.mjs (new): searchDishes(roster, text, limit) — prefix/word-prefix/substring matches first, then typo "close" matches (each typed word must match a distinct dish word prefix within an edit budget of 0/1/2 for <=3/4-5/6+ letters, optimal-string-alignment distance so swaps count as one edit; only for queries of 4+ chars). app.mjs uses it; heading switches to "Did you mean…?" when all results are close. Footer text no longer says skip/clue order are unapproved.
 - Checks: tests written first; node --test tests/game.test.mjs tests/search.test.mjs 25/25 pass (one initial failure was a wrong test: "zz" is a real substring of "pizza"). Browser: 8 restarts gave varied first clues; full 7-clue order differed from roster order; "shaksuka" showed "Did you mean…? Shakshuka", click-select + Guess won; no console errors. Real devices still untested.
 - Next: user playtesting; then daily mode (timezone, start date, shuffle sharing) and endless mode.
+
+### 2026-10-18 America/Los_Angeles — Claude — Daily shuffle decision
+- Branch: feat/three-meal-game; previous checkpoint 82fea86. Docs-only change.
+- User decision: everyone gets the same ingredient order for a given daily dish. Recorded in docs/PRODUCT.md. Implementation note for daily mode: pass a deterministic rng seeded from the schedule date + meal ID (and content version) to createGame's existing `rng` option; preview/endless keep Math.random.
+- Daily mode still needs: reset timezone, start date, schedule/reuse policy.
