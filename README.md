@@ -11,6 +11,8 @@ Contents: 45 proposed meals; 20 meal illustrations; 50/103 unique ingredient ico
 Open HTML files directly, or with Node installed run: node tools/serve.cjs
 Then visit http://127.0.0.1:8766/ . Use `PORT=8777 node tools/serve.cjs` if 8766 is busy. This server is for local review only. No dependencies or account required.
 
-Playable three-meal slice: http://127.0.0.1:8766/game/ (needs the server; ES modules and fetch do not run from file://). Tests: `node --test tests/game.test.mjs tests/search.test.mjs`.
+Playable three-meal slice: http://127.0.0.1:8766/game/ (needs the server; ES modules and fetch do not run from file://). Tests: `node --test tests/game.test.mjs tests/search.test.mjs tests/schedule.test.mjs`.
+
+Daily dish: changes at midnight US Eastern. Schedule lives in game/schedule.json (append new dish IDs to the end only; set `startDate` to launch day). QA on localhost only: add `?now=2026-11-01T03:59:50Z` to run the game clock from any instant.
 
 To hand off: give the other agent this entire folder or extract the ZIP, and paste KICKOFF_PROMPT.md. No files outside this folder are needed for the included galleries.

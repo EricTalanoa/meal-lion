@@ -29,7 +29,8 @@ button:disabled { cursor: not-allowed; opacity: .5; }
 .tag { font: 700 11px var(--pixel); letter-spacing: .2em; text-transform: uppercase; color: var(--cyan); margin-top: 6px; }
 .modes { display: flex; gap: 8px; margin: 0 auto; }
 .mode { font: 700 13px var(--pixel); text-transform: uppercase; letter-spacing: .08em; padding: 10px 16px; border: 2px solid var(--line-dim); color: var(--muted); }
-.mode.active { border-color: var(--pink); color: #ffd1e2; }
+button.mode { background: transparent; min-height: 44px; }
+.mode[aria-pressed=true] { border-color: var(--pink); color: #ffd1e2; background: rgba(242, 80, 143, .08); }
 .mode.soon { opacity: .6; }
 .links { display: flex; align-items: center; gap: 6px; }
 .link { white-space: nowrap; background: none; border: 0; color: var(--cyan); font: 700 13px var(--pixel); text-transform: uppercase; letter-spacing: .06em; text-decoration: underline; text-underline-offset: 4px; padding: 10px 8px; min-height: 44px; }
@@ -110,6 +111,12 @@ li[aria-selected=true] .mark::after { content: ''; width: 10px; height: 10px; bo
 .full { color: var(--muted); font-size: 14px; }
 .result-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 
+.countdown { font: 800 14px var(--pixel); color: var(--cyan); letter-spacing: .08em; text-transform: uppercase; }
+.countdown:empty { display: none; }
+.build { margin-left: auto; }
+.small-btn { min-height: 44px; font-size: 13px; padding: 0 14px; }
+.next-dish { font: 700 14px var(--pixel); color: var(--cyan); }
+.next-dish:empty { display: none; }
 .foot { grid-area: foot; display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line-dim); padding-top: 4px; }
 
 dialog { background: var(--panel); color: var(--text); border: 2px solid var(--line); max-width: min(440px, calc(100vw - 32px)); padding: 20px; }
@@ -153,6 +160,7 @@ dialog .primary { width: 100%; margin-top: 8px; }
   .result { order: 1; flex-direction: column; text-align: center; }
   .result-actions { justify-content: center; }
   .foot { flex-direction: column; align-items: flex-start; }
+  .build { margin-left: 0; }
 
   /* Typing: pin the app to the visual viewport so the composer sits above the keyboard. */
   body.typing { overflow: hidden; }

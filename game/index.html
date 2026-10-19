@@ -10,10 +10,10 @@
 <body>
 <div class="app" id="app">
   <header class="top">
-    <div class="brand"><span class="logo">MEAL-LION</span><span class="tag">Three-meal preview</span></div>
-    <div class="modes" aria-label="Game modes">
-      <span class="mode active">Preview · 3 meals</span>
-      <span class="mode soon" title="Not built yet">Daily · soon</span>
+    <div class="brand"><span class="logo">MEAL-LION</span><span class="tag">The daily dish</span></div>
+    <div class="modes" role="group" aria-label="Game modes">
+      <button type="button" class="mode" data-mode="daily" aria-pressed="true">Daily dish</button>
+      <button type="button" class="mode" data-mode="practice" aria-pressed="false">Practice · 3</button>
       <span class="mode soon" title="Not built yet">Endless · soon</span>
     </div>
     <nav class="links">
@@ -42,7 +42,7 @@
 
   <section class="play" aria-label="Guess the dish">
     <div class="round">
-      <p class="eyebrow" id="roundLabel">Meal 1 of 3</p>
+      <p class="eyebrow" id="roundLabel"></p>
       <h1>What’s cooking?</h1>
       <p class="progress" id="progress" aria-live="polite"></p>
     </div>
@@ -73,6 +73,7 @@
         <h2 id="resultTitle"></h2>
         <p id="resultText"></p>
         <p class="full" id="resultIngredients"></p>
+        <p class="next-dish" id="resultNext"></p>
         <div class="result-actions">
           <button type="button" class="primary" id="nextBtn">Next meal</button>
           <button type="button" class="secondary" id="againBtn">Play this meal again</button>
@@ -88,7 +89,12 @@
     </section>
   </section>
 
-  <footer class="foot"><span>Preview build — daily and endless modes are not built yet.</span><button type="button" class="link" id="restartBtn">Restart all three</button></footer>
+  <footer class="foot">
+    <span class="countdown" id="countdown" aria-live="off"></span>
+    <button type="button" class="primary small-btn" id="newDayBtn" hidden>New dish ready — play it</button>
+    <span class="build">Preview build · endless mode not built yet · progress isn’t saved on reload</span>
+    <button type="button" class="link" id="restartBtn">Restart practice</button>
+  </footer>
 </div>
 
 <p class="sr" id="announce" aria-live="polite"></p>

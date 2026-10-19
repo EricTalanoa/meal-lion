@@ -7,10 +7,10 @@ Every AI must read this file before working and update it throughout the session
 - Current milestone: responsive three-meal slice is playable at game/ (Shakshuka, Pancakes, Grilled cheese) with ingredient-based guess limits and session settings. Browser-verified in emulation; real-device keyboards untested.
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
 - Available: 45-meal roster, 20 meal illustrations, 50 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
-- Implemented: game/ (index.html, style.css, app.mjs, art.mjs, state.mjs). Not implemented: daily schedule, endless mode, persistence, aliases, final rules, deployment. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
+- Implemented: game/ (index.html, style.css, app.mjs, art.mjs, state.mjs). Not implemented: endless mode, persistence, aliases, final rules, deployment. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
 - Repository/branch/checkpoint: local repository initialized in the handoff root on main; baseline checkpoint 25962a4 created and verified; kickoff documentation checkpoint follows. Existing configured Git identity reused. No remote configured.
 - Confirmed rules: ingredient-count guess budget, one free clue (zero optional), hidden total by default (showing totals is optional), with explicit 'all ingredients revealed' and 'last guess' cues; reveal order shuffled every round; skip policy approved; typo-tolerant suggestions. Open decisions: aliases, timezone/schedule, scoring and storage. See docs/PRODUCT.md.
-- Next: real iOS Safari / Android Chrome keyboard QA of game/; user review of the slice and prototype defaults; then daily scheduling (needs timezone/start-date decision) and endless mode.
+- Next: endless mode (needs repeat/selection rules), persistence decision (daily progress resets on reload), real iOS/Android keyboard QA, more dishes + art. Daily mode is built with a placeholder start date.
 
 ### 2026-10-18 America/Los_Angeles — Codex — Approved rules / implementation start
 - Branch: feat/three-meal-game; latest checkpoint 8f5e6e4. Working tree was clean before this task.
@@ -93,3 +93,11 @@ Every AI must read this file before working and update it throughout the session
 - Branch: feat/three-meal-game; previous checkpoint 96337bd. Docs-only change.
 - User decision: daily dish resets at midnight US Eastern (America/New_York, DST-aware) for all players. Recorded in docs/PRODUCT.md.
 - Still needed before building daily mode: start date (Dish #1) and what happens after the 45 meals run out.
+
+### 2026-10-18/19 America/Los_Angeles — Claude — Daily mode
+- Branch: feat/three-meal-game; previous checkpoint f2fa04c.
+- User decisions: Dish #1 = the day the app is completed (placeholder start date until then); more dishes will be added before launch and over time, so no reuse policy now. Recorded in docs/PRODUCT.md with the append-only schedule rule.
+- game/schedule.mjs (new): easternDate, dayNumber, mealIdForDay (cycles past the end as a fallback only), nextReset (DST-proof search for the next Eastern midnight), seededRng (xmur3+mulberry32), dailyClueRng(date, mealId). game/schedule.json (new): version 1, America/New_York, startDate 2026-10-18 flagged startDateIsPlaceholder, 45 roster IDs in a fixed seeded order (no back-to-back repeats).
+- game/app.mjs/index.html/style.css: Daily dish / Practice · 3 tabs (Endless still "soon"); each mode keeps its own in-memory game; "Daily dish #N"; same clue order for everyone via dailyClueRng; footer countdown to next Eastern midnight; on rollover a "New dish ready — play it" button appears (never swaps mid-round); daily result hides replay, shows countdown and "Practice meals"; before the start date the Daily tab is disabled and Practice loads; plate hidden for dishes without meal art. Localhost-only ?now= clock override for QA.
+- Checks: tests written first (missing-module failure observed); node --test tests/*.test.mjs 32/32 pass incl. EDT/EST midnight boundaries, fall-back/spring-forward days, append-only stability, shipped schedule covers roster once. Browser: real clock (00:09 ET Oct 19) showed Dish #2 (Falafel pita, lettered icon fallback); reload reproduced the same clue order (PITA, CHICKPEAS, PARSLEY); tab switching preserved both games; daily win result correct; ?now 03:59:56Z rolled #2 -> "new dish ready" -> #3; EST ?now 04:59:58Z rolled over; ?now before start disabled Daily and opened Practice; 375px no overflow; no console errors.
+- Known limits: no persistence, so reloading lets a player replay today's dish; schedule.json exposes future dishes to anyone reading client files (expected for client-only, see docs/IMPLEMENTATION.md); 25/45 dishes lack meal art and many lack ingredient icons (fallbacks shown); real devices untested.
