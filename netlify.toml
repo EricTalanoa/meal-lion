@@ -1,0 +1,33 @@
+# Netlify static site. Not deployed yet: deploying needs the owner's go-ahead.
+# The build copies only what the game loads into dist/ (see tools/build.cjs).
+[build]
+  command = "node tools/build.cjs"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# The game lives at /game/ because it loads data from sibling folders.
+[[redirects]]
+  from = "/"
+  to = "/game/"
+  status = 302
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+
+# Browser ES modules must be served as JavaScript.
+[[headers]]
+  for = "/*.mjs"
+  [headers.values]
+    Content-Type = "text/javascript; charset=utf-8"
+
+# Data and code change with each deploy, so revalidate them.
+[[headers]]
+  for = "/game/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

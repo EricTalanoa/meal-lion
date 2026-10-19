@@ -15,6 +15,12 @@ Playable game (Daily dish + Endless): http://127.0.0.1:8766/game/ (needs the ser
 
 Alternative dish names (suggestions only, never accepted as guesses): game/aliases.json, keyed by roster ID.
 
+## Publishing (Netlify — prepared, not deployed)
+
+`node tools/build.cjs` copies only what the game loads (game/, the roster JSON, the asset map and the 24 images it references, ~33 MB) into dist/ (gitignored). netlify.toml runs that build, publishes dist/, redirects / to /game/, and sets security headers (CSP, nosniff) plus a JavaScript content type for .mjs. Preview the published set locally with the CSP applied: `ROOT=dist CSP="<policy from netlify.toml>" PORT=8778 node tools/serve.cjs`, or the `meal-lion-dist` entry in .claude/launch.json.
+
+To go live (owner's decision, not done yet): create a Netlify site linked to this repository (build settings come from netlify.toml), or run `netlify deploy --dir=dist` after a build. Set game/schedule.json startDate to launch day first. The localhost-only `?now=` test clock is inert on the live site.
+
 Daily dish: changes at midnight US Eastern. Schedule lives in game/schedule.json (append new dish IDs to the end only; set `startDate` to launch day). QA on localhost only: add `?now=2026-11-01T03:59:50Z` to run the game clock from any instant.
 
 To hand off: give the other agent this entire folder or extract the ZIP, and paste KICKOFF_PROMPT.md. No files outside this folder are needed for the included galleries.

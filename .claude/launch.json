@@ -4,8 +4,22 @@
     {
       "name": "meal-lion",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["tools/serve.cjs"],
+      "runtimeArgs": [
+        "tools/serve.cjs"
+      ],
       "port": 8777
+    },
+    {
+      "name": "meal-lion-dist",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "tools/serve.cjs"
+      ],
+      "port": 8778,
+      "env": {
+        "ROOT": "dist",
+        "CSP": "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+      }
     }
   ]
 }
