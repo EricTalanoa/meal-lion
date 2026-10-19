@@ -3,9 +3,8 @@ import {createArt} from './art.mjs';
 import {searchDishes, fold} from './search.mjs';
 import {easternDate, dayNumber, mealIdForDay, nextReset, dailyClueRng} from './schedule.mjs';
 import {dailyRecord, replayDaily, readRecord, writeRecord} from './persist.mjs';
+import {newDeck, drawDish} from './endless.mjs';
 
-// Practice rounds use stable roster IDs: Shakshuka, Pancakes, Grilled cheese.
-const ROUNDS = [3, 1, 22];
 const LOCAL = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname);
 // QA only, local hosts only: ?now=2026-11-01T03:59:50Z runs the clock from that instant.
 const nowParam = LOCAL && new URLSearchParams(location.search).get('now');
@@ -23,7 +22,7 @@ const el = {
   matches: $('matchesWrap'), matchesTitle: $('matchesTitle'), list: $('suggestions'), hint: $('hint'), error: $('error'), skip: $('skipBtn'),
   result: $('result'), plate: $('plate'), resultEyebrow: $('resultEyebrow'), resultTitle: $('resultTitle'),
   resultText: $('resultText'), resultIngredients: $('resultIngredients'), resultNext: $('resultNext'),
-  countdown: $('countdown'), newDay: $('newDayBtn'), restart: $('restartBtn'), next: $('nextBtn'), again: $('againBtn'),
+  countdown: $('countdown'), newDay: $('newDayBtn'), next: $('nextBtn'),
   history: $('history'), allShown: $('allShown'), historyEmpty: $('historyEmpty'), announce: $('announce'),
   settings: $('settings'), help: $('help'), optClue: $('optClue'), optHide: $('optHide'), optMotion: $('optMotion'),
 };
@@ -34,10 +33,13 @@ const settings = {startWithClue: true, hideTotal: true, still: matchMedia('(pref
 const coarse = matchMedia('(pointer: coarse)');
 const narrow = matchMedia('(max-width: 760px)');
 
-let roster = [], art = null, schedule = null, roundIndex = 0, game = null;
+let roster = [], art = null, schedule = null, game = null;
 // Each mode keeps its own game in memory so switching tabs doesn't lose progress.
 let mode = 'daily', daily = null;
-const games = {daily: null, practice: null};
+const games = {daily: null, endless: null};
+// Endless is not saved (User decision 2026-10-19): a fresh deck every visit.
+let deck = null;
+const endless = {played: 0, solved: 0};
 let selection = null, options = [], active = -1;
 let scene = {mood: 'idle', ingredient: null, mealId: null}, sceneStart = 0, clock = 0, last = 0, frame = 0;
 
@@ -53,7 +55,8 @@ async function boot() {
     const missing = await art.prepare();
     if (missing.length) console.warn('Missing artwork', missing);
     loadDaily();
-    setMode(daily.id ? 'daily' : 'practice');
+    deck = newDeck(roster.map(m => m.id));
+    setMode(daily.id ? 'daily' : 'endless');
     setInterval(tick, 1000); tick();
     if (missing.length) el.caption.textContent = 'Some artwork failed to load; the game still works.';
     document.body.dataset.ready = 'true';
@@ -76,19 +79,20 @@ function setMode(next) {
   if (game) games[mode] = game;
   mode = next;
   document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === mode)));
-  el.restart.hidden = mode !== 'practice';
   if (games[mode]) { game = games[mode]; resetComposer(); resumeScene(); render(); }
   else if (mode === 'daily') {
     const saved = replayDaily(readRecord(store), daily, meal(daily.id), roster);
     if (saved) { game = games.daily = saved; resetComposer(); clearResult(); resumeScene(); render(); }
     else begin(meal(daily.id), {rng: dailyClueRng(daily.date, daily.id)});
   }
-  else startRound(0);
+  else nextEndless();
 }
 
-function startRound(index) {
-  roundIndex = index;
-  begin(meal(ROUNDS[index]), {});
+function nextEndless() {
+  const draw = drawDish(deck, daily?.id ?? null, Math.random);
+  deck = draw.deck;
+  endless.played++;
+  begin(meal(draw.id), {});
 }
 
 function resumeScene() {
@@ -135,7 +139,7 @@ function say(text) { el.announce.textContent = ''; requestAnimationFrame(() => {
 function render() {
   const playing = game.status === 'playing';
   const hide = settings.hideTotal && playing;
-  el.round.textContent = mode === 'daily' ? `Daily dish #${daily.n}` : `Practice · meal ${roundIndex + 1} of ${ROUNDS.length}`;
+  el.round.textContent = mode === 'daily' ? `Daily dish #${daily.n}` : `Endless · dish ${endless.played} · ${endless.solved} solved`;
   const last = isLastGuess(game);
   el.progress.textContent = playing ? publicProgress(game, settings.hideTotal) + (last ? ' · Last guess!' : '')
     : game.status === 'won' ? `Solved on guess ${game.history.length}/${game.budget}` : `Out of guesses · ${game.budget}/${game.budget}`;
@@ -190,8 +194,7 @@ function renderResult() {
   el.resultIngredients.textContent = `Ingredients: ${game.meal.ingredients.join(', ')}`;
   // 25 of 45 dishes have no finished-meal art yet; hide the plate rather than show a blank.
   el.plate.hidden = !art.drawMeal(el.plate, game.meal.id);
-  el.again.hidden = mode === 'daily';
-  el.next.textContent = mode === 'daily' ? 'Practice meals' : roundIndex === ROUNDS.length - 1 ? 'Play the three again' : 'Next meal';
+  el.next.textContent = mode === 'daily' ? 'Play endless' : 'Next dish';
   tick();
 }
 
@@ -262,6 +265,7 @@ function apply(result, entryText) {
   if (result.error) { showError(result.error); return false; }
   const before = game.revealed;
   game = result.state;
+  if (mode === 'endless' && game.status === 'won') endless.solved++;
   save();
   resetComposer();
   if (game.status === 'won') setScene('won', null, `Yes! It’s ${game.meal.name}.`);
@@ -327,9 +331,7 @@ el.replay.addEventListener('click', () => {
 function setStill(still) { settings.still = still; el.optMotion.checked = still; render(); kick(); }
 el.motion.addEventListener('click', () => setStill(!settings.still));
 
-el.next.addEventListener('click', () => mode === 'daily' ? setMode('practice') : startRound((roundIndex + 1) % ROUNDS.length));
-el.again.addEventListener('click', () => startRound(roundIndex));
-el.restart.addEventListener('click', () => startRound(0));
+el.next.addEventListener('click', () => mode === 'daily' ? setMode('endless') : nextEndless());
 document.querySelectorAll('[data-mode]').forEach(b => b.addEventListener('click', () => { if (b.dataset.mode !== mode) setMode(b.dataset.mode); }));
 el.newDay.addEventListener('click', () => { loadDaily(); if (mode === 'daily') { game = null; } setMode('daily'); tick(); });
 

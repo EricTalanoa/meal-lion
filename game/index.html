@@ -13,8 +13,7 @@
     <div class="brand"><span class="logo">MEAL-LION</span><span class="tag">The daily dish</span></div>
     <div class="modes" role="group" aria-label="Game modes">
       <button type="button" class="mode" data-mode="daily" aria-pressed="true">Daily dish</button>
-      <button type="button" class="mode" data-mode="practice" aria-pressed="false">Practice · 3</button>
-      <span class="mode soon" title="Not built yet">Endless · soon</span>
+      <button type="button" class="mode" data-mode="endless" aria-pressed="false">Endless</button>
     </div>
     <nav class="links">
       <button type="button" class="link" id="helpBtn">How to play</button>
@@ -76,7 +75,6 @@
         <p class="next-dish" id="resultNext"></p>
         <div class="result-actions">
           <button type="button" class="primary" id="nextBtn">Next meal</button>
-          <button type="button" class="secondary" id="againBtn">Play this meal again</button>
         </div>
       </div>
     </section>
@@ -92,8 +90,7 @@
   <footer class="foot">
     <span class="countdown" id="countdown" aria-live="off"></span>
     <button type="button" class="primary small-btn" id="newDayBtn" hidden>New dish ready — play it</button>
-    <span class="build">Preview build · endless mode not built yet · daily progress is saved on this device</span>
-    <button type="button" class="link" id="restartBtn">Restart practice</button>
+    <span class="build">Preview build · daily progress is saved on this device · endless starts fresh each visit</span>
   </footer>
 </div>
 
@@ -122,6 +119,7 @@
       <li>Each wrong guess reveals another ingredient.</li>
       <li>Skipping reveals an ingredient but uses a guess. You can’t skip your last guess.</li>
       <li>Pick a dish from the list, then press Guess.</li>
+      <li><b>Daily dish:</b> one dish for everyone, new at midnight US Eastern. <b>Endless:</b> keep playing other dishes.</li>
     </ul>
     <button class="primary" value="close">Got it</button>
   </form>

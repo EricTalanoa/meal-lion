@@ -4,13 +4,13 @@ Every AI must read this file before working and update it throughout the session
 
 ## Current state
 
-- Current milestone: responsive three-meal slice is playable at game/ (Shakshuka, Pancakes, Grilled cheese) with ingredient-based guess limits and session settings. Browser-verified in emulation; real-device keyboards untested.
+- Current milestone: game/ is playable with Daily dish (US Eastern midnight, shared clue order, saved on device) and Endless (shuffled deck, excludes today's daily, not saved). Browser-verified in emulation; real-device keyboards untested.
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
 - Available: 45-meal roster, 20 meal illustrations, 50 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
 - Implemented: game/ (index.html, style.css, app.mjs, art.mjs, state.mjs). Not implemented: endless mode, persistence, aliases, final rules, deployment. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
 - Repository/branch/checkpoint: local repository initialized in the handoff root on main; baseline checkpoint 25962a4 created and verified; kickoff documentation checkpoint follows. Existing configured Git identity reused. No remote configured.
 - Confirmed rules: ingredient-count guess budget, one free clue (zero optional), hidden total by default (showing totals is optional), with explicit 'all ingredients revealed' and 'last guess' cues; reveal order shuffled every round; skip policy approved; typo-tolerant suggestions. Open decisions: aliases, timezone/schedule, scoring and storage. See docs/PRODUCT.md.
-- Next: endless mode (needs repeat/selection rules), whether to save settings/streaks/stats, real iOS/Android keyboard QA, more dishes + art. Daily mode is built with a placeholder start date.
+- Next: user playtesting; set schedule startDate at launch; add dishes + art (append IDs to game/schedule.json); real iOS/Android keyboard QA; open: aliases, saving settings, stats/streaks, sharing, hosting.
 
 ### 2026-10-18 America/Los_Angeles — Codex — Approved rules / implementation start
 - Branch: feat/three-meal-game; latest checkpoint 8f5e6e4. Working tree was clean before this task.
@@ -108,3 +108,10 @@ Every AI must read this file before working and update it throughout the session
 - game/persist.mjs (new): stores {version, date, mealId, startWithClue, actions} under localStorage key meal-lion:daily; restore replays the actions through state.mjs with the shared daily clue order and discards the record if it is for another date/dish, malformed, or any move is invalid. Storage read/write never throws (private mode/blocked storage just means no saving). game/state.mjs: game now records its startWithClue (so a mid-day setting change doesn't alter today's restored game). app.mjs saves on daily start and after every guess/skip; practice and settings are not saved.
 - Checks: tests first (missing-module failure observed); node --test tests/*.test.mjs 37/37 pass. Browser: mid-game reload restored guess count, clue order and history; won game reload went straight to the result with countdown; ?now next day started fresh Dish #3 and replaced the record; tampered record (invalid ID) discarded and a fresh game saved; no console errors. Cleared the QA record from the preview browser afterwards.
 - Not tested: Safari private mode / storage-disabled browsers in practice (covered only by a throwing-storage unit test); real devices.
+
+### 2026-10-19 America/Los_Angeles — Claude — Endless mode
+- Branch: feat/three-meal-game; previous checkpoint 670e4ef.
+- User decisions (asked first): shuffled deck (each dish once before repeats, no back-to-back across reshuffles); exclude today's daily dish; endless starts fresh each visit (not saved); endless replaces the Practice · 3 tab. Recorded in docs/PRODUCT.md.
+- game/endless.mjs (new): newDeck(ids), drawDish(deck, exclude, rng) — immutable deck; skips the excluded daily dish at draw time (so a mid-session daily rollover is respected); reshuffles when only excluded/none remain; small-roster fallbacks. app.mjs: tabs are Daily dish / Endless; "Endless · dish N · X solved" (session only); results offer "Next dish" (endless) or "Play endless" (daily); before the start date Daily is disabled and Endless opens. Removed the three-meal ROUNDS, restart and play-again controls.
+- Checks: tests first (missing-module failure observed); node --test tests/*.test.mjs 44/44 pass. Browser: 46 endless rounds — first cycle 44 unique dishes, today's daily (Falafel pita) never served, no back-to-back repeats; daily result -> Play endless; switching back keeps the daily result; pre-start ?now opens Endless with Daily disabled; no console errors. Cleared the QA daily record afterwards.
+- Known limit: if the daily rolls over mid-endless-round, the round in progress may be the new daily dish (later draws exclude it).
