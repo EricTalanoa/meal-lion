@@ -13,6 +13,8 @@ Then visit http://127.0.0.1:8766/ . Use `PORT=8777 node tools/serve.cjs` if 8766
 
 Playable game (Daily dish + Endless): http://127.0.0.1:8766/game/ (needs the server; ES modules and fetch do not run from file://). Tests: `node --test tests/game.test.mjs tests/search.test.mjs tests/schedule.test.mjs tests/persist.test.mjs tests/endless.test.mjs tests/streak.test.mjs` (or `node --test tests/*.test.mjs` in bash).
 
+Sound: game/audio.mjs synthesizes effects and the music loop with Web Audio (no audio files). Toggle with ♪ Music in the header or in Settings.
+
 Alternative dish names (suggestions only, never accepted as guesses): game/aliases.json, keyed by roster ID.
 
 ## Publishing (Netlify — prepared, not deployed)

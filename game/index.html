@@ -17,6 +17,7 @@
     </div>
     <nav class="links">
       <button type="button" class="link" id="helpBtn">How to play</button>
+      <button type="button" class="link music" id="musicBtn" aria-pressed="false">♪ Music: off</button>
       <button type="button" class="icon" id="settingsBtn" aria-label="Settings">⚙</button>
       <button type="button" class="link done" id="doneBtn">Done</button>
     </nav>
@@ -107,7 +108,11 @@
       <span><b>Hide ingredient total</b><small>On by default. Shows “Guess 1/X” and hides empty clue slots. You’ll still be told when every ingredient is out and when it’s your last guess.</small></span></label>
     <label class="opt"><input type="checkbox" id="optMotion">
       <span><b>Reduce motion</b><small>Shows still poses instead of animation.</small></span></label>
-    <p class="small">Settings last for this browser session only.</p>
+    <label class="opt"><input type="checkbox" id="optSfx" checked>
+      <span><b>Sound effects</b><small>Blips for picks, reveals, wrong guesses and results.</small></span></label>
+    <label class="opt"><input type="checkbox" id="optMusic">
+      <span><b>Music</b><small>A little kitchen tune on loop. Also the ♪ Music button up top.</small></span></label>
+    <p class="small">Settings reset when you reload the page.</p>
     <button class="primary" value="close">Done</button>
   </form>
 </dialog>

@@ -13,6 +13,7 @@
 - 2026-10-19: alternative dish names are not accepted as guesses. Typing one (e.g. "mac n cheese") suggests our dish name under "Did you mean…?", like a typo; the player picks it before guessing. Alias list lives in game/aliases.json.
 - 2026-10-19: settings are not saved (they reset on reload).
 - 2026-10-19: "correct in a row" streaks, counted separately. Daily streak = consecutive days the daily dish was solved, saved on this device; a loss or a missed day resets it. Endless streak = consecutive endless solves this visit; a loss resets it, not saved.
+- 2026-10-19: the game has sound effects and a toggleable background music loop (user request). Prototype defaults, not yet approved: all sound is synthesized in the browser (Web Audio, no audio files), effects on and music off by default, both reset on reload (settings are not saved). Sound never carries information that isn't also shown as text.
 - 2026-10-19: planned host is Netlify (static site). Setup prepared (netlify.toml + tools/build.cjs publish only game files) but not deployed; deploying needs the user's explicit go-ahead.
 - 2026-10-18: skip policy approved as built — a skip uses one guess and reveals the next ingredient; not allowed on the last guess.
 - 2026-10-18: suggestions include close matches for typos (shown as "Did you mean…?" when only close matches exist). The player still picks a dish before guessing.

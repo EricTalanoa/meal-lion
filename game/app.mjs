@@ -5,6 +5,7 @@ import {easternDate, dayNumber, mealIdForDay, nextReset, dailyClueRng} from './s
 import {dailyRecord, replayDaily, readRecord, writeRecord} from './persist.mjs';
 import {newDeck, drawDish} from './endless.mjs';
 import {recordDaily, dailyStreakNow, nextEndlessStreak, readStreak, writeStreak} from './streak.mjs';
+import {createAudio} from './audio.mjs';
 
 const LOCAL = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname);
 // QA only, local hosts only: ?now=2026-11-01T03:59:50Z runs the clock from that instant.
@@ -26,6 +27,7 @@ const el = {
   countdown: $('countdown'), newDay: $('newDayBtn'), streak: $('streakLabel'), resultStreak: $('resultStreak'), next: $('nextBtn'),
   history: $('history'), allShown: $('allShown'), historyEmpty: $('historyEmpty'), announce: $('announce'),
   settings: $('settings'), help: $('help'), optClue: $('optClue'), optHide: $('optHide'), optMotion: $('optMotion'),
+  optSfx: $('optSfx'), optMusic: $('optMusic'), music: $('musicBtn'),
 };
 
 // Session-only settings; nothing is persisted in this slice.
@@ -42,6 +44,7 @@ const games = {daily: null, endless: null};
 let deck = null;
 const endless = {played: 0, streak: 0};
 let streak = null;
+const audio = createAudio();
 let selection = null, options = [], active = -1;
 let scene = {mood: 'idle', ingredient: null, mealId: null}, sceneStart = 0, clock = 0, last = 0, frame = 0;
 
@@ -111,6 +114,7 @@ function begin(dish, options) {
   resetComposer();
   clearResult();
   save();
+  if (game.revealed) audio.play('reveal');
   resumeScene();
   render();
 }
@@ -255,6 +259,7 @@ function renderSuggestions() {
 function choose(id) {
   if (game.history.some(h => h.id === id)) { showError('You already tried that dish. Choose another.'); return; }
   selection = id;
+  audio.play('select');
   el.input.value = meal(id).name;
   active = options.findIndex(m => m.id === id);
   showError('');
@@ -269,7 +274,7 @@ function resetComposer() {
 function showError(text) { el.error.textContent = text; el.input.setAttribute('aria-invalid', String(!!text)); }
 
 // ---------- actions ----------
-function apply(result, entryText) {
+function apply(result, entryText, kind) {
   if (result.error) { showError(result.error); return false; }
   const before = game.revealed;
   game = result.state;
@@ -284,6 +289,7 @@ function apply(result, entryText) {
   else if (game.status === 'lost') setScene('lost', null, `Out of guesses — it was ${game.meal.name}.`);
   else if (game.revealed > before) { const ing = clue(game.revealed - 1); setScene('react', ing, `${entryText}${ing} revealed!${cues()}`); }
   else setScene('wrong', null, `${entryText}Keep going.${cues()}`);
+  audio.play(game.status === 'won' ? 'win' : game.status === 'lost' ? 'lose' : isLastGuess(game) ? 'last' : kind);
   render();
   if (game.status !== 'playing') { leaveTyping(); el.result.focus(); }
   return true;
@@ -299,13 +305,13 @@ el.composer.addEventListener('submit', e => {
     el.input.focus(); return;
   }
   const name = meal(selection).name;
-  if (apply(submitGuess(game, selection, roster), `Not ${name}. `) && game.status === 'playing') {
+  if (apply(submitGuess(game, selection, roster), `Not ${name}. `, 'wrong') && game.status === 'playing') {
     // Valid submission: dismiss the native keyboard on touch devices so the kitchen returns.
     if (coarse.matches || narrow.matches) { el.input.blur(); leaveTyping(); } else el.input.focus();
   }
 });
 
-el.skip.addEventListener('click', () => apply(skipClue(game), 'Skipped. '));
+el.skip.addEventListener('click', () => apply(skipClue(game), 'Skipped. ', 'skip'));
 
 el.input.addEventListener('input', () => {
   const exact = roster.find(m => fold(m.name) === fold(el.input.value));
@@ -368,7 +374,23 @@ function tick() {
 }
 
 // ---------- settings / help ----------
-$('settingsBtn').addEventListener('click', () => { el.optClue.checked = settings.startWithClue; el.optHide.checked = settings.hideTotal; el.optMotion.checked = settings.still; el.settings.showModal(); });
+$('settingsBtn').addEventListener('click', () => { el.optClue.checked = settings.startWithClue; el.optHide.checked = settings.hideTotal; el.optMotion.checked = settings.still; syncAudio(); el.settings.showModal(); });
+
+// ---------- sound ----------
+// Browsers only allow audio after a gesture: unlock on the first tap/click/key, and again
+// later in case the system interrupted it (e.g. a phone call on iOS).
+for (const type of ['pointerdown', 'keydown']) document.addEventListener(type, () => audio.unlock(), {capture: true});
+document.addEventListener('visibilitychange', () => audio.setHidden(document.hidden));
+function syncAudio() {
+  const {sfx, music} = audio.state();
+  el.optSfx.checked = sfx; el.optMusic.checked = music;
+  el.music.setAttribute('aria-pressed', String(music));
+  el.music.textContent = `♪ Music: ${music ? 'on' : 'off'}`;
+}
+el.music.addEventListener('click', () => { audio.unlock(); audio.setMusic(!audio.state().music); syncAudio(); });
+el.optMusic.addEventListener('change', () => { audio.unlock(); audio.setMusic(el.optMusic.checked); syncAudio(); });
+el.optSfx.addEventListener('change', () => { audio.setSfx(el.optSfx.checked); syncAudio(); audio.play('select'); });
+syncAudio();
 $('helpBtn').addEventListener('click', () => el.help.showModal());
 el.optClue.addEventListener('change', () => { settings.startWithClue = el.optClue.checked; say('Starting clue setting applies from the next round.'); });
 el.optHide.addEventListener('change', () => { settings.hideTotal = el.optHide.checked; render(); });

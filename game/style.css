@@ -36,6 +36,7 @@ button.mode { background: transparent; min-height: 44px; }
 .link { white-space: nowrap; background: none; border: 0; color: var(--cyan); font: 700 13px var(--pixel); text-transform: uppercase; letter-spacing: .06em; text-decoration: underline; text-underline-offset: 4px; padding: 10px 8px; min-height: 44px; }
 .icon { background: none; border: 0; color: var(--cyan); font-size: 26px; min-width: 44px; min-height: 44px; }
 .done { display: none; }
+.music[aria-pressed=false] { color: var(--muted); }
 
 .kitchen { grid-area: kitchen; border: 2px solid var(--line); background: var(--panel); }
 .stage-wrap { line-height: 0; }
