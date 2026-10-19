@@ -4,13 +4,20 @@ Every AI must read this file before working and update it throughout the session
 
 ## Current state
 
-- Current milestone: first development session started; handoff inspected and local Git initialized. Three-meal implementation is next.
+- Current milestone: implementing the responsive three-meal slice with user-approved ingredient-based guess limits and settings.
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
 - Available: 45-meal roster, 20 meal illustrations, 50 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
 - Not implemented: production guessing game, daily schedule, endless mode, persistence, final rules, deployment. Existing pilot is a visual review demo and exposes answers.
 - Repository/branch/checkpoint: local repository initialized in the handoff root on main; baseline checkpoint 25962a4 created and verified; kickoff documentation checkpoint follows. Existing configured Git identity reused. No remote configured.
-- Open decisions: attempt/reveal rules, clue ordering, aliases, timezone/schedule, scoring, storage and stack. See docs/PRODUCT.md.
-- Next: settle the proposed first-slice rules, document the build scope, then implement the responsive three-meal game.
+- Confirmed rules: ingredient-count guess budget, one free clue (zero optional), optional hidden total. Open decisions: skip policy, clue ordering, aliases, timezone/schedule, scoring and storage. See docs/PRODUCT.md.
+- Next: implement and test the three-meal game; validate browser behavior and document device gaps.
+
+### 2026-10-18 America/Los_Angeles — Codex — Approved rules / implementation start
+- Branch: feat/three-meal-game; latest checkpoint 8f5e6e4. Working tree was clean before this task.
+- User replaced proposed six-guess limit with one guess per ingredient and requested zero-start and hidden-total settings. Recorded in docs/PRODUCT.md.
+- Implementing the previously described three-meal scope using plain browser modules and native controls. Source assets stay unchanged; app lives in game/.
+- Ruling: hide empty clue slots in hidden-total mode; starting clues apply next round; settings are session-only in this slice. Skip costs an attempt but cannot spend the last attempt. These implementation defaults remain reviewable.
+- Checkpoints: deterministic state and tests, then responsive app and browser verification. Daily/endless scheduling and persistence remain later milestones.
 
 ## Session history
 
@@ -48,3 +55,5 @@ Every AI must read this file before working and update it throughout the session
 - Initial staging hit sandbox permissions; authorized escalated Git staging and commit succeeded. No unresolved Git blocker.
 - Original inventory remains unchanged; WORK_LOG.md hash now intentionally differs because development has begun.
 
+
+- State checkpoint: wrote tests first and observed the missing-module failure; implemented immutable transitions in game/state.mjs. All 18 tests passed, including 3/4/7/9 budgets with both starting-clue settings, final-turn wins/losses, invalid/duplicate input, and skip limits. UI and device behavior not yet tested.

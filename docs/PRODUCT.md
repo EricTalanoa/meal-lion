@@ -1,6 +1,9 @@
 # Product and decision ledger
 
 ## Confirmed direction
+- 2026-10-18: each meal allows exactly as many guesses as it has ingredients. Before the first attempt, show `Guess 1/7` for a seven-ingredient meal.
+- Start with one free ingredient by default; offer a setting to start with zero. Starting-clue changes apply to the next round.
+- Offer a setting to hide total ingredient count, showing `Guess 1/X`. Hide unrevealed tile counts and other total-count hints in this mode.
 - Working title: Meal-lion, a meal/dinner wordplay. Name is not final.
 - Guess the meal from ingredients revealed one by one.
 - Daily: one shared different meal per day. Endless mode also wanted.
@@ -13,7 +16,7 @@
 The existing work is art, mockups, motion studies and standalone visual prototypes. There is no complete guessing game, daily scheduler, endless mode, persistence, account system or production deployment. The three-meal pilot exposes answers for visual review.
 
 ## Proposals that still need decisions
-- Six guesses versus another limit; how reveals consume attempts; whether a first clue is free; skip policy; what happens when a 3-ingredient meal runs out of clues or a 9-ingredient meal exceeds guesses.
+- Manual reveal/skip policy remains a prototype default: a skip uses one attempt and reveals the next ingredient; unavailable on the last attempt to avoid spending the final chance without guessing. Wrong guesses reveal the next ingredient while attempts remain.
 - Clue ordering and difficulty; extra hints by dish family, cuisine, cooking method or other categories. The taxonomy-inspired idea is exploratory, not implemented.
 - Final name; whether the chef is called Leo.
 - Accepted aliases, spelling tolerance, overlapping dish variants, scoring, streaks, share format and loss behavior.

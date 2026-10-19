@@ -1,0 +1,29 @@
+export function createGame(meal, {startWithClue = true} = {}) {
+  return {meal, budget:meal.ingredients.length, revealed:startWithClue ? 1 : 0, history:[], status:'playing'};
+}
+
+export function publicProgress(state, hideTotal) {
+  const turn = Math.min(state.history.length + 1, state.budget);
+  return `Guess ${turn}/${hideTotal ? 'X' : state.budget}`;
+}
+
+export function submitGuess(state, mealId, roster) {
+  if (state.status !== 'playing') return {state, error:'This round is finished.'};
+  const guess = roster.find(meal => meal.id === mealId);
+  if (!guess) return {state, error:'Choose a dish from the suggestions first.'};
+  if (state.history.some(item => item.id === mealId)) return {state, error:'You already tried that dish. Choose another.'};
+  return advance(state, {id:guess.id, name:guess.name, type:'guess'}, mealId === state.meal.id);
+}
+
+export function skipClue(state) {
+  if (state.status !== 'playing') return {state, error:'This round is finished.'};
+  if (state.history.length >= state.budget - 1) return {state, error:'Use your last attempt to guess the dish.'};
+  if (state.revealed >= state.meal.ingredients.length) return {state, error:'All ingredients are already revealed.'};
+  return advance(state, {type:'skip', name:'Skipped for a clue'}, false);
+}
+
+function advance(state, entry, correct) {
+  const history = [...state.history, {...entry, correct}];
+  const status = correct ? 'won' : history.length >= state.budget ? 'lost' : 'playing';
+  return {state:{...state, history, status, revealed: status === 'playing' ? Math.min(state.revealed + 1, state.budget) : state.budget}, error:null};
+}
