@@ -59,6 +59,8 @@ h2 { font: 800 15px var(--pixel); letter-spacing: .1em; text-transform: uppercas
 .eyebrow { margin: 0; font: 800 14px var(--pixel); letter-spacing: .12em; text-transform: uppercase; color: var(--cyan); }
 h1 { font: 900 clamp(28px, 3.2vw, 42px)/1.1 var(--pixel); margin: 6px 0; color: #fff; text-shadow: 3px 3px 0 var(--pink); }
 .progress { margin: 0; font: 800 15px var(--pixel); color: var(--cyan); text-transform: uppercase; letter-spacing: .08em; }
+.progress.last { color: #ffd1e2; background: rgba(242, 80, 143, .18); border: 1px solid var(--pink); padding: 2px 8px; display: inline-block; }
+.all-shown { margin: 10px 0 0; text-align: center; font: 800 13px var(--pixel); letter-spacing: .1em; text-transform: uppercase; color: #ffe3a0; border: 1px dashed #ffe3a0; padding: 6px; }
 
 .dock { display: flex; flex-direction: column; gap: var(--gap); }
 .composer { display: flex; gap: 8px; }
@@ -169,6 +171,7 @@ dialog .primary { width: 100%; margin-top: 8px; }
   body.typing .clue canvas { width: 34px; }
   body.typing .clue span { font-size: 10px; }
   body.typing .clue .q { font-size: 26px; }
+  body.typing .all-shown { margin-top: 4px; padding: 2px; font-size: 11px; }
   body.typing .play { flex: 1; min-height: 0; gap: 6px; }
   body.typing .round { flex: none; padding: 6px 12px; }
   body.typing .dock { flex: 1; min-height: 0; position: static; border-top: 0; padding: 0; }

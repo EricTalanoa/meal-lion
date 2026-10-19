@@ -4,6 +4,7 @@
 - 2026-10-18: each meal allows exactly as many guesses as it has ingredients. Before the first attempt, show `Guess 1/7` for a seven-ingredient meal.
 - Start with one free ingredient by default; offer a setting to start with zero. Starting-clue changes apply to the next round.
 - Offer a setting to hide total ingredient count, showing `Guess 1/X`. Hide unrevealed tile counts and other total-count hints in this mode.
+- 2026-10-18 (update): hidden totals are the default; the setting turns totals on. Even with totals hidden, tell the player when every ingredient has been revealed and when they are on their last guess.
 - Working title: Meal-lion, a meal/dinner wordplay. Name is not final.
 - Guess the meal from ingredients revealed one by one.
 - Daily: one shared different meal per day. Endless mode also wanted.

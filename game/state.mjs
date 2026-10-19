@@ -7,6 +7,14 @@ export function publicProgress(state, hideTotal) {
   return `Guess ${turn}/${hideTotal ? 'X' : state.budget}`;
 }
 
+export function isLastGuess(state) {
+  return state.status === 'playing' && state.history.length === state.budget - 1;
+}
+
+export function allRevealed(state) {
+  return state.revealed >= state.meal.ingredients.length;
+}
+
 export function submitGuess(state, mealId, roster) {
   if (state.status !== 'playing') return {state, error:'This round is finished.'};
   const guess = roster.find(meal => meal.id === mealId);

@@ -1,4 +1,4 @@
-import {createGame, submitGuess, skipClue, publicProgress} from './state.mjs';
+import {createGame, submitGuess, skipClue, publicProgress, isLastGuess, allRevealed} from './state.mjs';
 import {createArt} from './art.mjs';
 
 // Stable roster IDs for the slice: Shakshuka, Pancakes, Grilled cheese.
@@ -14,12 +14,13 @@ const el = {
   matches: $('matchesWrap'), list: $('suggestions'), hint: $('hint'), error: $('error'), skip: $('skipBtn'),
   result: $('result'), plate: $('plate'), resultEyebrow: $('resultEyebrow'), resultTitle: $('resultTitle'),
   resultText: $('resultText'), resultIngredients: $('resultIngredients'), next: $('nextBtn'), again: $('againBtn'),
-  history: $('history'), historyEmpty: $('historyEmpty'), announce: $('announce'),
+  history: $('history'), allShown: $('allShown'), historyEmpty: $('historyEmpty'), announce: $('announce'),
   settings: $('settings'), help: $('help'), optClue: $('optClue'), optHide: $('optHide'), optMotion: $('optMotion'),
 };
 
 // Session-only settings; nothing is persisted in this slice.
-const settings = {startWithClue: true, hideTotal: false, still: matchMedia('(prefers-reduced-motion: reduce)').matches};
+// User decision 2026-10-18: totals are hidden by default.
+const settings = {startWithClue: true, hideTotal: true, still: matchMedia('(prefers-reduced-motion: reduce)').matches};
 const coarse = matchMedia('(pointer: coarse)');
 const narrow = matchMedia('(max-width: 760px)');
 
@@ -54,12 +55,14 @@ function startRound(index) {
   // Don't keep the previous answer in hidden DOM or on the plate canvas.
   for (const node of [el.resultEyebrow, el.resultTitle, el.resultText, el.resultIngredients]) node.textContent = '';
   el.plate.getContext('2d').clearRect(0, 0, el.plate.width, el.plate.height);
-  if (game.revealed) setScene('react', clue(0), `${clue(0)} revealed!`);
+  if (game.revealed) setScene('react', clue(0), `${clue(0)} revealed!${cues()}`);
   else setScene('idle', null, 'No ingredients yet. Take a guess, or skip for a clue.');
   render();
 }
 
 const clue = i => game.meal.ingredients[i];
+// Spoken/caption cues for the two moments players need to notice even with totals hidden.
+const cues = () => (allRevealed(game) ? ' That’s every ingredient.' : '') + (isLastGuess(game) ? ' Last guess!' : '');
 
 function setScene(mood, ingredient, caption) {
   scene = {mood, ingredient, mealId: game.meal.id};
@@ -76,9 +79,12 @@ function render() {
   const playing = game.status === 'playing';
   const hide = settings.hideTotal && playing;
   el.round.textContent = `Meal ${roundIndex + 1} of ${ROUNDS.length}`;
-  el.progress.textContent = playing ? publicProgress(game, settings.hideTotal)
+  const last = isLastGuess(game);
+  el.progress.textContent = playing ? publicProgress(game, settings.hideTotal) + (last ? ' · Last guess!' : '')
     : game.status === 'won' ? `Solved on guess ${game.history.length}/${game.budget}` : `Out of guesses · ${game.budget}/${game.budget}`;
   el.clueCount.textContent = hide ? `${game.revealed}` : `${game.revealed} / ${game.budget}`;
+  el.progress.classList.toggle('last', playing && last);
+  el.allShown.hidden = !(playing && allRevealed(game));
 
   const tiles = [];
   for (let i = 0; i < game.budget; i++) {
@@ -205,8 +211,8 @@ function apply(result, entryText) {
   resetComposer();
   if (game.status === 'won') setScene('won', null, `Yes! It’s ${game.meal.name}.`);
   else if (game.status === 'lost') setScene('lost', null, `Out of guesses — it was ${game.meal.name}.`);
-  else if (game.revealed > before) { const ing = clue(game.revealed - 1); setScene('react', ing, `${entryText}${ing} revealed!`); }
-  else setScene('wrong', null, `${entryText}Keep going.`);
+  else if (game.revealed > before) { const ing = clue(game.revealed - 1); setScene('react', ing, `${entryText}${ing} revealed!${cues()}`); }
+  else setScene('wrong', null, `${entryText}Keep going.${cues()}`);
   render();
   if (game.status !== 'playing') { leaveTyping(); el.result.focus(); }
   return true;

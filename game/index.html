@@ -37,6 +37,7 @@
   <section class="clues-panel" aria-labelledby="cluesHeading">
     <h2 id="cluesHeading">Ingredients <span id="clueCount"></span></h2>
     <ul class="clues" id="clues"></ul>
+    <p class="all-shown" id="allShown" hidden>All ingredients revealed</p>
   </section>
 
   <section class="play" aria-label="Guess the dish">
@@ -97,8 +98,8 @@
     <h2 id="settingsTitle">Settings</h2>
     <label class="opt"><input type="checkbox" id="optClue" checked>
       <span><b>Start with one free ingredient</b><small>Applies from the next round. Turn off to start with none.</small></span></label>
-    <label class="opt"><input type="checkbox" id="optHide">
-      <span><b>Hide ingredient total</b><small>Shows “Guess 1/X” and hides empty clue slots.</small></span></label>
+    <label class="opt"><input type="checkbox" id="optHide" checked>
+      <span><b>Hide ingredient total</b><small>On by default. Shows “Guess 1/X” and hides empty clue slots. You’ll still be told when every ingredient is out and when it’s your last guess.</small></span></label>
     <label class="opt"><input type="checkbox" id="optMotion">
       <span><b>Reduce motion</b><small>Shows still poses instead of animation.</small></span></label>
     <p class="small">Settings last for this browser session only.</p>
@@ -111,7 +112,7 @@
     <h2 id="helpTitle">How to play</h2>
     <ul>
       <li>Leo is cooking a dish. Guess it from the ingredients.</li>
-      <li>You get one guess per ingredient in the dish.</li>
+      <li>You get one guess per ingredient in the dish. The total stays hidden, but you’ll be told when it’s your last guess.</li>
       <li>Each wrong guess reveals another ingredient.</li>
       <li>Skipping reveals an ingredient but uses a guess. You can’t skip your last guess.</li>
       <li>Pick a dish from the list, then press Guess.</li>

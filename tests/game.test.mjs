@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createGame, submitGuess, skipClue, publicProgress} from '../game/state.mjs';
+import {createGame, submitGuess, skipClue, publicProgress, isLastGuess, allRevealed} from '../game/state.mjs';
 const roster = Array.from({length:12}, (_,i)=>({id:i+1,name:`Meal ${i+1}`,ingredients:['a','b','c']}));
 const meal = n => ({id:1,name:'Meal 1',ingredients:Array.from({length:n},(_,i)=>`Clue ${i}`)});
 for (const n of [3,4,7,9]) for (const startWithClue of [true,false]) {
@@ -42,4 +42,16 @@ test('skip costs one attempt, reveals one clue, and preserves the last guess',()
   s=skipClue(s).state;
   assert.strictEqual(skipClue(s).state,s);
   assert.equal(submitGuess(s,1,roster).state.status,'won');
+});
+test('last-guess and all-revealed cues track the budget',()=>{
+  for (const startWithClue of [true,false]) {
+    let s=createGame(meal(4),{startWithClue});
+    for(let i=0;i<3;i++){ assert.equal(isLastGuess(s),false); s=submitGuess(s,i+2,roster).state; }
+    assert.equal(isLastGuess(s),true);
+    assert.equal(allRevealed(s),startWithClue);
+    s=submitGuess(s,9,roster).state;
+    assert.equal(isLastGuess(s),false);
+    assert.equal(allRevealed(s),true);
+  }
+  assert.equal(isLastGuess(createGame(meal(1))),true);
 });
