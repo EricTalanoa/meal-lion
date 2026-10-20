@@ -8,7 +8,7 @@ Every AI must read this file before working and update it throughout the session
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
 - Available: 45-meal roster, 23 meal illustrations, 57 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
 - Implemented: responsive game, daily/endless, daily persistence, alias suggestions, streaks, sound and lazy-loaded art. Not implemented: deployment; final product decisions remain open. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
-- Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint 2d78f84 (image download optimization). No remote configured.
+- Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint 91d45d0. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
 - Confirmed rules: ingredient-count guess budget, one free clue (zero optional), hidden total by default (showing totals is optional), with explicit 'all ingredients revealed' and 'last guess' cues; reveal order shuffled every round; skip policy approved; typo-tolerant suggestions. Open decisions: aliases, timezone/schedule, scoring and storage. See docs/PRODUCT.md.
 - Images: startup now downloads ~2.4 MB (kitchen, chef, first clue atlas) instead of 32.9 MB; the rest loads on first use; published images are lossless WebP copies in assets/web/ (21.4 MB total). See the 2026-10-19 image-load entry.
 - Next: user playtesting; deploy to Netlify only on the user's go-ahead (setup ready); set schedule startDate at launch; add dishes + art; real iOS/Android keyboard QA; open: share format, analytics.
@@ -165,3 +165,9 @@ Every AI must read this file before working and update it throughout the session
 `n- Checkpoint 6bcefbd committed successfully. Arborio rice and Vegetable stock now saved and mapped, completing mushroom risotto ingredient art; coverage 21/45 meals, 57/103 ingredients. Prompts saved; optimized copies pending for these two additions.
 `n- Second batch: Arborio rice, Vegetable stock, Tomato soup and Gnocchi with tomato sauce mapped; lossless copies generated successfully. Coverage 23/45 meals and 57/103 ingredients. All 74 tests passed. Pasta icon also saved for next batch; not mapped yet.
 
+
+### 2026-10-19 — Claude — GitHub backup remote
+
+- At the user's request, created private GitHub repo EricTalanoa/meal-lion and added it as origin. Pushed all three local branches (main, feat/three-meal-game, codex/missing-food-art) with upstream tracking. No deployment.
+- Left the untracked assets/generated/food-2026-10-19/{pasta,pesto-pasta,pine-nuts}.png alone; they are not committed or pushed.
+- Next: push future checkpoint commits to origin.
