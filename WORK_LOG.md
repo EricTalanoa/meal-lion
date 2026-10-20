@@ -171,3 +171,4 @@ Every AI must read this file before working and update it throughout the session
 - At the user's request, created private GitHub repo EricTalanoa/meal-lion and added it as origin. Pushed all three local branches (main, feat/three-meal-game, codex/missing-food-art) with upstream tracking. No deployment.
 - Left the untracked assets/generated/food-2026-10-19/{pasta,pesto-pasta,pine-nuts}.png alone; they are not committed or pushed.
 - Next: push future checkpoint commits to origin.
+- Follow-up: committed and pushed the three generated images (pasta, pesto-pasta, pine-nuts) as source art at the user's request. They are not yet wired into assets/asset-map.json, assets/web/ or the game.
