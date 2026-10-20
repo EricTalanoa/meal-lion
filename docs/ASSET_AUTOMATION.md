@@ -29,3 +29,24 @@ Notify only for meaningful completed batches, queue completion, new failures or 
 Stop when all 45 meals and all canonical ingredients have mapped, inspected artwork and pending integration checks pass. Pause the heartbeat through the automation tool, record completion in WORK_LOG.md, and report remaining draft-quality or device-review caveats. Do not consume usage on duplicate artwork after the queue is done. Deployment is outside this authorization.
 
 Scheduling configuration is stored by the Codex app, not Git; this file preserves the intent and recovery procedure. Creation of the schedule does not prove an unattended image generation run has succeeded.
+
+## Cloud feasibility investigation — 2026-10-20
+
+Status: cloud scheduled image generation and downloading a resulting PNG verified. Full queue migration, automatic repository integration and quota-reset recovery are not verified. The existing local heartbeat is unchanged.
+
+- Official scheduled-task documentation supports cloud/web tasks with uploaded context and connected tools, but explicitly says they cannot directly use the local project folder or retain a local worktree between runs: https://learn.chatgpt.com/docs/automations
+- Official pricing documentation says Codex image generation counts toward general included usage alongside local messages and cloud chats. This does not establish tool availability in a particular scheduled cloud run: https://learn.chatgpt.com/docs/pricing?codex-pricing-plans=individual
+- The automation tool available in this local chat exposes local cron and thread heartbeat destinations, not a cloud execution option. A local heartbeat cannot be made computer-independent by changing its prompt.
+- User signed in to ChatGPT web. Created one-time cloud test `6ad7bfe9c2408191b650b820afd8a386` titled "Meal-lion cloud image capability test"; inspected "Runs on: Cloud", triggered Run now, and observed image output. The one-time schedule now displays Completed with no Pause action.
+- Result chat: https://chatgpt.com/c/6ad7bfdb-aa44-83e8-9a56-37c884747cb6 . Downloaded the first rendered generated image using the browser media download API after the attachment-download wait stalled. Saved assets/generated/cloud-test-2026-10-20/chickpeas-test.png; Pillow verifies PNG, RGBA, 1312 x 1199, alpha extrema 0–255. Visually inspected six recognizable chickpeas. Draft only; not mapped or counted as production coverage.
+- The run reported built-in generation without external API keys or purchased credits; no API fallback was configured here. This is not a billing audit. Two image renderings appeared in the chat after Run now and the scheduled time; one downloaded output was inspected. Future tests should avoid scheduling a near-future run and also using Run now.
+- Computer remained on to observe the test. Execution destination is verified as Cloud; physical power-off operation, long-term attachment retention, repeated reset recovery and repository writes were not tested.
+
+Checklist before moving the queue (steps 1–4 exercised for this account; remaining persistence/integration checks still open):
+
+1. Confirm the account exposes a cloud execution mode and a suitable scheduled-task interface. Test in the cloud with no local-computer access.
+2. Generate just one draft Chickpeas icon with the built-in image tool, using the established prompts.json style and a reference image if uploads are supported. Recheck coverage first in case the local queue already supplied it. Do not use an API key or paid fallback.
+3. Verify the result is a downloadable image with alpha transparency, not merely a textual claim or an expired session path. Save its exact prompt and an explicit test receipt.
+4. Exercise a single scheduled cloud generation and inspect the actual run result; an interactive image alone does not establish scheduled tool support.
+5. Verify durable output and queue state across separate cloud runs. Cloud chat attachments may suffice for later manual import, but automatic project integration additionally requires confirmed repository write capability. Never assume a GitHub read connector can commit binary images.
+6. Only after those checks pass, arrange recurring cloud generation and prevent duplicate local/cloud work. Preserve the current local schedule until a replacement is verified or the user requests otherwise.

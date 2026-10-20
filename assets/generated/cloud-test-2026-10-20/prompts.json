@@ -1,0 +1,11 @@
+[
+  {
+    "label": "Chickpeas",
+    "slug": "chickpeas-test",
+    "file": "chickpeas-test.png",
+    "status": "draft-cloud-capability-test-not-mapped",
+    "sourceChat": "https://chatgpt.com/c/6ad7bfdb-aa44-83e8-9a56-37c884747cb6",
+    "prompt": "At execution, use built-in image generation to create exactly one transparent PNG draft ingredient icon: a compact pile of six golden beige chickpeas with recognizable little beaks and creases, centered with generous transparent margins, crisp chunky 16-bit pixel-art square clusters, dark navy stepped outlines, warm food colors, upper-left highlights, limited palette, slight three-quarter view, readable at 64 pixels. No text, plate, scenery, watermark, blur or gradients. This is a capability test, not production art.",
+    "notes": "Exact submitted task image instruction. Internal image-tool prompt not inspected. Downloaded first rendered image. PNG RGBA 1312x1199; alpha extrema 0-255. Visual inspection completed; full style, edge cleanup and 64px readability approval pending."
+  }
+]

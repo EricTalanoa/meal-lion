@@ -187,3 +187,15 @@ Every AI must read this file before working and update it throughout the session
 - Setup verification: automation creation confirmed by tool; guide paths and command files inspected; no gameplay changes or new images. First unattended generation run and resume after a real reset remain untested.
 - Next: scheduled run reconciles files, checks usage, and resumes the 21 missing meals / 44 missing ingredient icons. Keep computer awake and Codex running. This checkpoint contains documentation only.
 
+
+### 2026-10-20 America/Los_Angeles — Codex — Cloud asset feasibility
+- Branch/checkpoint: codex/missing-food-art / f12be81; clean tree, one commit ahead of origin at start.
+- User requested investigation and testing of computer-off generation. Checking cloud scheduling, built-in image-tool availability and durable storage; existing local schedule unchanged. No paid API usage authorized.
+
+- User signed into ChatGPT web successfully (initial browser-check failure resolved by reload). Confirmed Scheduled page available on Plus. Submitted a one-time cloud chickpea-icon generation test through that page; awaiting creation/run result. Cloud conversation: https://chatgpt.com/c/6ad7bfdb-aa44-83e8-9a56-37c884747cb6 . No local dependencies or paid services requested.
+- Local heartbeat arrived during investigation; deferred asset batch to avoid overlap with active feasibility work. Local schedule remains active.
+
+- Cloud test verified: task 6ad7bfe9c2408191b650b820afd8a386 showed Runs on Cloud; Run now produced actual image attachments. One-time schedule now displays Completed (no recurring run configured). Two image renderings appeared after manual and scheduled execution; inspected/downloaded first only.
+- Saved assets/generated/cloud-test-2026-10-20/chickpeas-test.png and exact submitted instruction in prompts.json. Pillow: PNG RGBA, 1312x1199, alpha extrema 0-255. Visual inspection: six recognizable chickpeas; draft, not mapped. Attachment-download wait stalled; browser media download succeeded. No API key or paid fallback used.
+- Result: cloud image generation is feasible on this account. Physical PC-off run, automatic GitHub writes, long-term attachment persistence and repeated quota-reset recovery remain untested. Full local queue has NOT been migrated; existing local heartbeat unchanged.
+- Next: validate durable cloud queue/output storage and repository integration before migration; next local run should reconcile saved chickpea test before regenerating it. Docs and source test artifact only; gameplay tests not applicable.
