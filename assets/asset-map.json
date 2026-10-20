@@ -200,6 +200,14 @@
       "columns": 1,
       "rows": 1,
       "index": 0
+    },
+    {
+      "id": 12,
+      "name": "Pesto pasta",
+      "file": "assets/generated/food-2026-10-19/pesto-pasta.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
     }
   ],
   "ingredients": [
@@ -701,6 +709,22 @@
     {
       "label": "Vegetable stock",
       "file": "assets/generated/food-2026-10-19/vegetable-stock.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0,
+      "preferred": true
+    },
+    {
+      "label": "Pasta",
+      "file": "assets/generated/food-2026-10-19/pasta.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0,
+      "preferred": true
+    },
+    {
+      "label": "Pine nuts",
+      "file": "assets/generated/food-2026-10-19/pine-nuts.png",
       "columns": 1,
       "rows": 1,
       "index": 0,

@@ -6,9 +6,9 @@ Every AI must read this file before working and update it throughout the session
 
 - Current milestone: game/ is playable with Daily dish (US Eastern midnight, shared clue order, saved on device) and Endless (shuffled deck, excludes today's daily, not saved). Browser-verified in emulation; real-device keyboards untested.
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
-- Available: 45-meal roster, 23 meal illustrations, 57 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
+- Available: 45-meal roster, 24 meal illustrations, 59 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
 - Implemented: responsive game, daily/endless, daily persistence, alias suggestions, streaks, sound and lazy-loaded art. Not implemented: deployment; final product decisions remain open. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
-- Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint 91d45d0. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
+- Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint d630b5c. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
 - Confirmed rules: ingredient-count guess budget, one free clue (zero optional), hidden total by default (showing totals is optional), with explicit 'all ingredients revealed' and 'last guess' cues; reveal order shuffled every round; skip policy approved; typo-tolerant suggestions. Open decisions: aliases, timezone/schedule, scoring and storage. See docs/PRODUCT.md.
 - Images: startup now downloads ~2.4 MB (kitchen, chef, first clue atlas) instead of 32.9 MB; the rest loads on first use; published images are lossless WebP copies in assets/web/ (21.4 MB total). See the 2026-10-19 image-load entry.
 - Next: user playtesting; deploy to Netlify only on the user's go-ahead (setup ready); set schedule startDate at launch; add dishes + art; real iOS/Android keyboard QA; open: share format, analytics.
@@ -172,3 +172,6 @@ Every AI must read this file before working and update it throughout the session
 - Left the untracked assets/generated/food-2026-10-19/{pasta,pesto-pasta,pine-nuts}.png alone; they are not committed or pushed.
 - Next: push future checkpoint commits to origin.
 - Follow-up: committed and pushed the three generated images (pasta, pesto-pasta, pine-nuts) as source art at the user's request. They are not yet wired into assets/asset-map.json, assets/web/ or the game.
+- Mapped Pesto pasta (meal 12) art plus Pasta and Pine nuts icons in assets/asset-map.json; Pesto pasta now has all ingredient icons. Coverage 24/45 meals, 59/103 ingredients. Visually inspected all three (readable, on-style); corners fully transparent. Lossless WebP copies generated via tools/optimize-images.py.
+- Checks: 74/74 tests pass. Built-in browser (localhost dev server): game/art.mjs drawMeal(12) and drawIngredient for Pasta and Pine nuts all drew real art, not fallbacks. tools/build.cjs output maps all three to their .webp copies. tools/verify.cjs shows only the expected handoff-integrity mismatches for development-edited files. Not checked: a full played Pesto pasta round, or real devices.
+- Gap: exact generation prompts for these three images were not recorded in prompts.json (the generating session did not save them). All art remains draft.

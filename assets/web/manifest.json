@@ -57,6 +57,30 @@
       "width": 1254,
       "height": 1254
     },
+    "assets/generated/food-2026-10-19/pasta.png": {
+      "file": "assets/web/assets/generated/food-2026-10-19/pasta.webp",
+      "sourceSha256": "8998294c1e2051846735255108ed880e49b360ee92b4d88badefc3b3e6fe4460",
+      "sourceBytes": 1013068,
+      "bytes": 694062,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-19/pesto-pasta.png": {
+      "file": "assets/web/assets/generated/food-2026-10-19/pesto-pasta.webp",
+      "sourceSha256": "0e19544fb7b2037b286f35b099416bc44f77527a449e056c3b4c0f6aff321707",
+      "sourceBytes": 1661413,
+      "bytes": 1320312,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-19/pine-nuts.png": {
+      "file": "assets/web/assets/generated/food-2026-10-19/pine-nuts.webp",
+      "sourceSha256": "9d8b10707b64ec6ea1b6a5da6cfc8e9dabaffb4bb40081038de94151f7981b21",
+      "sourceBytes": 734817,
+      "bytes": 454442,
+      "width": 1254,
+      "height": 1254
+    },
     "assets/generated/food-2026-10-19/pizza-dough.png": {
       "file": "assets/web/assets/generated/food-2026-10-19/pizza-dough.webp",
       "sourceSha256": "80e86c88f9a63efe16084a7d8170cf37f1e5aba9a393e2e3d790c46b2cc61c17",
