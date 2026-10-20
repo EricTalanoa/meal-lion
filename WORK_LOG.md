@@ -8,7 +8,8 @@ Every AI must read this file before working and update it throughout the session
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
 - Available: 45-meal roster, 24 meal illustrations, 59 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
 - Implemented: responsive game, daily/endless, daily persistence, alias suggestions, streaks, sound and lazy-loaded art. Not implemented: deployment; final product decisions remain open. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
-- Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint d630b5c. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
+- Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint 76f1837 before scheduling setup. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
+- Asset automation: active thread heartbeat resume-meal-lion-asset-generation checks every 30 minutes and resumes the existing roster's missing artwork while included usage is available. See docs/ASSET_AUTOMATION.md. Unattended generation has not yet been verified.
 - Confirmed rules: ingredient-count guess budget, one free clue (zero optional), hidden total by default (showing totals is optional), with explicit 'all ingredients revealed' and 'last guess' cues; reveal order shuffled every round; skip policy approved; typo-tolerant suggestions. Open decisions: aliases, timezone/schedule, scoring and storage. See docs/PRODUCT.md.
 - Images: startup now downloads ~2.4 MB (kitchen, chef, first clue atlas) instead of 32.9 MB; the rest loads on first use; published images are lossless WebP copies in assets/web/ (21.4 MB total). See the 2026-10-19 image-load entry.
 - Next: user playtesting; deploy to Netlify only on the user's go-ahead (setup ready); set schedule startDate at launch; add dishes + art; real iOS/Android keyboard QA; open: share format, analytics.
@@ -175,3 +176,14 @@ Every AI must read this file before working and update it throughout the session
 - Mapped Pesto pasta (meal 12) art plus Pasta and Pine nuts icons in assets/asset-map.json; Pesto pasta now has all ingredient icons. Coverage 24/45 meals, 59/103 ingredients. Visually inspected all three (readable, on-style); corners fully transparent. Lossless WebP copies generated via tools/optimize-images.py.
 - Checks: 74/74 tests pass. Built-in browser (localhost dev server): game/art.mjs drawMeal(12) and drawIngredient for Pasta and Pine nuts all drew real art, not fallbacks. tools/build.cjs output maps all three to their .webp copies. tools/verify.cjs shows only the expected handoff-integrity mismatches for development-edited files. Not checked: a full played Pesto pasta round, or real devices.
 - Gap: exact generation prompts for these three images were not recorded in prompts.json (the generating session did not save them). All art remains draft.
+
+### 2026-10-20 America/Los_Angeles — Codex — Scheduled asset generation setup
+- Branch: codex/missing-food-art; latest existing checkpoint 76f1837; clean tree at start. Current summary checkpoint was stale; actual mapped coverage agrees with 24/45 meals and 59/103 ingredients.
+- User authorized recurring generation using available usage after resets until exhausted. Preparing a thread heartbeat and durable resume instructions; no asset generation performed in this setup turn.
+- Usage tool reports 12% of five-hour and 2% of weekly Codex allowance used. Image-generation quota is not exposed by that response; honor the image tool's own limit/reset errors.
+
+- Created ACTIVE thread heartbeat resume-meal-lion-asset-generation; automation view returned its app card. Cadence: every 30 minutes, resuming when allowance is available rather than an exact reset trigger.
+- Added docs/ASSET_AUTOMATION.md covering scope, sequential saving, prompt capture, duplicate prevention, quota backoff, checks/commits and completion pause. Corrected stale summary checkpoint.
+- Setup verification: automation creation confirmed by tool; guide paths and command files inspected; no gameplay changes or new images. First unattended generation run and resume after a real reset remain untested.
+- Next: scheduled run reconciles files, checks usage, and resumes the 21 missing meals / 44 missing ingredient icons. Keep computer awake and Codex running. This checkpoint contains documentation only.
+
