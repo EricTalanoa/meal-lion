@@ -184,6 +184,22 @@
       "columns": 1,
       "rows": 1,
       "index": 0
+    },
+    {
+      "id": 35,
+      "name": "Tomato soup",
+      "file": "assets/generated/food-2026-10-19/tomato-soup.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "id": 18,
+      "name": "Gnocchi with tomato sauce",
+      "file": "assets/generated/food-2026-10-19/gnocchi-tomato.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
     }
   ],
   "ingredients": [
@@ -669,6 +685,22 @@
     {
       "label": "Pizza dough",
       "file": "assets/generated/food-2026-10-19/pizza-dough.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0,
+      "preferred": true
+    },
+    {
+      "label": "Arborio rice",
+      "file": "assets/generated/food-2026-10-19/arborio-rice.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0,
+      "preferred": true
+    },
+    {
+      "label": "Vegetable stock",
+      "file": "assets/generated/food-2026-10-19/vegetable-stock.png",
       "columns": 1,
       "rows": 1,
       "index": 0,

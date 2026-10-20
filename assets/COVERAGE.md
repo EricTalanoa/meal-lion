@@ -1,6 +1,6 @@
 # Artwork coverage
 
-21/45 meal illustrations; 55/103 canonical ingredient icons; 11 custom animation groups. All draft.
+23/45 meal illustrations; 57/103 canonical ingredient icons; 11 custom animation groups. All draft.
 
 | ID | Meal | Meal art | Missing ingredient icons |
 |---|---|---|---|
@@ -20,8 +20,8 @@
 | 14 | Beef lasagna | Missing | Lasagna sheets |
 | 15 | Margherita pizza | Available | None |
 | 16 | Pepperoni pizza | Missing | Pepperoni |
-| 17 | Mushroom risotto | Available | Arborio rice, Vegetable stock |
-| 18 | Gnocchi with tomato sauce | Missing | None |
+| 17 | Mushroom risotto | Available | None |
+| 18 | Gnocchi with tomato sauce | Available | None |
 | 19 | Cheeseburger | Available | None |
 | 20 | Hot dog | Missing | Hot dog bun, Frankfurter, Mustard |
 | 21 | BLT sandwich | Missing | Mayonnaise |
@@ -38,7 +38,7 @@
 | 32 | Cottage pie | Missing | Beef stock |
 | 33 | Chicken pot pie | Missing | Puff pastry, Chicken stock |
 | 34 | French onion soup | Missing | Beef stock, Gruyère |
-| 35 | Tomato soup | Missing | Vegetable stock |
+| 35 | Tomato soup | Available | None |
 | 36 | Miso soup | Available | None |
 | 37 | Butter chicken | Available | None |
 | 38 | Thai green chicken curry | Missing | Coconut milk, Green curry paste, Eggplant, Bamboo shoots, Thai basil, Fish sauce |

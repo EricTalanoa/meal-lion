@@ -29,5 +29,27 @@
     "label": "Pizza dough",
     "slug": "pizza-dough",
     "prompt": "Use case: stylized-concept. Create one square transparent PNG ingredient icon for Meal-lion, a pixel-art food guessing game. Subject: Pizza dough, a pale cream soft raw dough ball resting on a slightly flattened round dough disk, gentle kneading folds and a tiny flour dusting on the dough only, clearly uncooked, no toppings, no finished pizza. Single centered object grouping filling 75% of the canvas with generous transparent margins. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outline, warm saturated food colors, simple readable highlights from upper left and limited-palette shadows. Slight three-quarter view. Must read clearly at 64px. No text, letters, labels, plate, scenery, border, watermark, gradients, blur, glow, or cast shadow outside the object. Genuinely transparent background. Match the established cozy retro cooking-game food icons. This is an ingredient clue, not a prepared meal."
+  },
+  {
+    "label": "Arborio rice",
+    "slug": "arborio-rice",
+    "prompt": "Use case: stylized-concept. Create one square transparent PNG ingredient icon for Meal-lion, a pixel-art food guessing game. Subject: Arborio rice, a small wooden scoop holding a mound of uncooked pearly ivory short plump oval rice grains, with four clearly separated plump grains at its base. Emphasize short rounded grains distinct from long basmati rice, no cooked dish. Single centered object grouping filling 75% of the canvas with generous transparent margins. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outline, warm saturated food colors, simple readable highlights from upper left and limited-palette shadows. Slight three-quarter view. Must read clearly at 64px. No text, letters, labels, plate, scenery, border, watermark, gradients, blur, glow, or cast shadow outside the object. Genuinely transparent background. Match the established cozy retro cooking-game food icons. This is an ingredient clue, not a prepared meal."
+  },
+  {
+    "label": "Vegetable stock",
+    "slug": "vegetable-stock",
+    "prompt": "Use case: stylized-concept. Create one square transparent PNG ingredient icon for Meal-lion, a pixel-art food guessing game. Subject: Vegetable stock, a small clear glass measuring jug of translucent golden vegetable broth with a green celery stalk and orange carrot illustrated as a simple pictogram on the front of the jug, no letters, no numbers. Broad handle and short pouring spout, clearly a cooking ingredient jug not a soup bowl. Single centered object grouping filling 75% of the canvas with generous transparent margins. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outline, warm saturated food colors, simple readable highlights from upper left and limited-palette shadows. Slight three-quarter view. Must read clearly at 64px. No text, letters, labels, plate, scenery, border, watermark, gradients, blur, glow, or cast shadow outside the object. Genuinely transparent background. Match the established cozy retro cooking-game food icons. This is an ingredient clue, not a prepared meal."
+  },
+  {
+    "id": 35,
+    "name": "Tomato soup",
+    "slug": "tomato-soup",
+    "prompt": "Use case: stylized-concept. Asset: one square transparent PNG finished-meal illustration for the result screen of Meal-lion, a cozy retro pixel-art cooking game. Subject: Tomato soup, a shallow white ceramic bowl with pale blue shaded rim filled with smooth rich red tomato soup and one simple ivory cream swirl. No spoon, bread, herbs or side dishes. Match chunky 16-bit food sprite art with crisp square pixel clusters, dark navy stepped outlines, saturated warm food colors, limited-palette highlights and shadows. Three-quarter elevated view, complete dish centered, filling about 75% of canvas with transparent padding on every side. No text, labels, letters, watermark, scenery, table, blur, glow, gradients or floating particles. Genuine transparent background, not a checkerboard. Readable at 154 pixels."
+  },
+  {
+    "id": 18,
+    "name": "Gnocchi with tomato sauce",
+    "slug": "gnocchi-tomato",
+    "prompt": "Use case: stylized-concept. Asset: one square transparent PNG finished-meal illustration for the result screen of Meal-lion, a cozy retro pixel-art cooking game. Subject: Gnocchi with tomato sauce, a white ceramic plate with pale blue shaded rim holding plump small ridged oval potato gnocchi coated in rich red tomato sauce, with a few bright green basil leaves and light Parmesan shavings. The gnocchi must be clearly short oval dumplings with fork ridges, not spaghetti or macaroni. No side dishes. Match chunky 16-bit food sprite art with crisp square pixel clusters, dark navy stepped outlines, saturated warm food colors, limited-palette highlights and shadows. Three-quarter elevated view, complete dish centered, filling about 75% of canvas with transparent padding on every side. No text, labels, letters, watermark, scenery, table, blur, glow, gradients or floating particles. Genuine transparent background, not a checkerboard. Readable at 154 pixels."
   }
 ]

@@ -6,7 +6,7 @@ Every AI must read this file before working and update it throughout the session
 
 - Current milestone: game/ is playable with Daily dish (US Eastern midnight, shared clue order, saved on device) and Endless (shuffled deck, excludes today's daily, not saved). Browser-verified in emulation; real-device keyboards untested.
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
-- Available: 45-meal roster, 21 meal illustrations, 55 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
+- Available: 45-meal roster, 23 meal illustrations, 57 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
 - Implemented: responsive game, daily/endless, daily persistence, alias suggestions, streaks, sound and lazy-loaded art. Not implemented: deployment; final product decisions remain open. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
 - Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint 2d78f84 (image download optimization). No remote configured.
 - Confirmed rules: ingredient-count guess budget, one free clue (zero optional), hidden total by default (showing totals is optional), with explicit 'all ingredients revealed' and 'last guess' cues; reveal order shuffled every round; skip policy approved; typo-tolerant suggestions. Open decisions: aliases, timezone/schedule, scoring and storage. See docs/PRODUCT.md.
@@ -161,4 +161,7 @@ Every AI must read this file before working and update it throughout the session
 - First checkpoint: mapped Parmesan, Basil, Macaroni, Mozzarella, Pizza dough and Chicken quesadilla. Coverage 21/45 meals and 55/103 ingredients; original reference/ untouched. Lossless web copies refreshed and all 74 tests passed (including map/build paths, source hashes and image dimensions).
 - Visual inspection: subjects readable and follow pixel-food direction; transparency confirmed. Some low-alpha pixels reach image boundaries, so final halo cleanup/light-and-dark background approval is still pending. No real-device/browser artwork inspection in this pass yet.
 - Next batch: Arborio rice generated and saved, not mapped yet; vegetable stock next. All artwork remains draft.
+
+`n- Checkpoint 6bcefbd committed successfully. Arborio rice and Vegetable stock now saved and mapped, completing mushroom risotto ingredient art; coverage 21/45 meals, 57/103 ingredients. Prompts saved; optimized copies pending for these two additions.
+`n- Second batch: Arborio rice, Vegetable stock, Tomato soup and Gnocchi with tomato sauce mapped; lossless copies generated successfully. Coverage 23/45 meals and 57/103 ingredients. All 74 tests passed. Pasta icon also saved for next batch; not mapped yet.
 
