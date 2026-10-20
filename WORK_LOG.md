@@ -6,9 +6,9 @@ Every AI must read this file before working and update it throughout the session
 
 - Current milestone: game/ is playable with Daily dish (US Eastern midnight, shared clue order, saved on device) and Endless (shuffled deck, excludes today's daily, not saved). Browser-verified in emulation; real-device keyboards untested.
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
-- Available: 45-meal roster, 20 meal illustrations, 50 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
-- Implemented: game/ (index.html, style.css, app.mjs, art.mjs, state.mjs). Not implemented: endless mode, persistence, aliases, final rules, deployment. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
-- Repository/branch/checkpoint: local repository initialized in the handoff root on main; baseline checkpoint 25962a4 created and verified; kickoff documentation checkpoint follows. Existing configured Git identity reused. No remote configured.
+- Available: 45-meal roster, 21 meal illustrations, 55 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
+- Implemented: responsive game, daily/endless, daily persistence, alias suggestions, streaks, sound and lazy-loaded art. Not implemented: deployment; final product decisions remain open. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
+- Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint 2d78f84 (image download optimization). No remote configured.
 - Confirmed rules: ingredient-count guess budget, one free clue (zero optional), hidden total by default (showing totals is optional), with explicit 'all ingredients revealed' and 'last guess' cues; reveal order shuffled every round; skip policy approved; typo-tolerant suggestions. Open decisions: aliases, timezone/schedule, scoring and storage. See docs/PRODUCT.md.
 - Images: startup now downloads ~2.4 MB (kitchen, chef, first clue atlas) instead of 32.9 MB; the rest loads on first use; published images are lossless WebP copies in assets/web/ (21.4 MB total). See the 2026-10-19 image-load entry.
 - Next: user playtesting; deploy to Netlify only on the user's go-ahead (setup ready); set schedule startDate at launch; add dishes + art; real iOS/Android keyboard QA; open: share format, analytics.
@@ -149,3 +149,16 @@ Every AI must read this file before working and update it throughout the session
 - Browser checks (headless Chrome via DevTools protocol, because this session's browser pane was hidden and rAF/decode do not run there), old build vs new dist with the Netlify CSP: cold load at simulated 10 Mbps/40 ms: old 28.3 s to playable, 24 images / 32.9 MB; new 2.9 s, 3 images / 2.36 MB (kitchen, chef, butter's atlas), no further images until play. Three dailies (Pancakes, Grilled cheese, Shakshuka) played clue-by-clue to a loss with motion paused: all 17 stage frames (incl. egg/milk/cheese/tomato/onion strips, serve strips, finished meals) and clue/plate canvases match within 1-2/255 per channel; full-page screenshots desktop + 375px phone: same, apart from the countdown clock text. Difference is Chrome's WebP vs PNG premultiplied-alpha rounding on semi-transparent pixels only (opaque pixels and alpha identical; kitchen bit-identical). Console: only the pre-existing favicon.ico 404 in both builds.
 - Not tested: Firefox/Safari decoders; throttled play where a reaction strip arrives mid-reaction (logic unit-tested; it starts from the strip's current step); real phones; real Netlify.
 - Possible follow-ups: downscaled copies sized to the 1200x400 stage (much smaller, but visibly resamples the art, needs the user's OK); dark one-pixel bleed left of the Pancakes plate comes from the source atlas (pre-existing, unchanged).
+
+### 2026-10-19 America/Los_Angeles — Codex — Missing food artwork kickoff
+- User requested missing ingredient and meal artwork until usage runs out. Branch: codex/missing-food-art; existing checkpoint 2d78f84; initial working tree clean.
+- Reconciled current summary with implemented daily/endless, persistence, aliases, streaks and audio. Coverage remains 20/45 meals and 50/103 ingredients (25 meals and 53 ingredient gaps).
+- Plan: generate individual transparent pixel-art assets using built-in image generation, prioritizing shared ingredient gaps; inspect outputs, save outside reference/, update map/coverage/prompts, refresh lossless web copies, run asset/build checks and commit verified batches.
+- Existing artwork is approved style; no visual redesign or gameplay changes requested. No generation performed yet.
+
+`n- First assets: Parmesan and Basil generated, visually inspected, saved under assets/generated/food-2026-10-19/ and mapped. Prompts recorded. Coverage refresh utility added. Initial branch creation required sandbox escalation and then succeeded. Web copies/checkpoint checks pending.
+
+- First checkpoint: mapped Parmesan, Basil, Macaroni, Mozzarella, Pizza dough and Chicken quesadilla. Coverage 21/45 meals and 55/103 ingredients; original reference/ untouched. Lossless web copies refreshed and all 74 tests passed (including map/build paths, source hashes and image dimensions).
+- Visual inspection: subjects readable and follow pixel-food direction; transparency confirmed. Some low-alpha pixels reach image boundaries, so final halo cleanup/light-and-dark background approval is still pending. No real-device/browser artwork inspection in this pass yet.
+- Next batch: Arborio rice generated and saved, not mapped yet; vegetable stock next. All artwork remains draft.
+

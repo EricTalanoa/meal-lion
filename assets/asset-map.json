@@ -176,6 +176,14 @@
       "columns": 3,
       "rows": 1,
       "index": 2
+    },
+    {
+      "id": 24,
+      "name": "Chicken quesadilla",
+      "file": "assets/generated/food-2026-10-19/chicken-quesadilla.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
     }
   ],
   "ingredients": [
@@ -624,6 +632,46 @@
       "columns": 3,
       "rows": 3,
       "index": 8,
+      "preferred": true
+    },
+    {
+      "label": "Parmesan",
+      "file": "assets/generated/food-2026-10-19/parmesan.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0,
+      "preferred": true
+    },
+    {
+      "label": "Basil",
+      "file": "assets/generated/food-2026-10-19/basil.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0,
+      "preferred": true
+    },
+    {
+      "label": "Macaroni",
+      "file": "assets/generated/food-2026-10-19/macaroni.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0,
+      "preferred": true
+    },
+    {
+      "label": "Mozzarella",
+      "file": "assets/generated/food-2026-10-19/mozzarella.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0,
+      "preferred": true
+    },
+    {
+      "label": "Pizza dough",
+      "file": "assets/generated/food-2026-10-19/pizza-dough.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0,
       "preferred": true
     }
   ],

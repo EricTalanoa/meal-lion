@@ -1,6 +1,6 @@
 # Artwork coverage
 
-20/45 meal illustrations; 50/103 canonical ingredient icons; 11 custom animation groups. All draft.
+21/45 meal illustrations; 55/103 canonical ingredient icons; 11 custom animation groups. All draft.
 
 | ID | Meal | Meal art | Missing ingredient icons |
 |---|---|---|---|
@@ -15,19 +15,19 @@
 | 9 | Potato rösti | Available | None |
 | 10 | Spaghetti carbonara | Missing | Guanciale, Pecorino, Black pepper |
 | 11 | Spaghetti Bolognese | Available | None |
-| 12 | Pesto pasta | Missing | Pasta, Basil, Pine nuts, Parmesan |
-| 13 | Macaroni and cheese | Available | Macaroni |
-| 14 | Beef lasagna | Missing | Lasagna sheets, Parmesan |
-| 15 | Margherita pizza | Available | Pizza dough, Mozzarella, Basil |
-| 16 | Pepperoni pizza | Missing | Pizza dough, Mozzarella, Pepperoni |
-| 17 | Mushroom risotto | Available | Arborio rice, Vegetable stock, Parmesan |
-| 18 | Gnocchi with tomato sauce | Missing | Basil, Parmesan |
+| 12 | Pesto pasta | Missing | Pasta, Pine nuts |
+| 13 | Macaroni and cheese | Available | None |
+| 14 | Beef lasagna | Missing | Lasagna sheets |
+| 15 | Margherita pizza | Available | None |
+| 16 | Pepperoni pizza | Missing | Pepperoni |
+| 17 | Mushroom risotto | Available | Arborio rice, Vegetable stock |
+| 18 | Gnocchi with tomato sauce | Missing | None |
 | 19 | Cheeseburger | Available | None |
 | 20 | Hot dog | Missing | Hot dog bun, Frankfurter, Mustard |
 | 21 | BLT sandwich | Missing | Mayonnaise |
 | 22 | Grilled cheese | Available | None |
 | 23 | Tuna melt | Missing | Canned tuna, Mayonnaise |
-| 24 | Chicken quesadilla | Missing | None |
+| 24 | Chicken quesadilla | Available | None |
 | 25 | Beef tacos | Missing | Corn tortilla |
 | 26 | Falafel pita | Missing | Pita, Chickpeas, Parsley, Tahini |
 | 27 | Fish and chips | Available | None |
@@ -47,5 +47,5 @@
 | 41 | Chicken katsu curry | Missing | Panko, Japanese curry roux |
 | 42 | Pad Thai | Missing | Rice noodles, Bean sprouts, Peanuts, Tamarind, Fish sauce, Palm sugar |
 | 43 | Greek salad | Available | None |
-| 44 | Chicken Caesar salad | Missing | Romaine lettuce, Parmesan, Anchovy |
+| 44 | Chicken Caesar salad | Missing | Romaine lettuce, Anchovy |
 | 45 | Bibimbap | Missing | Spinach, Bean sprouts, Gochujang, Sesame oil |

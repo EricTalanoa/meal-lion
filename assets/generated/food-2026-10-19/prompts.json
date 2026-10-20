@@ -1,0 +1,33 @@
+[
+  {
+    "label": "Parmesan",
+    "slug": "parmesan",
+    "prompt": "Use case: stylized-concept. Create one square transparent PNG ingredient icon for Meal-lion, a pixel-art food guessing game. Subject: Parmesan cheese, a pale straw-yellow hard cheese wedge with a darker natural rind and a small pile of coarse grated flakes at its base. Single centered object grouping filling 75% of the canvas with generous transparent margins. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outline, warm saturated food colors, simple readable highlights from upper left and limited-palette shadows. Slight three-quarter view. Must read clearly at 64px. No text, letters, labels, plate, scenery, border, watermark, gradients, blur, glow, or cast shadow outside the object. Genuinely transparent background. Match the established cozy retro cooking-game food icons. This is an ingredient clue, not a prepared meal."
+  },
+  {
+    "label": "Basil",
+    "slug": "basil",
+    "prompt": "Use case: stylized-concept. Create one square transparent PNG ingredient icon for Meal-lion, a pixel-art food guessing game. Subject: Basil, a small fresh sprig with five broad bright green sweet basil leaves, smooth gently pointed oval leaves with clear central veins, not Thai basil. Single centered object grouping filling 75% of the canvas with generous transparent margins. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outline, warm saturated food colors, simple readable highlights from upper left and limited-palette shadows. Slight three-quarter view. Must read clearly at 64px. No text, letters, labels, plate, scenery, border, watermark, gradients, blur, glow, or cast shadow outside the object. Genuinely transparent background. Match the established cozy retro cooking-game food icons. This is an ingredient clue, not a prepared meal."
+  },
+  {
+    "id": 24,
+    "name": "Chicken quesadilla",
+    "slug": "chicken-quesadilla",
+    "prompt": "Use case: stylized-concept. Asset: one square transparent PNG finished-meal illustration for the result screen of Meal-lion, a cozy retro pixel-art cooking game. Subject: Chicken quesadilla, three golden toasted tortilla wedges arranged on a small white ceramic plate with a pale blue shaded rim. Cut edges clearly show melted cheddar, cooked chicken pieces and red bell pepper. Subtle browned tortilla spots. No side dishes, garnishes or sauces. Match chunky 16-bit food sprite art with crisp square pixel clusters, dark navy stepped outlines, saturated warm food colors, limited-palette highlights and shadows. Three-quarter elevated view, complete plate centered, filling about 75% of canvas with transparent padding on every side. No text, labels, letters, watermark, scenery, table, blur, glow, gradients or floating particles. Genuine transparent background, not a checkerboard. Readable at 154 pixels."
+  },
+  {
+    "label": "Macaroni",
+    "slug": "macaroni",
+    "prompt": "Use case: stylized-concept. Create one square transparent PNG ingredient icon for Meal-lion, a pixel-art food guessing game. Subject: Macaroni, a compact little pile of six uncooked golden-yellow elbow macaroni tubes with obvious curved hollow openings, no sauce or cheese. Single centered object grouping filling 75% of the canvas with generous transparent margins. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outline, warm saturated food colors, simple readable highlights from upper left and limited-palette shadows. Slight three-quarter view. Must read clearly at 64px. No text, letters, labels, plate, scenery, border, watermark, gradients, blur, glow, or cast shadow outside the object. Genuinely transparent background. Match the established cozy retro cooking-game food icons. This is an ingredient clue, not a prepared meal."
+  },
+  {
+    "label": "Mozzarella",
+    "slug": "mozzarella",
+    "prompt": "Use case: stylized-concept. Create one square transparent PNG ingredient icon for Meal-lion, a pixel-art food guessing game. Subject: Mozzarella, one fresh round ivory-white mozzarella cheese ball with two soft round slices leaning against it, moist creamy white interior, no rind, no holes, no herbs or tomatoes. Single centered object grouping filling 75% of the canvas with generous transparent margins. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outline, warm saturated food colors, simple readable highlights from upper left and limited-palette shadows. Slight three-quarter view. Must read clearly at 64px. No text, letters, labels, plate, scenery, border, watermark, gradients, blur, glow, or cast shadow outside the object. Genuinely transparent background. Match the established cozy retro cooking-game food icons. This is an ingredient clue, not a prepared meal."
+  },
+  {
+    "label": "Pizza dough",
+    "slug": "pizza-dough",
+    "prompt": "Use case: stylized-concept. Create one square transparent PNG ingredient icon for Meal-lion, a pixel-art food guessing game. Subject: Pizza dough, a pale cream soft raw dough ball resting on a slightly flattened round dough disk, gentle kneading folds and a tiny flour dusting on the dough only, clearly uncooked, no toppings, no finished pizza. Single centered object grouping filling 75% of the canvas with generous transparent margins. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outline, warm saturated food colors, simple readable highlights from upper left and limited-palette shadows. Slight three-quarter view. Must read clearly at 64px. No text, letters, labels, plate, scenery, border, watermark, gradients, blur, glow, or cast shadow outside the object. Genuinely transparent background. Match the established cozy retro cooking-game food icons. This is an ingredient clue, not a prepared meal."
+  }
+]
