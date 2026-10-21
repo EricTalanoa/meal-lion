@@ -9,7 +9,7 @@ Every AI must read this file before working and update it throughout the session
 - Available: 45-meal roster, 26 meal illustrations, 61 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
 - Implemented: responsive game, daily/endless, daily persistence, alias suggestions, streaks, sound and lazy-loaded art. Not implemented: deployment; final product decisions remain open. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
 - Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint d7dbcf4 before resumed artwork. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
-- Asset automation: active thread heartbeat resume-meal-lion-asset-generation checks every 30 minutes and resumes the existing roster's missing artwork while included usage is available. See docs/ASSET_AUTOMATION.md. Unattended generation has not yet been verified.
+- Asset automation: cloud task 6ad7bfe9c2408191b650b820afd8a386 is Active every 1 hour; local heartbeat is PAUSED to prevent duplicates. 41 icons / 18 meals queued. Outputs require later local import. See docs/ASSET_AUTOMATION.md. Recurring queue/resume behavior remains untested.
 - Confirmed rules: ingredient-count guess budget, one free clue (zero optional), hidden total by default (showing totals is optional), with explicit 'all ingredients revealed' and 'last guess' cues; reveal order shuffled every round; skip policy approved; typo-tolerant suggestions. Open decisions: aliases, timezone/schedule, scoring and storage. See docs/PRODUCT.md.
 - Images: startup now downloads ~2.4 MB (kitchen, chef, first clue atlas) instead of 32.9 MB; the rest loads on first use; published images are lossless WebP copies in assets/web/ (21.4 MB total). See the 2026-10-19 image-load entry.
 - Next: user playtesting; deploy to Netlify only on the user's go-ahead (setup ready); set schedule startDate at launch; add dishes + art; real iOS/Android keyboard QA; open: share format, analytics.
@@ -212,4 +212,13 @@ Every AI must read this file before working and update it throughout the session
 - Checkpoint verification: all 74 tests pass; static build succeeds; new PNGs are RGBA with alpha 0-255; lossless web copies verified by optimization script. Browser review attempted but blocked by localhost connection timeout; Python Playwright unavailable. No browser/device pass claimed. Saved review.html uses game renderer for future review.
 - Restored three exact earlier prompts. Chickpea source remains unchanged. Cloud setup entry preserved; this commit includes that pre-existing log context without claiming setup completed.
 - Next: Canned tuna and Tuna melt, then shared stock/vegetable gaps. No deployment or account changes.
+
+
+### 2026-10-21 America/Los_Angeles — Codex — Resume cloud migration
+- Existing checkpoint e2cc675; preserved pending tuna artwork/map changes from other work. Usage available (3% five-hour, 48% weekly used). Finishing authorized cloud queue migration; no duplicate local generation.
+
+
+- Cloud migration completed: existing test task updated to Meal-lion cloud asset generation, Active / Cloud / every 1 hour, America/Los_Angeles. Full 59-subject prompt verified in saved task after canceling stale edit fields. Local heartbeat pause confirmed by automation tool. No setup generation or paid fallback.
+- Saved submitted instructions in docs/CLOUD_ASSET_QUEUE.md and updated docs/ASSET_AUTOMATION.md. First recurring run, cross-run ledger persistence and quota recovery remain untested; cloud attachments need later local import and review. Screenshot capture unavailable; DOM verification succeeded.
+- Branch codex/missing-food-art, prior checkpoint e2cc675. Pending tuna files/map/log preserved unstaged. Documentation-only verification: actual cloud saved fields and local pause; gameplay tests not applicable. Next: inspect first scheduled cloud output and import completed drafts with original prompts, then finish pending tuna checks.
 

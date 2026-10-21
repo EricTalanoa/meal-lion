@@ -4,14 +4,14 @@ Authorized by the user on 2026-10-20: use available included usage to generate m
 
 ## Schedule and limits
 
-- Active Codex thread heartbeat: `resume-meal-lion-asset-generation`.
-- Checks every 30 minutes, throughout the day and night. This is polling, not a reset-event trigger; an available run resumes after a reset.
+- Local Codex heartbeat `resume-meal-lion-asset-generation` is PAUSED after cloud migration on 2026-10-21.
+- Active cloud task: Meal-lion cloud asset generation, ID `6ad7bfe9c2408191b650b820afd8a386`, every 1 hour (minimum supported interval), America/Los_Angeles. Verified saved UI: Active, Cloud, Interval, 1 hour, complete queue prompt.
 - Check the live usage tool and the latest WORK_LOG.md entry before generation. Codex usage and image generation usage may be separate; do not infer image quota from Codex percentages.
 - If a recorded retry/reset time is still in the future, skip generation. If no reset time was supplied, allow at most one generation attempt per scheduled run. Stop at the first quota error; never loop on errors.
 - Use included built-in image generation only. Do not buy credits, spend banked resets, introduce paid API fallbacks or change subscriptions.
-- A scheduled run may be delayed or unable to start when usage is exhausted. Keep the computer awake, Codex running and this project available for local work.
+- Cloud generation does not depend on this computer. Outputs and a queue ledger live in https://chatgpt.com/c/6ad7bfdb-aa44-83e8-9a56-37c884747cb6 . See CLOUD_ASSET_QUEUE.md for the submitted instructions. Local import still requires this project and a running computer.
 
-## Resume workflow
+## Local import / fallback workflow
 
 1. Read AGENTS.md, WORK_LOG.md, docs/GIT_AND_CONTINUITY.md, START_HERE.md, docs/PRODUCT.md and docs/ASSETS.md. Inspect Git branch/status/recent commits. Continue the asset branch only when safe; preserve unrelated changes. If another worker is editing the same map/log, defer instead of racing it.
 2. Update the log at the start. Reconcile assets/asset-map.json, assets/COVERAGE.md, the roster and saved generated files. Integrate unfinished saved assets first; do not generate duplicates because a prior run stopped before mapping.
@@ -50,3 +50,7 @@ Checklist before moving the queue (steps 1–4 exercised for this account; remai
 4. Exercise a single scheduled cloud generation and inspect the actual run result; an interactive image alone does not establish scheduled tool support.
 5. Verify durable output and queue state across separate cloud runs. Cloud chat attachments may suffice for later manual import, but automatic project integration additionally requires confirmed repository write capability. Never assume a GitHub read connector can commit binary images.
 6. Only after those checks pass, arrange recurring cloud generation and prevent duplicate local/cloud work. Preserve the current local schedule until a replacement is verified or the user requests otherwise.
+
+## Cloud migration — 2026-10-21
+
+The existing test task was updated, not duplicated. Fixed queue: 41 ingredient icons and 18 meals, excluding pending local tuna artwork. Local heartbeat pause confirmed by automation tool. First recurring queue run, ledger persistence across runs and quota recovery remain untested. Download actual PNG attachments and exact prompts, inspect them, then use the local integration workflow above. Reconcile cloud outputs before restarting any local generation. Cloud completion means draft generation only; local coverage, checks and approval remain separate. No automatic GitHub writes configured. Screenshot capture was unavailable; saved task fields verified through browser DOM.
