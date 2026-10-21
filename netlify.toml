@@ -1,4 +1,4 @@
-# Netlify static site. Not deployed yet: deploying needs the owner's go-ahead.
+# Netlify static site. Test deploy: meal-lion-playtest.netlify.app (deploys need the owner's go-ahead).
 # The build copies only what the game loads into dist/ (see tools/build.cjs).
 [build]
   command = "node tools/build.cjs"
