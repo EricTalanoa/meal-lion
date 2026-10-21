@@ -255,3 +255,4 @@ Every AI must read this file before working and update it throughout the session
 - Live check in built-in browser: / redirects to /game/, game loads with no console errors, CSP header present, .mjs served as JavaScript, new pecorino icon returns 200. Site is public with no password. Not tested on real phones.
 - Redeploying: rebuild with node tools/build.cjs and deploy dist/ (repo is too large for the zip-and-build path). Git-connected continuous deploys not set up.
 
+- Pushed codex/missing-food-art to origin (76f1837..0986b54), including the earlier unpushed tuna, BLT/chana masala and cloud-queue commits.
