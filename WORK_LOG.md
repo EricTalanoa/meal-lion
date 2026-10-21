@@ -6,9 +6,9 @@ Every AI must read this file before working and update it throughout the session
 
 - Current milestone: game/ is playable with Daily dish (US Eastern midnight, shared clue order, saved on device) and Endless (shuffled deck, excludes today's daily, not saved). Browser-verified in emulation; real-device keyboards untested.
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
-- Available: 45-meal roster, 24 meal illustrations, 59 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
+- Available: 45-meal roster, 26 meal illustrations, 61 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
 - Implemented: responsive game, daily/endless, daily persistence, alias suggestions, streaks, sound and lazy-loaded art. Not implemented: deployment; final product decisions remain open. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
-- Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint 76f1837 before scheduling setup. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
+- Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint d7dbcf4 before resumed artwork. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
 - Asset automation: active thread heartbeat resume-meal-lion-asset-generation checks every 30 minutes and resumes the existing roster's missing artwork while included usage is available. See docs/ASSET_AUTOMATION.md. Unattended generation has not yet been verified.
 - Confirmed rules: ingredient-count guess budget, one free clue (zero optional), hidden total by default (showing totals is optional), with explicit 'all ingredients revealed' and 'last guess' cues; reveal order shuffled every round; skip policy approved; typo-tolerant suggestions. Open decisions: aliases, timezone/schedule, scoring and storage. See docs/PRODUCT.md.
 - Images: startup now downloads ~2.4 MB (kitchen, chef, first clue atlas) instead of 32.9 MB; the rest loads on first use; published images are lossless WebP copies in assets/web/ (21.4 MB total). See the 2026-10-19 image-load entry.
@@ -199,3 +199,17 @@ Every AI must read this file before working and update it throughout the session
 - Saved assets/generated/cloud-test-2026-10-20/chickpeas-test.png and exact submitted instruction in prompts.json. Pillow: PNG RGBA, 1312x1199, alpha extrema 0-255. Visual inspection: six recognizable chickpeas; draft, not mapped. Attachment-download wait stalled; browser media download succeeded. No API key or paid fallback used.
 - Result: cloud image generation is feasible on this account. Physical PC-off run, automatic GitHub writes, long-term attachment persistence and repeated quota-reset recovery remain untested. Full local queue has NOT been migrated; existing local heartbeat unchanged.
 - Next: validate durable cloud queue/output storage and repository integration before migration; next local run should reconcile saved chickpea test before regenerating it. Docs and source test artifact only; gameplay tests not applicable.
+
+### 2026-10-20 America/Los_Angeles — Codex — Cloud queue setup
+- Branch/checkpoint: codex/missing-food-art / d7dbcf4; clean tree, two local commits ahead of origin.
+- User authorized setting up recurring cloud asset generation after successful test. Preparing self-contained queue and prompts in the existing cloud chat; will pause local generation after verifying cloud activation. Cloud chat attachments will be imported locally later; no automatic GitHub write claim.
+
+`n### 2026-10-20 America/Los_Angeles — Codex — Resume food artwork`n- Branch codex/missing-food-art; checkpoint d7dbcf4. Existing uncommitted cloud-queue kickoff entry belongs to scheduling session and is preserved. That chat is idle/interrupted; no concurrent map edits observed.`n- Reconciled 24/45 meals, 59/103 icons; pesto set already integrated. Restored exact Pasta, Pine nuts and Pesto pasta generation prompts from this chat history.`n- Inspected saved cloud chickpeas: recognizable pixel-art draft; will reuse rather than regenerate. Continuing remaining ingredient/meal queue locally with included image tool only. Cloud recurring setup remains unverified.
+`n- Reused and mapped cloud Chickpeas draft (non-square source displayed using current square icon renderer; visual QA pending), generated/saved/mapped Mayonnaise with exact prompt. Coverage 24/45 meals, 61/103 icons. BLT now has all ingredient icons. Next: BLT meal art.
+`n- BLT sandwich generated, saved with exact prompt, visually inspected and mapped. Coverage 25/45 meal illustrations, 61/103 ingredient icons. Next Chana masala meal art.
+`n- Chana masala meal generated, visually inspected, saved with exact prompt and mapped. Coverage 26/45 meals and 61/103 ingredient icons. Preparing optimized copies and a browser review of the four additions.
+
+- Checkpoint verification: all 74 tests pass; static build succeeds; new PNGs are RGBA with alpha 0-255; lossless web copies verified by optimization script. Browser review attempted but blocked by localhost connection timeout; Python Playwright unavailable. No browser/device pass claimed. Saved review.html uses game renderer for future review.
+- Restored three exact earlier prompts. Chickpea source remains unchanged. Cloud setup entry preserved; this commit includes that pre-existing log context without claiming setup completed.
+- Next: Canned tuna and Tuna melt, then shared stock/vegetable gaps. No deployment or account changes.
+

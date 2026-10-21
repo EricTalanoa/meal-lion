@@ -1,0 +1,25 @@
+[
+  {
+    "label": "Mayonnaise",
+    "slug": "mayonnaise",
+    "status": "draft",
+    "file": "assets/generated/food-2026-10-20/mayonnaise.png",
+    "prompt": "Use case: stylized-concept. Create one square transparent PNG ingredient icon for Meal-lion, a pixel-art food guessing game. Subject: Mayonnaise, a small open clear glass jar filled with thick ivory mayonnaise, a soft curled dollop visible at its open top and a short wooden spreading spoon leaning inside. No branding or label, no eggs or sandwich. Single centered object grouping filling 75% of the canvas with generous transparent margins. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outline, warm saturated food colors, simple readable highlights from upper left and limited-palette shadows. Slight three-quarter view. Must read clearly at 64px. No text, letters, labels, plate, scenery, border, watermark, gradients, blur, glow, or cast shadow outside the object. Genuinely transparent background. Match the established cozy retro cooking-game food icons. This is an ingredient clue, not a prepared meal."
+  },
+  {
+    "id": 21,
+    "name": "BLT sandwich",
+    "slug": "blt-sandwich",
+    "status": "draft",
+    "file": "assets/generated/food-2026-10-20/blt-sandwich.png",
+    "prompt": "Use case: stylized-concept. Asset: one square transparent PNG finished-meal illustration for the result screen of Meal-lion, a cozy retro pixel-art cooking game. Subject: BLT sandwich, two triangular halves of a toasted sandwich on a small white ceramic plate with pale blue shaded rim, clearly layered crisp reddish-brown bacon strips, bright green lettuce, red tomato slices and thin ivory mayonnaise between golden toasted bread. No cheese, no chicken, no sides, no toothpicks. Match chunky 16-bit food sprite art with crisp square pixel clusters, dark navy stepped outlines, saturated warm food colors, limited-palette highlights and shadows. Three-quarter elevated view, complete dish centered, filling about 75% of canvas with transparent padding on every side. No text, labels, letters, watermark, scenery, table, blur, glow, gradients or floating particles. Genuine transparent background, not a checkerboard. Readable at 154 pixels."
+  },
+  {
+    "id": 39,
+    "name": "Chana masala",
+    "slug": "chana-masala",
+    "status": "draft",
+    "file": "assets/generated/food-2026-10-20/chana-masala.png",
+    "prompt": "Use case: stylized-concept. Asset: one square transparent PNG finished-meal illustration for the result screen of Meal-lion, a cozy retro pixel-art cooking game. Subject: Chana masala, a small white ceramic bowl with pale blue shaded rim filled with plump golden chickpeas in thick rust-red tomato and onion curry. Distinct little chickpea beaks and creases visible above the rich sauce, a few cooked onion pieces. No rice, bread, cream, herbs, meat or side dishes. Match chunky 16-bit food sprite art with crisp square pixel clusters, dark navy stepped outlines, saturated warm food colors, limited-palette highlights and shadows. Three-quarter elevated view, complete dish centered, filling about 75% of canvas with transparent padding on every side. No text, labels, letters, watermark, scenery, table, blur, glow, gradients or floating particles. Genuine transparent background, not a checkerboard. Readable at 154 pixels."
+  }
+]

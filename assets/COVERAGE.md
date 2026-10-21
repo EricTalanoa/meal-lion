@@ -1,6 +1,6 @@
 # Artwork coverage
 
-24/45 meal illustrations; 59/103 canonical ingredient icons; 11 custom animation groups. All draft.
+26/45 meal illustrations; 61/103 canonical ingredient icons; 11 custom animation groups. All draft.
 
 | ID | Meal | Meal art | Missing ingredient icons |
 |---|---|---|---|
@@ -24,12 +24,12 @@
 | 18 | Gnocchi with tomato sauce | Available | None |
 | 19 | Cheeseburger | Available | None |
 | 20 | Hot dog | Missing | Hot dog bun, Frankfurter, Mustard |
-| 21 | BLT sandwich | Missing | Mayonnaise |
+| 21 | BLT sandwich | Available | None |
 | 22 | Grilled cheese | Available | None |
-| 23 | Tuna melt | Missing | Canned tuna, Mayonnaise |
+| 23 | Tuna melt | Missing | Canned tuna |
 | 24 | Chicken quesadilla | Available | None |
 | 25 | Beef tacos | Missing | Corn tortilla |
-| 26 | Falafel pita | Missing | Pita, Chickpeas, Parsley, Tahini |
+| 26 | Falafel pita | Missing | Pita, Parsley, Tahini |
 | 27 | Fish and chips | Available | None |
 | 28 | Egg fried rice | Available | None |
 | 29 | Chicken biryani | Missing | Basmati rice, Saffron |
@@ -42,7 +42,7 @@
 | 36 | Miso soup | Available | None |
 | 37 | Butter chicken | Available | None |
 | 38 | Thai green chicken curry | Missing | Coconut milk, Green curry paste, Eggplant, Bamboo shoots, Thai basil, Fish sauce |
-| 39 | Chana masala | Missing | Chickpeas |
+| 39 | Chana masala | Available | None |
 | 40 | Palak paneer | Missing | Paneer, Spinach |
 | 41 | Chicken katsu curry | Missing | Panko, Japanese curry roux |
 | 42 | Pad Thai | Missing | Rice noodles, Bean sprouts, Peanuts, Tamarind, Fish sauce, Palm sugar |

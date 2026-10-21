@@ -1,0 +1,22 @@
+<!doctype html><meta charset="utf-8"><title>Meal-lion draft artwork review</title>
+<style>body{font:16px system-ui;margin:24px;background:#e8e7e2;color:#10293d}section{display:flex;gap:12px;margin:12px 0}figure{margin:0;padding:14px;width:170px;text-align:center;background:white}figure.dark{background:#10293d;color:white}canvas{display:block;margin:8px auto;image-rendering:pixelated}h1{font-size:22px}</style>
+<h1>Draft food art · actual game renderer</h1><p>64px ingredient clues and 154px result plates. Light and dark backgrounds.</p><main></main>
+<script type="module">
+import {createArt} from '../../../game/art.mjs';
+const map=await (await fetch('../../asset-map.json')).json();
+const entries=[{label:'Chickpeas'},...await (await fetch('./prompts.json')).json()];
+const art=createArt(map,'../../../');
+const draws=[];
+for(const item of entries){
+ const row=document.createElement('section');document.querySelector('main').append(row);
+ for(const dark of [false,true]){
+  const figure=document.createElement('figure');if(dark)figure.className='dark';
+  const label=document.createElement('div');label.textContent=item.name||item.label;figure.append(label);
+  const c=document.createElement('canvas');c.width=c.height=item.id?154:64;figure.append(c);row.append(figure);
+  draws.push(()=>item.id?art.drawMeal(c,item.id):art.drawIngredient(c,item.label));
+ }
+}
+draws.forEach(draw=>draw());await art.settled();
+window.reviewResult={draws:draws.map(draw=>draw()),failed:await art.settled()};
+document.body.dataset.ready='true';
+</script>

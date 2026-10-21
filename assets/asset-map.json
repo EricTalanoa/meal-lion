@@ -208,6 +208,22 @@
       "columns": 1,
       "rows": 1,
       "index": 0
+    },
+    {
+      "id": 21,
+      "name": "BLT sandwich",
+      "file": "assets/generated/food-2026-10-20/blt-sandwich.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "id": 39,
+      "name": "Chana masala",
+      "file": "assets/generated/food-2026-10-20/chana-masala.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
     }
   ],
   "ingredients": [
@@ -729,6 +745,22 @@
       "rows": 1,
       "index": 0,
       "preferred": true
+    },
+    {
+      "label": "Chickpeas",
+      "file": "assets/generated/cloud-test-2026-10-20/chickpeas-test.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0,
+      "preferred": true
+    },
+    {
+      "label": "Mayonnaise",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-20/mayonnaise.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
     }
   ],
   "animations": [
