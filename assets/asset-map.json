@@ -224,6 +224,14 @@
       "columns": 1,
       "rows": 1,
       "index": 0
+    },
+    {
+      "id": 23,
+      "name": "Tuna melt",
+      "file": "assets/generated/food-2026-10-20/tuna-melt-v2.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
     }
   ],
   "ingredients": [
@@ -758,6 +766,14 @@
       "label": "Mayonnaise",
       "preferred": true,
       "file": "assets/generated/food-2026-10-20/mayonnaise.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Canned tuna",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-20/canned-tuna.png",
       "columns": 1,
       "rows": 1,
       "index": 0

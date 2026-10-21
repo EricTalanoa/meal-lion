@@ -121,6 +121,14 @@
       "width": 1254,
       "height": 1254
     },
+    "assets/generated/food-2026-10-20/canned-tuna.png": {
+      "file": "assets/web/assets/generated/food-2026-10-20/canned-tuna.webp",
+      "sourceSha256": "dcef4ca467d919de43e963d4e584af16952538aa4ce27a4c97a2549d756b42ea",
+      "sourceBytes": 1088060,
+      "bytes": 668876,
+      "width": 1254,
+      "height": 1254
+    },
     "assets/generated/food-2026-10-20/chana-masala.png": {
       "file": "assets/web/assets/generated/food-2026-10-20/chana-masala.webp",
       "sourceSha256": "22afa9ebf39fb2d416acd674e6edbaa4748c7c43754cda3e3531f9a86a37749c",
@@ -134,6 +142,14 @@
       "sourceSha256": "11b9813f877cf033e4b6cfa39fc0844b4695819bffe45fe1edd2d8c76a844a03",
       "sourceBytes": 858239,
       "bytes": 534390,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-20/tuna-melt-v2.png": {
+      "file": "assets/web/assets/generated/food-2026-10-20/tuna-melt-v2.webp",
+      "sourceSha256": "90d59d7577842359a767016e5a7df5142081689a41e3ec2fd6ca1377eed3d5d2",
+      "sourceBytes": 874194,
+      "bytes": 656394,
       "width": 1254,
       "height": 1254
     },

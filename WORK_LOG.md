@@ -6,7 +6,7 @@ Every AI must read this file before working and update it throughout the session
 
 - Current milestone: game/ is playable with Daily dish (US Eastern midnight, shared clue order, saved on device) and Endless (shuffled deck, excludes today's daily, not saved). Browser-verified in emulation; real-device keyboards untested.
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
-- Available: 45-meal roster, 26 meal illustrations, 61 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
+- Available: 45-meal roster, 27 meal illustrations, 62 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
 - Implemented: responsive game, daily/endless, daily persistence, alias suggestions, streaks, sound and lazy-loaded art. Not implemented: deployment; final product decisions remain open. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
 - Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint d7dbcf4 before resumed artwork. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
 - Asset automation: cloud task 6ad7bfe9c2408191b650b820afd8a386 is Active every 1 hour; local heartbeat is PAUSED to prevent duplicates. 41 icons / 18 meals queued. Outputs require later local import. See docs/ASSET_AUTOMATION.md. Recurring queue/resume behavior remains untested.
@@ -157,14 +157,17 @@ Every AI must read this file before working and update it throughout the session
 - Plan: generate individual transparent pixel-art assets using built-in image generation, prioritizing shared ingredient gaps; inspect outputs, save outside reference/, update map/coverage/prompts, refresh lossless web copies, run asset/build checks and commit verified batches.
 - Existing artwork is approved style; no visual redesign or gameplay changes requested. No generation performed yet.
 
-`n- First assets: Parmesan and Basil generated, visually inspected, saved under assets/generated/food-2026-10-19/ and mapped. Prompts recorded. Coverage refresh utility added. Initial branch creation required sandbox escalation and then succeeded. Web copies/checkpoint checks pending.
+
+- First assets: Parmesan and Basil generated, visually inspected, saved under assets/generated/food-2026-10-19/ and mapped. Prompts recorded. Coverage refresh utility added. Initial branch creation required sandbox escalation and then succeeded. Web copies/checkpoint checks pending.
 
 - First checkpoint: mapped Parmesan, Basil, Macaroni, Mozzarella, Pizza dough and Chicken quesadilla. Coverage 21/45 meals and 55/103 ingredients; original reference/ untouched. Lossless web copies refreshed and all 74 tests passed (including map/build paths, source hashes and image dimensions).
 - Visual inspection: subjects readable and follow pixel-food direction; transparency confirmed. Some low-alpha pixels reach image boundaries, so final halo cleanup/light-and-dark background approval is still pending. No real-device/browser artwork inspection in this pass yet.
 - Next batch: Arborio rice generated and saved, not mapped yet; vegetable stock next. All artwork remains draft.
 
-`n- Checkpoint 6bcefbd committed successfully. Arborio rice and Vegetable stock now saved and mapped, completing mushroom risotto ingredient art; coverage 21/45 meals, 57/103 ingredients. Prompts saved; optimized copies pending for these two additions.
-`n- Second batch: Arborio rice, Vegetable stock, Tomato soup and Gnocchi with tomato sauce mapped; lossless copies generated successfully. Coverage 23/45 meals and 57/103 ingredients. All 74 tests passed. Pasta icon also saved for next batch; not mapped yet.
+
+- Checkpoint 6bcefbd committed successfully. Arborio rice and Vegetable stock now saved and mapped, completing mushroom risotto ingredient art; coverage 21/45 meals, 57/103 ingredients. Prompts saved; optimized copies pending for these two additions.
+
+- Second batch: Arborio rice, Vegetable stock, Tomato soup and Gnocchi with tomato sauce mapped; lossless copies generated successfully. Coverage 23/45 meals and 57/103 ingredients. All 74 tests passed. Pasta icon also saved for next batch; not mapped yet.
 
 
 ### 2026-10-19 — Claude — GitHub backup remote
@@ -204,15 +207,28 @@ Every AI must read this file before working and update it throughout the session
 - Branch/checkpoint: codex/missing-food-art / d7dbcf4; clean tree, two local commits ahead of origin.
 - User authorized setting up recurring cloud asset generation after successful test. Preparing self-contained queue and prompts in the existing cloud chat; will pause local generation after verifying cloud activation. Cloud chat attachments will be imported locally later; no automatic GitHub write claim.
 
-`n### 2026-10-20 America/Los_Angeles — Codex — Resume food artwork`n- Branch codex/missing-food-art; checkpoint d7dbcf4. Existing uncommitted cloud-queue kickoff entry belongs to scheduling session and is preserved. That chat is idle/interrupted; no concurrent map edits observed.`n- Reconciled 24/45 meals, 59/103 icons; pesto set already integrated. Restored exact Pasta, Pine nuts and Pesto pasta generation prompts from this chat history.`n- Inspected saved cloud chickpeas: recognizable pixel-art draft; will reuse rather than regenerate. Continuing remaining ingredient/meal queue locally with included image tool only. Cloud recurring setup remains unverified.
-`n- Reused and mapped cloud Chickpeas draft (non-square source displayed using current square icon renderer; visual QA pending), generated/saved/mapped Mayonnaise with exact prompt. Coverage 24/45 meals, 61/103 icons. BLT now has all ingredient icons. Next: BLT meal art.
-`n- BLT sandwich generated, saved with exact prompt, visually inspected and mapped. Coverage 25/45 meal illustrations, 61/103 ingredient icons. Next Chana masala meal art.
-`n- Chana masala meal generated, visually inspected, saved with exact prompt and mapped. Coverage 26/45 meals and 61/103 ingredient icons. Preparing optimized copies and a browser review of the four additions.
+
+### 2026-10-20 America/Los_Angeles — Codex — Resume food artwork
+- Branch codex/missing-food-art; checkpoint d7dbcf4. Existing uncommitted cloud-queue kickoff entry belongs to scheduling session and is preserved. That chat is idle/interrupted; no concurrent map edits observed.
+- Reconciled 24/45 meals, 59/103 icons; pesto set already integrated. Restored exact Pasta, Pine nuts and Pesto pasta generation prompts from this chat history.
+- Inspected saved cloud chickpeas: recognizable pixel-art draft; will reuse rather than regenerate. Continuing remaining ingredient/meal queue locally with included image tool only. Cloud recurring setup remains unverified.
+
+- Reused and mapped cloud Chickpeas draft (non-square source displayed using current square icon renderer; visual QA pending), generated/saved/mapped Mayonnaise with exact prompt. Coverage 24/45 meals, 61/103 icons. BLT now has all ingredient icons. Next: BLT meal art.
+
+- BLT sandwich generated, saved with exact prompt, visually inspected and mapped. Coverage 25/45 meal illustrations, 61/103 ingredient icons. Next Chana masala meal art.
+
+- Chana masala meal generated, visually inspected, saved with exact prompt and mapped. Coverage 26/45 meals and 61/103 ingredient icons. Preparing optimized copies and a browser review of the four additions.
 
 - Checkpoint verification: all 74 tests pass; static build succeeds; new PNGs are RGBA with alpha 0-255; lossless web copies verified by optimization script. Browser review attempted but blocked by localhost connection timeout; Python Playwright unavailable. No browser/device pass claimed. Saved review.html uses game renderer for future review.
 - Restored three exact earlier prompts. Chickpea source remains unchanged. Cloud setup entry preserved; this commit includes that pre-existing log context without claiming setup completed.
 - Next: Canned tuna and Tuna melt, then shared stock/vegetable gaps. No deployment or account changes.
 
+
+- Existing checkpoint e2cc675. Canned tuna generated, saved with exact prompt, visually inspected and mapped; coverage 26/45 meals, 62/103 icons. Next tuna melt meal.
+
+- Tuna melt draft saved with prompt, but visual inspection found the plate clipped at the side edges. Not mapping this version; requesting a padded revision before integration.
+
+- Tuna melt framing corrected with built-in image edit; v2 visibly contains the full plate with clear margins and is now mapped. Original clipped draft retained only as rejected source, excluded from map/build. Coverage 27/45 meals, 62/103 icons.
 
 ### 2026-10-21 America/Los_Angeles — Codex — Resume cloud migration
 - Existing checkpoint e2cc675; preserved pending tuna artwork/map changes from other work. Usage available (3% five-hour, 48% weekly used). Finishing authorized cloud queue migration; no duplicate local generation.
@@ -221,4 +237,13 @@ Every AI must read this file before working and update it throughout the session
 - Cloud migration completed: existing test task updated to Meal-lion cloud asset generation, Active / Cloud / every 1 hour, America/Los_Angeles. Full 59-subject prompt verified in saved task after canceling stale edit fields. Local heartbeat pause confirmed by automation tool. No setup generation or paid fallback.
 - Saved submitted instructions in docs/CLOUD_ASSET_QUEUE.md and updated docs/ASSET_AUTOMATION.md. First recurring run, cross-run ledger persistence and quota recovery remain untested; cloud attachments need later local import and review. Screenshot capture unavailable; DOM verification succeeded.
 - Branch codex/missing-food-art, prior checkpoint e2cc675. Pending tuna files/map/log preserved unstaged. Documentation-only verification: actual cloud saved fields and local pause; gameplay tests not applicable. Next: inspect first scheduled cloud output and import completed drafts with original prompts, then finish pending tuna checks.
+
+
+### 2026-10-21 America/Los_Angeles — Codex — Reconcile cloud drafts and resume
+- Branch codex/missing-food-art; latest checkpoint e1f20bf. Pending tuna art/map/web copies from this chat preserved. Fixed literal newline escapes in earlier log entries.
+- Local coverage 27/45 meals, 62/103 icons. Cloud chat ledger reports five draft ingredient subjects (Guanciale, Pecorino, Black pepper, Lasagna sheets, Pepperoni), not yet imported; reports schedule paused after repeated duplicate subjects. This is a chat report, not independent schedule UI verification.
+- Next: verify and commit pending tuna work, inspect/import cloud drafts, then continue remaining queue without duplicating those five subjects. Usage available; no paid fallback.
+
+
+- Pending tuna checkpoint checks rerun: optimization found copies current; all 74 tests passed; build 58 files / 35.3 MB. Cloud UI independently shows Paused. Importing saved cloud images for local inspection; not yet counted.
 

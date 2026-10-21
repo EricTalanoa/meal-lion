@@ -1,6 +1,6 @@
 # Artwork coverage
 
-26/45 meal illustrations; 61/103 canonical ingredient icons; 11 custom animation groups. All draft.
+27/45 meal illustrations; 62/103 canonical ingredient icons; 11 custom animation groups. All draft.
 
 | ID | Meal | Meal art | Missing ingredient icons |
 |---|---|---|---|
@@ -26,7 +26,7 @@
 | 20 | Hot dog | Missing | Hot dog bun, Frankfurter, Mustard |
 | 21 | BLT sandwich | Available | None |
 | 22 | Grilled cheese | Available | None |
-| 23 | Tuna melt | Missing | Canned tuna |
+| 23 | Tuna melt | Available | None |
 | 24 | Chicken quesadilla | Available | None |
 | 25 | Beef tacos | Missing | Corn tortilla |
 | 26 | Falafel pita | Missing | Pita, Parsley, Tahini |
