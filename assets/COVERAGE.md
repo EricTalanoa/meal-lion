@@ -1,6 +1,6 @@
 # Artwork coverage
 
-27/45 meal illustrations; 62/103 canonical ingredient icons; 11 custom animation groups. All draft.
+27/45 meal illustrations; 65/103 canonical ingredient icons; 11 custom animation groups. All draft.
 
 | ID | Meal | Meal art | Missing ingredient icons |
 |---|---|---|---|
@@ -13,11 +13,11 @@
 | 7 | Mushroom omelette | Available | None |
 | 8 | Quiche Lorraine | Available | None |
 | 9 | Potato rösti | Available | None |
-| 10 | Spaghetti carbonara | Missing | Guanciale, Pecorino, Black pepper |
+| 10 | Spaghetti carbonara | Missing | Guanciale |
 | 11 | Spaghetti Bolognese | Available | None |
 | 12 | Pesto pasta | Available | None |
 | 13 | Macaroni and cheese | Available | None |
-| 14 | Beef lasagna | Missing | Lasagna sheets |
+| 14 | Beef lasagna | Missing | None |
 | 15 | Margherita pizza | Available | None |
 | 16 | Pepperoni pizza | Missing | Pepperoni |
 | 17 | Mushroom risotto | Available | None |

@@ -777,6 +777,30 @@
       "columns": 1,
       "rows": 1,
       "index": 0
+    },
+    {
+      "label": "Black pepper",
+      "preferred": true,
+      "file": "assets/generated/cloud-import-2026-10-21/black-pepper.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Pecorino",
+      "preferred": true,
+      "file": "assets/generated/cloud-import-2026-10-21/pecorino.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Lasagna sheets",
+      "preferred": true,
+      "file": "assets/generated/cloud-import-2026-10-21/lasagna-sheets.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
     }
   ],
   "animations": [

@@ -6,7 +6,7 @@ Every AI must read this file before working and update it throughout the session
 
 - Current milestone: game/ is playable with Daily dish (US Eastern midnight, shared clue order, saved on device) and Endless (shuffled deck, excludes today's daily, not saved). Browser-verified in emulation; real-device keyboards untested.
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
-- Available: 45-meal roster, 27 meal illustrations, 62 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
+- Available: 45-meal roster, 27 meal illustrations, 65 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
 - Implemented: responsive game, daily/endless, daily persistence, alias suggestions, streaks, sound and lazy-loaded art. Not implemented: deployment; final product decisions remain open. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
 - Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint d7dbcf4 before resumed artwork. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
 - Asset automation: cloud task 6ad7bfe9c2408191b650b820afd8a386 is Active every 1 hour; local heartbeat is PAUSED to prevent duplicates. 41 icons / 18 meals queued. Outputs require later local import. See docs/ASSET_AUTOMATION.md. Recurring queue/resume behavior remains untested.
@@ -246,4 +246,10 @@ Every AI must read this file before working and update it throughout the session
 
 
 - Pending tuna checkpoint checks rerun: optimization found copies current; all 74 tests passed; build 58 files / 35.3 MB. Cloud UI independently shows Paused. Importing saved cloud images for local inspection; not yet counted.
+
+### 2026-10-21 America/Los_Angeles — Claude — Map cloud icons and Netlify test deploy
+- Branch codex/missing-food-art; prior checkpoint 7a6e5b8. Untracked assets/generated/cloud-import-2026-10-21/ held three cloud drafts (Black pepper, Pecorino, Lasagna sheets). Guanciale and Pepperoni reported by the cloud ledger were not in that folder and remain unmapped.
+- Visually inspected all three (readable, on-style, RGBA with transparent background) and mapped them in assets/asset-map.json. Added prompts.json noting they came from the cloud queue in docs/CLOUD_ASSET_QUEUE.md; the exact expanded per-subject prompt text was not exported. Coverage 27/45 meals, 65/103 icons. Lossless WebP copies generated.
+- Checks: 74/74 tests pass (node --test tests/*.test.mjs); build 61 files / 36.9 MB. Built-in browser on dist (CSP on): the three .webp icons load at full size, game loads with no console errors. Not checked: a full played round that shows these icons; real devices.
+- User asked to deploy to Netlify for testing; deploy details recorded below once done.
 
