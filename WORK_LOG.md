@@ -281,3 +281,7 @@ Every AI must read this file before working and update it throughout the session
 - Checks: 77/77 tests pass (3 new: sheet current and covering all labels, sheet drawing, pending state). Built-in browser on dist with CSP: only the sheet is requested for icons (no per-icon files); three skips each showed the new clue with its picture immediately; no console errors. Not checked: slow-network behaviour in a real browser (covered by unit tests only), real phones. The Netlify playtest site has NOT been redeployed with this change.
 - Not addressed: Leo's reaction animation strips (~1 MB each) and finished-meal plates still load on first use and can pop in on the stage/result screen. Mobile keyboard layout rework still pending a design decision.
 
+
+### 2026-10-21 America/Los_Angeles — Claude — Redeploy playtest with icon sheet
+- Pushed codex/missing-food-art (includes 8ac6ab3 lasagna/tacos/corn tortilla art and 24ec4ad icon sheet). Another session had uncommitted, partly processed Hot dog art (hot-dog, hot-dog-bun, frankfurter, mustard; map, coverage, docs/ASSETS.md and log edits) in the working tree; left untouched and not deployed. Their map changes make the icon sheet stale until python tools/build-icon-atlas.py is rerun.
+- Built commit 24ec4ad from a clean git archive export and deployed dist to meal-lion-playtest (deploy 6ad9a4850dc2c4c2f7825078, ready). Live check: only kitchen, chef and icon-atlas.webp requested; three skips each showed the new clue picture immediately with the fade; no console errors. Real phones untested.
