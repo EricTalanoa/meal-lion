@@ -3,7 +3,7 @@
   "file": "assets/web/icon-atlas.webp",
   "cell": 96,
   "columns": 10,
-  "inputSha256": "e4582a8c5341e603928023356b1f458cbfc737a8a9f03a2754c0a557b23629a2",
+  "inputSha256": "da6508aeb8b0322f4a34cd2e519acaed061d14e50d7049a7d98d77eefac2677f",
   "labels": [
     "Tomato",
     "Egg",
@@ -70,6 +70,9 @@
     "Black pepper",
     "Pecorino",
     "Lasagna sheets",
-    "Corn tortilla"
+    "Corn tortilla",
+    "Hot dog bun",
+    "Frankfurter",
+    "Mustard"
   ]
 }

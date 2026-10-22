@@ -1,6 +1,6 @@
 # Artwork coverage
 
-29/45 meal illustrations; 66/103 canonical ingredient icons; 11 custom animation groups. All draft.
+30/45 meal illustrations; 69/103 canonical ingredient icons; 11 custom animation groups. All draft.
 
 | ID | Meal | Meal art | Missing ingredient icons |
 |---|---|---|---|
@@ -23,7 +23,7 @@
 | 17 | Mushroom risotto | Available | None |
 | 18 | Gnocchi with tomato sauce | Available | None |
 | 19 | Cheeseburger | Available | None |
-| 20 | Hot dog | Missing | Hot dog bun, Frankfurter, Mustard |
+| 20 | Hot dog | Available | None |
 | 21 | BLT sandwich | Available | None |
 | 22 | Grilled cheese | Available | None |
 | 23 | Tuna melt | Available | None |

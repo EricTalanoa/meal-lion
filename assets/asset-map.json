@@ -248,6 +248,14 @@
       "columns": 1,
       "rows": 1,
       "index": 0
+    },
+    {
+      "id": 20,
+      "name": "Hot dog",
+      "file": "assets/generated/food-2026-10-21/hot-dog.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
     }
   ],
   "ingredients": [
@@ -822,6 +830,30 @@
       "label": "Corn tortilla",
       "preferred": true,
       "file": "assets/generated/food-2026-10-21/corn-tortilla.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Hot dog bun",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-21/hot-dog-bun.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Frankfurter",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-21/frankfurter.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Mustard",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-21/mustard.png",
       "columns": 1,
       "rows": 1,
       "index": 0

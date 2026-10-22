@@ -117,6 +117,10 @@
     "25": {
       "file": "assets/web/meals/meal-25.webp",
       "key": "e89977ff72b8481493bd0f3381b9871bddb689ba01d8fb9c5035870ebca82c7d"
+    },
+    "20": {
+      "file": "assets/web/meals/meal-20.webp",
+      "key": "95961148deb1a7bda8cb02a27cd86f8b2288c3c1e57d509d2d11b02bfd1e6aa2"
     }
   }
 }

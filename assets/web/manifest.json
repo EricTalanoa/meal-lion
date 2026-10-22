@@ -201,6 +201,38 @@
       "width": 1254,
       "height": 1254
     },
+    "assets/generated/food-2026-10-21/frankfurter.png": {
+      "file": "assets/web/assets/generated/food-2026-10-21/frankfurter.webp",
+      "sourceSha256": "6d25081bd70cc5e115b31601615d68478b35b780b46250a712b16057c2ce6218",
+      "sourceBytes": 490018,
+      "bytes": 283926,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-21/hot-dog-bun.png": {
+      "file": "assets/web/assets/generated/food-2026-10-21/hot-dog-bun.webp",
+      "sourceSha256": "6043b8a1963ec02d36f041f7e470306e53fc29c18bcede964bacc882bd3835aa",
+      "sourceBytes": 936117,
+      "bytes": 591614,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-21/hot-dog.png": {
+      "file": "assets/web/assets/generated/food-2026-10-21/hot-dog.webp",
+      "sourceSha256": "9f91468df69311dcf336ba82de6d2e5e421621c28d8169a2d583e0da0125fb94",
+      "sourceBytes": 987466,
+      "bytes": 679352,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-21/mustard.png": {
+      "file": "assets/web/assets/generated/food-2026-10-21/mustard.webp",
+      "sourceSha256": "4d1bbbdf41d2b7acabb8c1e7d5a2cd96ca7d948d63c540acaad8b4e70890615c",
+      "sourceBytes": 871846,
+      "bytes": 570510,
+      "width": 1254,
+      "height": 1254
+    },
     "reference/meal-lion-assets-batch-02/ingredients-01.png": {
       "file": "assets/web/meal-lion-assets-batch-02/ingredients-01.webp",
       "sourceSha256": "d2a94b0128c86d4a4432cd07ed493a152a84d99fa535329981a3bba0690df412",

@@ -1,0 +1,31 @@
+[
+  {
+    "label": "Hot dog bun",
+    "file": "hot-dog-bun.png",
+    "prompt": "Use case: stylized-concept. Asset: square transparent PNG ingredient clue for Meal-lion cozy pixel-art cooking game. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outline, warm saturated food colors, upper-left highlights, limited-palette shadows, elevated three-quarter view. Centered object fills 70 percent of canvas with clear padding on every side. Readable at 64px. No text, labels, scenery, plate, watermark, gradients, blur, glow or outside shadow. Genuine transparent background. Subject: One soft golden oblong hot dog bread roll split lengthwise along the top, pale fluffy interior visible, rounded ends and connected bottom hinge. Empty bread only, no sausage, filling, sesame seeds or condiments.",
+    "status": "draft",
+    "tool": "built-in image_gen"
+  },
+  {
+    "label": "Frankfurter",
+    "file": "frankfurter.png",
+    "prompt": "Use case: stylized-concept. Asset: square transparent PNG ingredient clue for Meal-lion cozy pixel-art cooking game. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outline, warm saturated food colors, upper-left highlights, limited-palette shadows, elevated three-quarter view. Centered object fills 70 percent of canvas with clear padding on every side. Readable at 64px. No text, labels, scenery, plate, watermark, gradients, blur, glow or outside shadow. Genuine transparent background. Subject: One smooth reddish-brown cooked frankfurter sausage with rounded sealed ends, gently curved long cylindrical shape and a few subtle highlights. No grill marks, bun, sliced meat, herbs or condiments.",
+    "status": "draft",
+    "tool": "built-in image_gen"
+  },
+  {
+    "label": "Mustard",
+    "file": "mustard.png",
+    "prompt": "Use case: stylized-concept. Asset: square transparent PNG ingredient clue for Meal-lion cozy pixel-art cooking game. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outline, warm saturated food colors, upper-left highlights, limited-palette shadows, elevated three-quarter view. Centered object fills 70 percent of canvas with clear padding on every side. Readable at 64px. No text, labels, scenery, plate, watermark, gradients, blur, glow or outside shadow. Genuine transparent background. Subject: A small clear squat glass jar of smooth vivid golden-yellow mustard, open top and a short wooden spoon holding a dollop beside it. No lid, label, writing, seeds, other ingredients or bread.",
+    "status": "draft",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": 20,
+    "name": "Hot dog",
+    "file": "hot-dog.png",
+    "prompt": "Use case: stylized-concept. Asset: square transparent PNG finished meal for Meal-lion cozy pixel-art cooking game. Subject: one hot dog, reddish brown frankfurter nestled in split golden soft oblong bread bun, simple golden mustard zigzag on top. On a small white ceramic plate with pale-blue rim. No ketchup, relish, vegetables, side dishes or utensils. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outlines, warm saturated colors, upper-left highlights, limited-palette shadows. Elevated three-quarter view. Entire plate centered within middle 70 percent of canvas with clear transparent margins on ALL sides, no clipping. Readable at 154px. No text, labels, scenery, table, watermark, gradients, blur or glow. Genuine transparent background.",
+    "status": "draft",
+    "tool": "built-in image_gen"
+  }
+]
