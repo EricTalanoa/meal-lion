@@ -1,0 +1,25 @@
+[
+  {
+    "id": 14,
+    "name": "Beef lasagna",
+    "file": "beef-lasagna.png",
+    "prompt": "Use case: stylized-concept. Asset: one square transparent PNG finished-meal illustration for the result screen of Meal-lion, a cozy retro pixel-art cooking game. Subject: Beef lasagna, one thick square serving with visible alternating layers of pale pasta sheets, rich red beef tomato sauce, creamy white bechamel and melted golden cheese on top, on a small white ceramic plate with pale blue shaded rim. No garnish, side dishes or utensils. Crisp chunky 16-bit food sprite art, visible square pixel clusters, dark navy stepped outlines, warm saturated colors and limited-palette highlights and shadows. Elevated three-quarter view showing the layered cut front. Entire plate centered within middle 70 percent of canvas, generous transparent margins on ALL sides, no clipping. Readable at 154px. No text, labels, watermark, scenery, table, gradients, blur, glow or floating particles. Genuine transparent background.",
+    "status": "draft",
+    "tool": "built-in image_gen"
+  },
+  {
+    "label": "Corn tortilla",
+    "file": "corn-tortilla.png",
+    "prompt": "Use case: stylized-concept. Create one square transparent PNG ingredient clue icon for Meal-lion, a cozy retro pixel-art cooking game. Subject: Corn tortilla, a neat short stack of three soft round golden-yellow corn tortillas, upper tortilla slightly offset, clear circular shape, subtle toasted brown speckles and coarse corn texture. No filling, no folded tacos, no plate, no corn cob, no garnish. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outlines, warm saturated food colors, upper-left highlights and limited-palette shadows. Elevated three-quarter view, centered compact grouping filling 70 percent of square canvas, generous transparent margins on every side. Readable at 64px. No text, letters, labels, scenery, watermark, gradients, blur, glow or shadow outside the object. Genuine transparent background.",
+    "status": "draft",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": 25,
+    "name": "Beef tacos",
+    "file": "beef-tacos.png",
+    "prompt": "Use case: stylized-concept. Asset: one square transparent PNG finished-meal illustration for the result screen of Meal-lion, a cozy retro pixel-art cooking game. Subject: Beef tacos, two soft golden corn tortillas loosely folded open around browned cumin-seasoned ground beef, small diced white onion and red tomato, and shredded green lettuce. Clearly soft round corn tortillas, not rigid hard shells. On a small white ceramic plate with pale blue shaded rim. No cheese, sour cream, lime, side dishes or utensils. Crisp chunky 16-bit food sprite art with visible square pixel clusters, dark navy stepped outlines, warm saturated food colors, limited palette highlights from upper left and shadows. Elevated three-quarter view showing fillings. Entire plate centered in middle 70 percent of square canvas with generous transparent padding on every side, no clipping. Readable at 154px. No text, labels, watermark, scenery, table, gradients, blur, glow or floating particles. Genuine transparent background.",
+    "status": "draft",
+    "tool": "built-in image_gen"
+  }
+]

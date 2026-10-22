@@ -232,6 +232,22 @@
       "columns": 1,
       "rows": 1,
       "index": 0
+    },
+    {
+      "id": 14,
+      "name": "Beef lasagna",
+      "file": "assets/generated/food-2026-10-21/beef-lasagna.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "id": 25,
+      "name": "Beef tacos",
+      "file": "assets/generated/food-2026-10-21/beef-tacos.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
     }
   ],
   "ingredients": [
@@ -798,6 +814,14 @@
       "label": "Lasagna sheets",
       "preferred": true,
       "file": "assets/generated/cloud-import-2026-10-21/lasagna-sheets.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Corn tortilla",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-21/corn-tortilla.png",
       "columns": 1,
       "rows": 1,
       "index": 0

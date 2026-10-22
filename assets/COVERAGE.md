@@ -1,6 +1,6 @@
 # Artwork coverage
 
-27/45 meal illustrations; 65/103 canonical ingredient icons; 11 custom animation groups. All draft.
+29/45 meal illustrations; 66/103 canonical ingredient icons; 11 custom animation groups. All draft.
 
 | ID | Meal | Meal art | Missing ingredient icons |
 |---|---|---|---|
@@ -17,7 +17,7 @@
 | 11 | Spaghetti Bolognese | Available | None |
 | 12 | Pesto pasta | Available | None |
 | 13 | Macaroni and cheese | Available | None |
-| 14 | Beef lasagna | Missing | None |
+| 14 | Beef lasagna | Available | None |
 | 15 | Margherita pizza | Available | None |
 | 16 | Pepperoni pizza | Missing | Pepperoni |
 | 17 | Mushroom risotto | Available | None |
@@ -28,7 +28,7 @@
 | 22 | Grilled cheese | Available | None |
 | 23 | Tuna melt | Available | None |
 | 24 | Chicken quesadilla | Available | None |
-| 25 | Beef tacos | Missing | Corn tortilla |
+| 25 | Beef tacos | Available | None |
 | 26 | Falafel pita | Missing | Pita, Parsley, Tahini |
 | 27 | Fish and chips | Available | None |
 | 28 | Egg fried rice | Available | None |

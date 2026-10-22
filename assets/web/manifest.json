@@ -177,6 +177,30 @@
       "width": 1254,
       "height": 1254
     },
+    "assets/generated/food-2026-10-21/beef-lasagna.png": {
+      "file": "assets/web/assets/generated/food-2026-10-21/beef-lasagna.webp",
+      "sourceSha256": "2bcb30b7b589ed67e00f8f5a85a4b1e13a65dcf3da4a10d282eac34f05c31e22",
+      "sourceBytes": 985281,
+      "bytes": 758686,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-21/beef-tacos.png": {
+      "file": "assets/web/assets/generated/food-2026-10-21/beef-tacos.webp",
+      "sourceSha256": "0e1bb2926033b55d7184e036ca8030d0a770e727638634e12389e0d1acdd1d5e",
+      "sourceBytes": 1228680,
+      "bytes": 960794,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-21/corn-tortilla.png": {
+      "file": "assets/web/assets/generated/food-2026-10-21/corn-tortilla.webp",
+      "sourceSha256": "8ede424a5f57dbdef68e67fb52a9b37b7015a22a15ed796b8d61baf6a7bca2c9",
+      "sourceBytes": 997728,
+      "bytes": 694936,
+      "width": 1254,
+      "height": 1254
+    },
     "reference/meal-lion-assets-batch-02/ingredients-01.png": {
       "file": "assets/web/meal-lion-assets-batch-02/ingredients-01.webp",
       "sourceSha256": "d2a94b0128c86d4a4432cd07ed493a152a84d99fa535329981a3bba0690df412",

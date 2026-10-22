@@ -6,10 +6,10 @@ Every AI must read this file before working and update it throughout the session
 
 - Current milestone: game/ is playable with Daily dish (US Eastern midnight, shared clue order, saved on device) and Endless (shuffled deck, excludes today's daily, not saved). Browser-verified in emulation; real-device keyboards untested.
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
-- Available: 45-meal roster, 27 meal illustrations, 65 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
+- Available: 45-meal roster, 29 meal illustrations, 66 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
 - Implemented: responsive game, daily/endless, daily persistence, alias suggestions, streaks, sound and lazy-loaded art. Test deploy live at https://meal-lion-playtest.netlify.app (2026-10-21, public, no password); final product decisions remain open. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
-- Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint d7dbcf4 before resumed artwork. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
-- Asset automation: cloud task 6ad7bfe9c2408191b650b820afd8a386 is Active every 1 hour; local heartbeat is PAUSED to prevent duplicates. 41 icons / 18 meals queued. Outputs require later local import. See docs/ASSET_AUTOMATION.md. Recurring queue/resume behavior remains untested.
+- Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint 8c54ac5 before this asset batch. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
+- Asset automation: cloud task 6ad7bfe9c2408191b650b820afd8a386 was verified PAUSED on 2026-10-21; local heartbeat is PAUSED to prevent duplicates. 41 icons / 18 meals queued. Outputs require later local import. See docs/ASSET_AUTOMATION.md. Recurring queue/resume behavior remains untested.
 - Confirmed rules: ingredient-count guess budget, one free clue (zero optional), hidden total by default (showing totals is optional), with explicit 'all ingredients revealed' and 'last guess' cues; reveal order shuffled every round; skip policy approved; typo-tolerant suggestions. Open decisions: aliases, timezone/schedule, scoring and storage. See docs/PRODUCT.md.
 - Images: startup now downloads ~2.4 MB (kitchen, chef, first clue atlas) instead of 32.9 MB; the rest loads on first use; published images are lossless WebP copies in assets/web/ (21.4 MB total). See the 2026-10-19 image-load entry.
 - Next: user playtesting; deploy to Netlify only on the user's go-ahead (setup ready); set schedule startDate at launch; add dishes + art; real iOS/Android keyboard QA; open: share format, analytics.
@@ -256,3 +256,16 @@ Every AI must read this file before working and update it throughout the session
 - Redeploying: rebuild with node tools/build.cjs and deploy dist/ (repo is too large for the zip-and-build path). Git-connected continuous deploys not set up.
 
 - Pushed codex/missing-food-art to origin (76f1837..0986b54), including the earlier unpushed tuna, BLT/chana masala and cloud-queue commits.
+
+
+### 2026-10-21 America/Los_Angeles — Codex — Additional food assets
+- Branch/checkpoint: codex/missing-food-art / 8c54ac5; clean tree at start.
+- Reconciled mapped coverage: 27/45 meals, 65/103 ingredients. Cloud summary was stale; latest verified history says paused. Guanciale and Pepperoni reported in cloud remain unimported; avoiding duplicates.
+- Active batch: Beef lasagna (14), Corn tortilla, Beef tacos (25), following established approved pixel-art direction. Save exact prompts, integrate map and WebP copies, then verify and commit. No deployment requested.
+
+- Beef lasagna generated and saved. Visual review: recognizable layers, full plate visible, no text; alpha and integration checks pending.
+- Corn tortilla generated and saved; recognizable unfilled stack with clear margins. Exact prompt retained; checks pending.
+
+- All three PNGs saved with exact built-in generation prompts and mapped. Coverage now 29/45 meals and 66/103 ingredients. RGBA alpha spans 0-255 for each; faint pixels reach some canvas boundaries, so final halo approval remains pending. First test run was premature while optimization was still running: three build tests failed on missing WebP manifest entries; rerun after completion required.
+- Verification complete: lossless WebP copies produced and visible-pixel equality checked by optimizer. All 74 tests pass after optimization; static build succeeds (64 files, 39.3 MB). Solid-alpha bounds fit inside all three canvases. PNGs are 1254x1254. No browser/device review or deployment performed. Next: remaining 16 meals / 37 ingredient icons, import existing cloud Guanciale/Pepperoni before generating duplicates, and final light/dark halo QA.
+- Concurrent unrelated icon-atlas work appeared during verification (tools/build-icon-atlas.py, assets/web/icon-atlas.*, tools/build.cjs). Preserved and excluded from this asset checkpoint; test/build results above precede those later edits. Git inspection required sandbox escalation; no file rollback performed.
