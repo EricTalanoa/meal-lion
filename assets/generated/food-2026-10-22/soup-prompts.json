@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Gruyère",
+    "file": "gruyere.png",
+    "prompt": "Use case: stylized-concept. Square transparent PNG ingredient clue for Meal-lion cozy retro cooking game. Subject: Gruyere cheese, a wedge of pale golden-yellow firm alpine cheese with a narrow darker tan natural rind along the curved back, smooth cut faces with just two or three tiny sparse holes, one thick slice leaning against it. Distinct from a white mozzarella ball or bright orange cheddar. No bread, herbs, plate or packaging. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outline, warm saturated colors, upper-left highlights, limited palette shadows. Elevated three-quarter view. Centered grouping occupies 70 percent of square canvas with generous transparent padding on every side. Readable at 64px. No text, labels, watermark, scenery, gradients, blur, glow or external shadow. Genuine transparent background.",
+    "status": "draft",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": 34,
+    "name": "French onion soup",
+    "file": "french-onion-soup.png",
+    "prompt": "Use case: stylized-concept. Square transparent PNG finished-meal illustration for Meal-lion cozy retro cooking game. Subject: French onion soup in a small white ceramic soup crock with pale-blue rim and two stubby handles, rich dark amber onion broth with soft caramelized onion ribbons, one round toasted bread slice floating on top under melted golden Gruyere cheese with browned bubbly patches. Soup visible around the cheese toast. No garnish, sides, spoon or saucer. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outlines, warm saturated colors, upper-left highlights and limited palette shadows. Elevated three-quarter view. Complete bowl AND both handles centered within middle 70 percent of canvas with wide clear transparent margins on every side. Readable at 154px. No text, labels, watermark, scenery, table, gradients, blur, glow or steam particles. Genuine transparent background.",
+    "status": "draft",
+    "tool": "built-in image_gen"
+  }
+]

@@ -249,6 +249,22 @@
       "width": 1254,
       "height": 1254
     },
+    "assets/generated/food-2026-10-22/french-onion-soup.png": {
+      "file": "assets/web/assets/generated/food-2026-10-22/french-onion-soup.webp",
+      "sourceSha256": "7975e989a5921efd10472b2ac096090236782877fc7061d5604d84593aa87adf",
+      "sourceBytes": 1098566,
+      "bytes": 810538,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-22/gruyere.png": {
+      "file": "assets/web/assets/generated/food-2026-10-22/gruyere.webp",
+      "sourceSha256": "6c2d17f706ed880d52db96e6256466867d99fcc6610ef5b2258c0e6fc5f27098",
+      "sourceBytes": 884540,
+      "bytes": 549762,
+      "width": 1254,
+      "height": 1254
+    },
     "reference/meal-lion-assets-batch-02/ingredients-01.png": {
       "file": "assets/web/meal-lion-assets-batch-02/ingredients-01.webp",
       "sourceSha256": "d2a94b0128c86d4a4432cd07ed493a152a84d99fa535329981a3bba0690df412",

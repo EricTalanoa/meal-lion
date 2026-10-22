@@ -1,6 +1,6 @@
 # Artwork coverage
 
-31/45 meal illustrations; 70/103 canonical ingredient icons; 11 custom animation groups. All draft.
+32/45 meal illustrations; 71/103 canonical ingredient icons; 11 custom animation groups. All draft.
 
 | ID | Meal | Meal art | Missing ingredient icons |
 |---|---|---|---|
@@ -37,7 +37,7 @@
 | 31 | Chili con carne | Missing | Kidney beans, Chili powder |
 | 32 | Cottage pie | Available | None |
 | 33 | Chicken pot pie | Missing | Puff pastry, Chicken stock |
-| 34 | French onion soup | Missing | Gruyère |
+| 34 | French onion soup | Available | None |
 | 35 | Tomato soup | Available | None |
 | 36 | Miso soup | Available | None |
 | 37 | Butter chicken | Available | None |

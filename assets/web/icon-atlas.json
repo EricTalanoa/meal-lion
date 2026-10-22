@@ -3,7 +3,7 @@
   "file": "assets/web/icon-atlas.webp",
   "cell": 96,
   "columns": 10,
-  "inputSha256": "58e591588d781a160c4f50538adf783e5cf127d648292e4f998b03e91689f92d",
+  "inputSha256": "25db4fa1ddae88cd9bb52fc3dab4c2dd97c5883b1bc3106d4b710e9bc156b0f2",
   "labels": [
     "Tomato",
     "Egg",
@@ -74,6 +74,7 @@
     "Hot dog bun",
     "Frankfurter",
     "Mustard",
-    "Beef stock"
+    "Beef stock",
+    "Gruy\u00e8re"
   ]
 }

@@ -264,6 +264,14 @@
       "columns": 1,
       "rows": 1,
       "index": 0
+    },
+    {
+      "id": 34,
+      "name": "French onion soup",
+      "file": "assets/generated/food-2026-10-22/french-onion-soup.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
     }
   ],
   "ingredients": [
@@ -870,6 +878,14 @@
       "label": "Beef stock",
       "preferred": true,
       "file": "assets/generated/food-2026-10-22/beef-stock.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Gruyère",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-22/gruyere.png",
       "columns": 1,
       "rows": 1,
       "index": 0
