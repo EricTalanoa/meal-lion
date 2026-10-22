@@ -43,7 +43,7 @@ test('the icon sheet is current and covers every ingredient label with art', () 
 });
 
 test('published asset map matches the source map except for image paths', () => {
-  const strip = m => JSON.stringify(m, (k, v) => k === 'file' || k === 'iconAtlas' ? undefined : v);
+  const strip = m => JSON.stringify(m, (k, v) => k === 'file' || k === 'iconAtlas' || k === 'mealArt' ? undefined : v);
   assert.equal(strip(publishedMap), strip(sourceMap));
   const flat = m => [m.background, m.chef, ...m.meals, ...m.ingredients, ...m.animations].map(x => x.file);
   flat(sourceMap).forEach((f, i) => assert.equal(flat(publishedMap)[i], manifest[f].file, f));
@@ -71,7 +71,8 @@ test('every relative URL the game fetches resolves inside the published site', (
 
 test('publishes nothing else: no docs, prompts, mockups, demos, tests or tools', () => {
   const images = mapFiles(publishedMap);
-  const allowed = f => f.startsWith('game/') || images.has(f) || ['reference/meal-lion-45-meals.json', 'assets/asset-map.json', publishedMap.iconAtlas.file].includes(f);
+  const small = new Set(Object.values(publishedMap.mealArt));
+  const allowed = f => f.startsWith('game/') || images.has(f) || small.has(f) || ['reference/meal-lion-45-meals.json', 'assets/asset-map.json', publishedMap.iconAtlas.file].includes(f);
   assert.deepEqual(files.filter(f => !allowed(f)), []);
   assert.ok(!files.some(f => /\.(md|txt|cjs|py|png)$/.test(f) || f.includes('game-layouts') || f.endsWith('pilot.html') || f.endsWith('manifest.json')));
 });
@@ -80,4 +81,17 @@ test('netlify config builds and publishes only dist', () => {
   const toml = readFileSync(join(root, 'netlify.toml'), 'utf8');
   assert.match(toml, /publish\s*=\s*"dist"/);
   assert.match(toml, /command\s*=\s*"node tools\/build\.cjs"/);
+});
+
+test('every meal picture has a current small copy for the result screen', () => {
+  const thumbs = JSON.parse(readFileSync(join(root, 'assets', 'web', 'meals', 'meals.json'))).meals;
+  assert.deepEqual(Object.keys(publishedMap.mealArt).map(Number).sort((a, b) => a - b), sourceMap.meals.map(m => m.id).sort((a, b) => a - b),
+    'small meal copies out of date: run python tools/optimize-images.py');
+  for (const [id, file] of Object.entries(publishedMap.mealArt)) {
+    assert.equal(file, thumbs[id].file);
+    assert.ok(files.includes(file), file);
+    const b = readFileSync(join(root, file));
+    assert.deepEqual([b.readUInt32LE(24) & 0xffffff, b.readUInt32LE(27) & 0xffffff].map(n => n + 1), [240, 240], file);
+    assert.ok(b.length < 150_000, `${file} stays small`);
+  }
 });

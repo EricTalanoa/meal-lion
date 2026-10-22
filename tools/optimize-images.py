@@ -8,8 +8,8 @@ that every visible pixel decodes identically, and records the result in
 assets/web/manifest.json. tools/build.cjs publishes these copies instead of the originals
 when the manifest's source hash still matches; otherwise it falls back to the original PNG.
 Unchanged sources are skipped, so rerunning is cheap. Free and offline; no paid service.
-Finally rebuilds the ingredient icon sheet (tools/build-icon-atlas.py), so new icons reach the
-sheet the game loads at startup without a separate step.
+Finally rebuilds the ingredient icon sheet (tools/build-icon-atlas.py) and the small result-screen
+meal copies (tools/build-meal-thumbs.py), so new art reaches them without a separate step.
 """
 import hashlib
 import io
@@ -77,6 +77,7 @@ def main():
     after = sum(f['bytes'] for f in files.values())
     print(f'Total {before:,} -> {after:,} bytes ({after / before:.0%})')
     runpy.run_path(str(ROOT / 'tools' / 'build-icon-atlas.py'), run_name='__main__')
+    runpy.run_path(str(ROOT / 'tools' / 'build-meal-thumbs.py'), run_name='__main__')
 
 
 if __name__ == '__main__':

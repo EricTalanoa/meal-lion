@@ -14,7 +14,8 @@ const W = 1200, H = 400;
 // `onLoad` fires once it arrives so the caller can redraw. The published map carries an
 // `iconAtlas` (one small sheet of every ingredient icon, see tools/build.cjs) that loads with
 // the kitchen, so clue icons are normally ready before any clue is shown. Finished-meal art is only
-// requested by the end-of-round draws, so it is never fetched while a round is in play.
+// requested by the end-of-round draws (or loadMeal() once a round ends), so it is never fetched
+// while a round is in play. The published map's `mealArt` points at small 240 px copies.
 export function createArt(map, base = '../', {onLoad = () => {}} = {}) {
   const images = new Map();
   const loaded = new Map();
@@ -23,6 +24,7 @@ export function createArt(map, base = '../', {onLoad = () => {}} = {}) {
   const atlas = map.iconAtlas;
   if (atlas) atlas.labels.forEach((label, index) => icons.set(label, {file: atlas.file, columns: atlas.columns, rows: Math.ceil(atlas.labels.length / atlas.columns), index}));
   const anims = new Map(map.animations.map(a => [a.id, a]));
+  const mealItem = id => map.mealArt?.[id] ? {file: map.mealArt[id], columns: 1, rows: 1, index: 0} : map.meals.find(m => m.id === id);
 
   // Resolves with the image, or null if it failed. Uses load events rather than decode(),
   // which can stall in background tabs.
@@ -83,6 +85,16 @@ export function createArt(map, base = '../', {onLoad = () => {}} = {}) {
       return failed();
     },
     hasIcon: label => icons.has(label),
+    // Starts fetching a finished-meal picture; resolves true once drawable (false: no art or failed).
+    // Only call once a round is over: the request would give the answer away.
+    loadMeal: id => { const meal = mealItem(id); return meal ? load(meal.file).then(Boolean) : Promise.resolve(false); },
+    // 'ready', 'pending' or 'none', like iconState; does not start a download.
+    mealState(id) {
+      const meal = mealItem(id);
+      if (!meal) return 'none';
+      if (!loaded.has(meal.file)) return 'pending';
+      return loaded.get(meal.file) ? 'ready' : 'none';
+    },
     iconState,
 
     // scene: {ingredient, mood:'idle'|'react'|'wrong'|'won'|'lost', mealId, elapsed, still}
@@ -106,7 +118,7 @@ export function createArt(map, base = '../', {onLoad = () => {}} = {}) {
         cell(c, map.chef.file, map.chef.columns, map.chef.rows, CHEF[pose], 490, 174, 152, 203);
       }
       if (done) {
-        const meal = map.meals.find(m => m.id === mealId);
+        const meal = mealItem(mealId);
         if (meal) cell(c, meal.file, meal.columns, meal.rows, meal.index, 680, 242, 154, 154);
         if (mood === 'won' && !still && elapsed < 4) for (let i = 0; i < 18; i++) rect(c, 450 + (i * 43 % 370), 165 + ((elapsed * 45 + i * 15) % 180), 4, 6, ['#f97ba7', '#5be6e5', '#ffe3a0'][i % 3]);
         return;
@@ -137,7 +149,7 @@ export function createArt(map, base = '../', {onLoad = () => {}} = {}) {
     drawMeal(canvas, id) {
       const c = canvas.getContext('2d');
       c.clearRect(0, 0, canvas.width, canvas.height);
-      const meal = map.meals.find(m => m.id === id);
+      const meal = mealItem(id);
       return meal ? cell(c, meal.file, meal.columns, meal.rows, meal.index, 0, 0, canvas.width, canvas.height) : false;
     },
   };

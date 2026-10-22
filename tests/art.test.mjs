@@ -109,3 +109,21 @@ test('an icon that is still downloading reports pending and draws no letter', as
   await flush();
   assert.equal(art.iconState('Onion'), 'ready');
 });
+
+test('finished-meal pictures use the small copy when published, and loadMeal fetches it', async () => {
+  reset();
+  const small = {...map, mealArt: {1: 'assets/web/meals/meal-1.webp'}};
+  const art = createArt(small, '');
+  assert.equal(art.mealState(1), 'pending');
+  assert.deepEqual(requested, [], 'mealState never starts a download');
+  const ready = art.loadMeal(1);
+  assert.deepEqual(requested, ['assets/web/meals/meal-1.webp']);
+  await flush();
+  assert.equal(await ready, true);
+  assert.equal(art.mealState(1), 'ready');
+  const c = canvas();
+  assert.equal(art.drawMeal(c, 1), true);
+  assert.deepEqual(c.draws, ['assets/web/meals/meal-1.webp']);
+  assert.equal(art.mealState(10), 'none', 'no art for carbonara yet');
+  assert.equal(await art.loadMeal(10), false);
+});

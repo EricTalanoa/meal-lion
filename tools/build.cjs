@@ -44,8 +44,21 @@ const atlasFresh = atlas && fs.existsSync(path.join(root, atlas.file)) && atlas.
 if (atlasFresh) publishedMap.iconAtlas = {file: atlas.file, cell: atlas.cell, columns: atlas.columns, labels: atlas.labels};
 else console.warn('Publishing without the icon sheet: missing or out of date (run python tools/build-icon-atlas.py)');
 
+// Small copies of the finished-meal pictures (made by tools/build-meal-thumbs.py), so the
+// result plate loads quickly. Each is published only while it matches its source cell.
+const mealKey = m => crypto.createHash('sha256').update([m.file, m.columns, m.rows, m.index, sha(m.file)].join('|')).digest('hex');
+const thumbsPath = path.join(root, 'assets', 'web', 'meals', 'meals.json');
+const thumbs = fs.existsSync(thumbsPath) ? JSON.parse(fs.readFileSync(thumbsPath, 'utf8')).meals : {};
+const mealArt = {};
+for (const m of map.meals) {
+  const t = thumbs[m.id];
+  if (t && t.key === mealKey(m) && fs.existsSync(path.join(root, t.file))) mealArt[m.id] = t.file;
+  else console.warn(`Publishing full-size art for meal ${m.id}: no up-to-date small copy (run python tools/optimize-images.py)`);
+}
+publishedMap.mealArt = mealArt;
+
 const gameFiles = fs.readdirSync(path.join(root, 'game')).map(f => `game/${f}`);
-const files = [...gameFiles, 'reference/meal-lion-45-meals.json', ...new Set(publishAs.values()), ...(atlasFresh ? [atlas.file] : [])];
+const files = [...gameFiles, 'reference/meal-lion-45-meals.json', ...new Set(publishAs.values()), ...(atlasFresh ? [atlas.file] : []), ...Object.values(mealArt)];
 
 fs.rmSync(out, {recursive: true, force: true});
 fs.mkdirSync(path.join(out, 'assets'), {recursive: true});

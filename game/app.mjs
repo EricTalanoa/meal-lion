@@ -47,6 +47,8 @@ let streak = null;
 const audio = createAudio();
 let selection = null, options = [], active = -1;
 const shownIcons = new Set();
+const RESULT_WAIT_MS = 1500;
+let plateWaiting = false; // the result showed before its picture loaded
 let scene = {mood: 'idle', ingredient: null, mealId: null}, sceneStart = 0, clock = 0, last = 0, frame = 0;
 
 const meal = id => roster.find(m => m.id === id);
@@ -132,6 +134,7 @@ function begin(dish, options) {
 
 // Don't keep a previous answer in hidden DOM or on the plate canvas.
 function clearResult() {
+  plateWaiting = false; el.plate.classList.remove('appear');
   for (const node of [el.resultEyebrow, el.resultTitle, el.resultText, el.resultIngredients]) node.textContent = '';
   el.plate.getContext('2d').clearRect(0, 0, el.plate.width, el.plate.height);
 }
@@ -216,8 +219,13 @@ function renderResult() {
   el.resultTitle.textContent = game.meal.name;
   el.resultText.textContent = won ? `You got it in ${game.history.length} of ${game.budget} guesses.` : `Out of guesses. It was ${game.meal.name}.`;
   el.resultIngredients.textContent = `Ingredients: ${game.meal.ingredients.join(', ')}`;
-  // 25 of 45 dishes have no finished-meal art yet; hide the plate rather than show a blank.
-  el.plate.hidden = !art.drawMeal(el.plate, game.meal.id);
+  // Dishes without finished-meal art hide the plate rather than show a blank. A picture still
+  // loading keeps its space and fades in once, instead of popping in and shifting the layout.
+  const drawn = art.drawMeal(el.plate, game.meal.id);
+  const state = art.mealState(game.meal.id);
+  el.plate.hidden = !drawn && state === 'none';
+  if (!drawn && state === 'pending') plateWaiting = true;
+  else if (drawn && plateWaiting) { plateWaiting = false; if (!settings.still) el.plate.classList.add('appear'); }
   el.next.textContent = mode === 'daily' ? 'Play endless' : 'Next dish';
   el.resultStreak.textContent = mode === 'daily'
     ? `Daily streak: ${dailyStreakNow(streak, daily.date)} in a row · best ${streak.best}`
@@ -309,13 +317,26 @@ function apply(result, entryText, kind) {
   }
   save();
   resetComposer();
-  if (game.status === 'won') setScene('won', null, `Yes! It’s ${game.meal.name}.`);
-  else if (game.status === 'lost') setScene('lost', null, `Out of guesses — it was ${game.meal.name}.`);
-  else if (game.revealed > before) { const ing = clue(game.revealed - 1); setScene('react', ing, `${entryText}${ing} revealed!${cues()}`); }
-  else setScene('wrong', null, `${entryText}Keep going.${cues()}`);
-  audio.play(game.status === 'won' ? 'win' : game.status === 'lost' ? 'lose' : isLastGuess(game) ? 'last' : kind);
-  render();
-  if (game.status !== 'playing') { leaveTyping(); el.result.focus(); }
+  if (game.status === 'playing') {
+    if (game.revealed > before) { const ing = clue(game.revealed - 1); setScene('react', ing, `${entryText}${ing} revealed!${cues()}`); }
+    else setScene('wrong', null, `${entryText}Keep going.${cues()}`);
+    audio.play(isLastGuess(game) ? 'last' : kind);
+    render();
+    return true;
+  }
+  // Round over: fetch the finished-meal picture before showing the result, so the plate doesn't
+  // pop in after it. Capped so a slow connection never holds the result back for long; if the
+  // picture is still loading then, it fades in when it arrives (see renderResult).
+  const ended = game;
+  el.input.disabled = el.guessBtn.disabled = el.skip.disabled = true;
+  Promise.race([art.loadMeal(ended.meal.id), new Promise(r => setTimeout(r, RESULT_WAIT_MS))]).then(() => {
+    if (game !== ended) return; // switched mode meanwhile; resumeScene shows it on return
+    const won = ended.status === 'won';
+    setScene(won ? 'won' : 'lost', null, won ? `Yes! It’s ${ended.meal.name}.` : `Out of guesses — it was ${ended.meal.name}.`);
+    audio.play(won ? 'win' : 'lose');
+    render();
+    leaveTyping(); el.result.focus();
+  });
   return true;
 }
 

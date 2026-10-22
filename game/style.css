@@ -110,6 +110,7 @@ li[aria-selected=true] .mark::after { content: ''; width: 10px; height: 10px; bo
 .result:focus { outline: none; }
 .result:focus-visible { outline: 3px solid #ffd38b; }
 #plate { width: 132px; height: 132px; image-rendering: pixelated; flex: none; }
+#plate.appear { animation: icon-in .25s ease-out; }
 .result h2 { font-size: 26px; color: #fff; text-transform: none; letter-spacing: 0; margin: 4px 0; }
 .result p { margin: 4px 0; }
 .full { color: var(--muted); font-size: 14px; }
@@ -138,7 +139,7 @@ dialog li { margin: 6px 0; }
 .small { color: var(--muted); font-size: 13px; }
 dialog .primary { width: 100%; margin-top: 8px; }
 
-@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } .clue.fresh canvas { animation: none; } }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } .clue.fresh canvas, #plate.appear { animation: none; } }
 
 /* ---------- phone / narrow ---------- */
 @media (max-width: 760px) {
