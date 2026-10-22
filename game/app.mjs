@@ -46,6 +46,7 @@ const endless = {played: 0, streak: 0};
 let streak = null;
 const audio = createAudio();
 let selection = null, options = [], active = -1;
+const shownIcons = new Set();
 let scene = {mood: 'idle', ingredient: null, mealId: null}, sceneStart = 0, clock = 0, last = 0, frame = 0;
 
 const meal = id => roster.find(m => m.id === id);
@@ -70,6 +71,7 @@ async function boot() {
     for (let i = 0; i < game.revealed; i++) art.drawIngredient(scratch, clue(i));
     art.drawStage(scratch, {...scene, elapsed: 0, still: settings.still});
     const missing = await art.settled();
+    for (let i = 0; i < game.revealed; i++) shownIcons.add(clue(i));
     booting = false;
     render(); kick();
     if (missing.length) console.warn('Missing artwork', missing);
@@ -167,13 +169,17 @@ function render() {
   const tiles = [];
   for (let i = 0; i < game.budget; i++) {
     const li = document.createElement('li');
-    if (i < game.revealed) {
+    // A revealed clue whose picture is still downloading stays a '?' tile until it arrives,
+    // then fades in once, so the tile never switches from a placeholder to the picture.
+    const icon = i < game.revealed && !booting ? art.iconState(clue(i)) : 'none';
+    if (i < game.revealed && icon !== 'pending') {
       const c = document.createElement('canvas');
       c.width = c.height = 96; c.setAttribute('aria-hidden', 'true');
       if (!booting) art.drawIngredient(c, clue(i));
       const label = document.createElement('span'); label.textContent = clue(i);
       li.className = 'clue'; li.append(c, label);
-    } else if (!hide) {
+      if (icon === 'ready' && !shownIcons.has(clue(i))) { shownIcons.add(clue(i)); if (!settings.still) li.classList.add('fresh'); }
+    } else if (!hide || i < game.revealed) {
       li.className = 'clue hidden'; li.innerHTML = '<span class="q" aria-hidden="true">?</span><span class="sr">Hidden ingredient</span>';
     } else continue;
     tiles.push(li);

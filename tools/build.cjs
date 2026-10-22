@@ -28,8 +28,24 @@ for (const file of new Set(items.map(x => x.file))) {
 }
 const publishedMap = JSON.parse(JSON.stringify(map));
 for (const x of [publishedMap.background, publishedMap.chef, ...publishedMap.meals, ...publishedMap.ingredients, ...publishedMap.animations]) x.file = publishAs.get(x.file);
+
+// One small sheet of every ingredient icon (made by tools/build-icon-atlas.py), loaded at
+// startup so clues never wait on a download. Published only while it matches the map.
+const sha = file => crypto.createHash('sha256').update(fs.readFileSync(path.join(root, file))).digest('hex');
+function inputSha256(m) {
+  const icons = new Map();
+  for (const item of m.ingredients) if (!icons.has(item.label) || item.preferred) icons.set(item.label, item);
+  const lines = [...icons].map(([label, it]) => [label, it.file, it.columns, it.rows, it.index, sha(it.file)].join('|'));
+  return crypto.createHash('sha256').update(lines.join('\n')).digest('hex');
+}
+const atlasPath = path.join(root, 'assets', 'web', 'icon-atlas.json');
+const atlas = fs.existsSync(atlasPath) ? JSON.parse(fs.readFileSync(atlasPath, 'utf8')) : null;
+const atlasFresh = atlas && fs.existsSync(path.join(root, atlas.file)) && atlas.inputSha256 === inputSha256(map);
+if (atlasFresh) publishedMap.iconAtlas = {file: atlas.file, cell: atlas.cell, columns: atlas.columns, labels: atlas.labels};
+else console.warn('Publishing without the icon sheet: missing or out of date (run python tools/build-icon-atlas.py)');
+
 const gameFiles = fs.readdirSync(path.join(root, 'game')).map(f => `game/${f}`);
-const files = [...gameFiles, 'reference/meal-lion-45-meals.json', ...new Set(publishAs.values())];
+const files = [...gameFiles, 'reference/meal-lion-45-meals.json', ...new Set(publishAs.values()), ...(atlasFresh ? [atlas.file] : [])];
 
 fs.rmSync(out, {recursive: true, force: true});
 fs.mkdirSync(path.join(out, 'assets'), {recursive: true});

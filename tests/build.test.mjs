@@ -29,10 +29,21 @@ test('publishes the game, its data and every image in the published asset map', 
     'reference/meal-lion-45-meals.json', 'assets/asset-map.json']) assert.ok(files.includes(f), f);
   for (const f of readdirSync(join(root, 'game'))) assert.ok(files.includes(`game/${f}`), `game/${f}`);
   for (const f of mapFiles(publishedMap)) assert.ok(files.includes(f), f);
+  assert.ok(files.includes(publishedMap.iconAtlas.file), 'icon sheet');
+});
+
+test('the icon sheet is current and covers every ingredient label with art', () => {
+  const atlas = JSON.parse(readFileSync(join(root, 'assets', 'web', 'icon-atlas.json')));
+  assert.deepEqual(publishedMap.iconAtlas, {file: atlas.file, cell: atlas.cell, columns: atlas.columns, labels: atlas.labels},
+    'icon sheet out of date: run python tools/build-icon-atlas.py');
+  assert.deepEqual([...atlas.labels].sort(), [...new Set(sourceMap.ingredients.map(i => i.label))].sort());
+  const [w, h] = (b => [b.readUInt32LE(24) & 0xffffff, b.readUInt32LE(27) & 0xffffff].map(n => n + 1))(readFileSync(join(root, atlas.file)));
+  assert.deepEqual([w, h], [atlas.columns * atlas.cell, Math.ceil(atlas.labels.length / atlas.columns) * atlas.cell]);
+  assert.ok(readFileSync(join(root, atlas.file)).length < 600_000, 'icon sheet stays small');
 });
 
 test('published asset map matches the source map except for image paths', () => {
-  const strip = m => JSON.stringify(m, (k, v) => k === 'file' ? undefined : v);
+  const strip = m => JSON.stringify(m, (k, v) => k === 'file' || k === 'iconAtlas' ? undefined : v);
   assert.equal(strip(publishedMap), strip(sourceMap));
   const flat = m => [m.background, m.chef, ...m.meals, ...m.ingredients, ...m.animations].map(x => x.file);
   flat(sourceMap).forEach((f, i) => assert.equal(flat(publishedMap)[i], manifest[f].file, f));
@@ -60,7 +71,7 @@ test('every relative URL the game fetches resolves inside the published site', (
 
 test('publishes nothing else: no docs, prompts, mockups, demos, tests or tools', () => {
   const images = mapFiles(publishedMap);
-  const allowed = f => f.startsWith('game/') || images.has(f) || ['reference/meal-lion-45-meals.json', 'assets/asset-map.json'].includes(f);
+  const allowed = f => f.startsWith('game/') || images.has(f) || ['reference/meal-lion-45-meals.json', 'assets/asset-map.json', publishedMap.iconAtlas.file].includes(f);
   assert.deepEqual(files.filter(f => !allowed(f)), []);
   assert.ok(!files.some(f => /\.(md|txt|cjs|py|png)$/.test(f) || f.includes('game-layouts') || f.endsWith('pilot.html') || f.endsWith('manifest.json')));
 });

@@ -53,6 +53,9 @@ h2 { font: 800 15px var(--pixel); letter-spacing: .1em; text-transform: uppercas
 .clue span { font: 700 12px var(--pixel); text-transform: uppercase; text-align: center; overflow-wrap: anywhere; line-height: 1.15; }
 .clue.hidden { border-color: var(--line-dim); }
 .clue .q { font: 900 44px var(--pixel); color: #2d6fa0; }
+/* A clue's picture appears once it has loaded; it never swaps in over a placeholder. */
+.clue.fresh canvas { animation: icon-in .25s ease-out; }
+@keyframes icon-in { from { opacity: 0; transform: scale(.8); } }
 .clues .none { grid-column: 1 / -1; color: var(--muted); font: 600 14px var(--pixel); text-align: center; padding: 18px; border: 2px dashed var(--line-dim); }
 
 .play { grid-area: play; display: flex; flex-direction: column; gap: var(--gap); min-width: 0; }
@@ -135,7 +138,7 @@ dialog li { margin: 6px 0; }
 .small { color: var(--muted); font-size: 13px; }
 dialog .primary { width: 100%; margin-top: 8px; }
 
-@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } .clue.fresh canvas { animation: none; } }
 
 /* ---------- phone / narrow ---------- */
 @media (max-width: 760px) {

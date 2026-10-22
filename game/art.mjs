@@ -10,14 +10,18 @@ const CHEF = {neutral:0, blink:1, thinking:2, celebrate:3};
 const W = 1200, H = 400;
 
 // Images load on first use so startup only waits for what the first screen draws. While a
-// file is pending, draws fall back (plain backdrop, neutral chef, lettered icon) and
-// `onLoad` fires once it arrives so the caller can redraw. Finished-meal art is only
+// file is pending, draws fall back (plain backdrop, neutral chef, blank plate for an icon) and
+// `onLoad` fires once it arrives so the caller can redraw. The published map carries an
+// `iconAtlas` (one small sheet of every ingredient icon, see tools/build.cjs) that loads with
+// the kitchen, so clue icons are normally ready before any clue is shown. Finished-meal art is only
 // requested by the end-of-round draws, so it is never fetched while a round is in play.
 export function createArt(map, base = '../', {onLoad = () => {}} = {}) {
   const images = new Map();
   const loaded = new Map();
   const icons = new Map();
   for (const item of map.ingredients) if (!icons.has(item.label) || item.preferred) icons.set(item.label, item);
+  const atlas = map.iconAtlas;
+  if (atlas) atlas.labels.forEach((label, index) => icons.set(label, {file: atlas.file, columns: atlas.columns, rows: Math.ceil(atlas.labels.length / atlas.columns), index}));
   const anims = new Map(map.animations.map(a => [a.id, a]));
 
   // Resolves with the image, or null if it failed. Uses load events rather than decode(),
@@ -47,20 +51,30 @@ export function createArt(map, base = '../', {onLoad = () => {}} = {}) {
 
   function rect(c, x, y, w, h, color) { c.fillStyle = color; c.fillRect(Math.round(x), Math.round(y), w, h); }
 
+  // 'ready' (art loaded), 'pending' (art requested, still downloading) or 'none' (no art, or it failed).
+  function iconState(label) {
+    const item = icons.get(label);
+    if (!item) return 'none';
+    if (!loaded.has(item.file)) { load(item.file); return 'pending'; }
+    return loaded.get(item.file) ? 'ready' : 'none';
+  }
+
   function drawIcon(c, label, x, y, size) {
     const item = icons.get(label);
     if (item && cell(c, item.file, item.columns, item.rows, item.index, x, y, size, size)) return true;
-    // Fallback for the 53 ingredients without art yet: a lettered plate.
     c.fillStyle = '#16364d'; c.beginPath(); c.arc(x + size / 2, y + size / 2, size * 0.42, 0, Math.PI * 2); c.fill();
+    // Art still downloading: a blank plate, so nothing switches from letter to picture.
+    if (iconState(label) === 'pending') return false;
+    // Ingredients without art yet: a lettered plate.
     c.fillStyle = '#7ce5df'; c.font = `bold ${Math.round(size * 0.42)}px ui-monospace, monospace`;
     c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText(label[0].toUpperCase(), x + size / 2, y + size / 2 + 1);
     return false;
   }
 
   return {
-    // Loads the kitchen and chef; resolves with the files that failed.
+    // Loads the kitchen, chef and icon sheet; resolves with the files that failed.
     async prepare() {
-      await Promise.all([load(map.background.file), load(map.chef.file)]);
+      await Promise.all([load(map.background.file), load(map.chef.file), ...(atlas ? [load(atlas.file)] : [])]);
       return failed();
     },
     // Waits for every image requested so far (including ones requested while waiting).
@@ -69,6 +83,7 @@ export function createArt(map, base = '../', {onLoad = () => {}} = {}) {
       return failed();
     },
     hasIcon: label => icons.has(label),
+    iconState,
 
     // scene: {ingredient, mood:'idle'|'react'|'wrong'|'won'|'lost', mealId, elapsed, still}
     drawStage(canvas, scene) {

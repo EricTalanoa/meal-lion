@@ -76,3 +76,36 @@ test('settled waits for every requested image and reports failures', async () =>
   art.drawIngredient(c, 'Milk');
   assert.equal(requested.length, 2, 'a failed image is not retried every frame');
 });
+
+test('with an icon sheet, prepare loads it and every icon draws from it', async () => {
+  reset();
+  const labels = [...new Set(map.ingredients.map(i => i.label))];
+  const sheet = {...map, iconAtlas: {file: 'assets/web/icon-atlas.webp', cell: 96, columns: 10, labels}};
+  const art = createArt(sheet, '');
+  const ready = art.prepare();
+  assert.ok(requested.includes('assets/web/icon-atlas.webp'));
+  await flush();
+  await ready;
+  assert.equal(art.iconState('Onion'), 'ready');
+  assert.equal(art.iconState('Saffron'), 'none', 'no art yet');
+  const c = canvas();
+  assert.equal(art.drawIngredient(c, 'Pecorino'), true);
+  assert.deepEqual(c.draws, ['assets/web/icon-atlas.webp']);
+  assert.equal(requested.length, 3, 'no per-icon downloads');
+});
+
+test('an icon that is still downloading reports pending and draws no letter', async () => {
+  reset();
+  const art = createArt(map, '');
+  const texts = [];
+  const c = canvas();
+  const ctx = c.getContext();
+  const real = {getContext: () => new Proxy(ctx, {get: (t, k) => k === 'fillText' ? (s) => texts.push(s) : t[k]})};
+  assert.equal(art.iconState('Onion'), 'pending');
+  assert.equal(art.drawIngredient({...c, ...real}, 'Onion'), false);
+  assert.deepEqual(texts, [], 'blank plate while loading');
+  art.drawIngredient({...c, ...real}, 'Saffron');
+  assert.deepEqual(texts, ['S'], 'lettered plate only for ingredients without art');
+  await flush();
+  assert.equal(art.iconState('Onion'), 'ready');
+});
