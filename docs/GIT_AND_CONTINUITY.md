@@ -21,6 +21,10 @@ The distributed ZIP intentionally contains no .git history. Follow the above ste
 - Record the latest existing commit ID when known, or say changes are uncommitted. A log committed alongside code cannot contain that same commit's final hash; reference the previous checkpoint and describe the current checkpoint, then let the next session read Git history. Do not create an endless cycle of commits just to update a hash.
 - Never silently discard changes, rewrite shared history, force-push, or use destructive resets. If multiple agents work concurrently, use separate branches/worktrees and reconcile their logs during integration.
 
+## Asset-set checkpoints (user instruction, 2026-10-22)
+
+After each completed asset set, save exact generation prompts and source files, update the asset map and coverage, run `python tools/optimize-images.py` (including icon-sheet and meal-thumbnail generation), run the tests and build, then commit the verified set with its work log. Fetch and reconcile remote changes, merge the checkpoint into `main` (fast-forward when possible), and push both the asset branch and `main`. Verify the remote refs and record the outcome. The user explicitly authorized these merges and pushes; no deployment is implied. Preserve concurrent work and never force-push. If a check or push fails, record the failure and resolve it before claiming the checkpoint is published.
+
 ## Required contents of WORK_LOG.md
 
 Keep a short current-state summary at the top. Append session entries below it, preserving useful history. Use paths relative to the project root so the record is portable.

@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Beef stock",
+    "file": "beef-stock.png",
+    "prompt": "Use case: stylized-concept. Square transparent PNG ingredient clue for Meal-lion cozy retro food game. Subject: Beef stock, small clear glass measuring jug filled with rich dark amber brown broth, broad handle and short pouring spout, a simple tiny brown beef-steak silhouette pictogram on front, no lettering or numbers. Clearly a cooking ingredient jug, not a soup bowl. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outline, warm saturated colors, upper-left highlights, limited palette shadows. Elevated three-quarter view. Centered object occupies 70 percent of canvas with generous transparent margins. Readable at 64px. No text, labels, plate, scenery, watermark, gradients, blur, glow or external shadow. Genuine transparent background.",
+    "status": "draft",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": 32,
+    "name": "Cottage pie",
+    "file": "cottage-pie.png",
+    "prompt": "Use case: stylized-concept. Square transparent PNG finished-meal illustration for Meal-lion cozy retro pixel-art cooking game. Subject: Cottage pie, one generous square serving of minced beef with tiny orange carrot and green peas in brown gravy, topped with thick creamy mashed potato with golden browned fork ridges. Visible cut side showing two layers, mashed potato above ground beef. On a small white ceramic plate with pale blue rim. No pastry crust, cheese, garnish, sides or utensils. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outlines, warm saturated food colors, upper-left highlights and limited-palette shadows. Elevated three-quarter view. Entire plate centered within middle 70 percent of square canvas with transparent margins on ALL sides, no clipping. Readable at 154px. No text, labels, watermark, scenery, gradients, blur or glow. Genuine transparent background.",
+    "status": "draft",
+    "tool": "built-in image_gen"
+  }
+]

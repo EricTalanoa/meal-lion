@@ -6,9 +6,9 @@ Every AI must read this file before working and update it throughout the session
 
 - Current milestone: game/ is playable with Daily dish (US Eastern midnight, shared clue order, saved on device) and Endless (shuffled deck, excludes today's daily, not saved). Browser-verified in emulation; real-device keyboards untested.
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
-- Available: 45-meal roster, 30 meal illustrations, 69 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
+- Available: 45-meal roster, 31 meal illustrations, 70 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
 - Implemented: responsive game, daily/endless, daily persistence, alias suggestions, streaks, sound and lazy-loaded art. Test deploy live at https://meal-lion-playtest.netlify.app (2026-10-21, public, no password); final product decisions remain open. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
-- Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint 8ac6ab3 before the hot dog batch. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
+- Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint 954212a (Hot dog set), pushed to origin/main and origin/codex/missing-food-art. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
 - Asset automation: cloud task 6ad7bfe9c2408191b650b820afd8a386 was verified PAUSED on 2026-10-21; local heartbeat is PAUSED to prevent duplicates. 41 icons / 18 meals queued. Outputs require later local import. See docs/ASSET_AUTOMATION.md. Recurring queue/resume behavior remains untested.
 - Confirmed rules: ingredient-count guess budget, one free clue (zero optional), hidden total by default (showing totals is optional), with explicit 'all ingredients revealed' and 'last guess' cues; reveal order shuffled every round; skip policy approved; typo-tolerant suggestions. Open decisions: aliases, timezone/schedule, scoring and storage. See docs/PRODUCT.md.
 - Images: startup downloads kitchen, chef and one 261 KB sheet of all 66 ingredient icons (tools/build-icon-atlas.py), so clue icons no longer pop in; the rest loads on first use; published images are lossless WebP copies in assets/web/ (21.4 MB total). See the 2026-10-19 image-load entry.
@@ -311,3 +311,11 @@ Every AI must read this file before working and update it throughout the session
 
 - Latest HEAD advanced concurrently to 556b69e, adding small meal copies. Recheck: 78/79 tests passed; new small-copy coverage test correctly requires Hot dog thumbnail. Running updated optimization pipeline before merge.
 - Updated optimization completed: 30 meal thumbnails and 69-icon sheet. All 79 tests passed; build 99 files / 42.3 MB. Hot dog checkpoint ready. Next set Beef stock source saved (unmapped), Cottage pie pending; excluded from hot dog commit.
+
+### 2026-10-22 America/Los_Angeles — Codex — Cottage pie asset set
+- Previous asset checkpoint 954212a (Hot dog); GitHub push/fast-forward in progress.
+- Generated and visually inspected Beef stock clue and Cottage pie result, saved under assets/generated/food-2026-10-22 with exact built-in prompts. Both mapped; coverage 31/45 meals and 70/103 ingredients. Full objects visible; small edge margins on cottage plate, final halo approval pending.
+- Running updated WebP/icon-sheet/meal-thumbnail pipeline before tests and next commit. No gameplay edits or deployment.
+
+- GitHub confirmed hot dog checkpoint 954212a pushed to both codex/missing-food-art and main (fast-forward from 8f5e6e4). Local main also advanced without changing the active working branch. No force push.
+- Cottage pie set verification: both 1254x1254 RGBA sources have alpha 0-255; solid bounds are within canvas. Lossless WebP verification passed; 70-icon sheet and 31 meal thumbnails regenerated. All 79 tests passed; build 102 files / 43.9 MB. No browser/device review or deployment. Next remaining 14 meals / 33 ingredient icons; prioritize Gruyere plus French onion soup, and import existing cloud Guanciale/Pepperoni before generating duplicates.

@@ -233,6 +233,22 @@
       "width": 1254,
       "height": 1254
     },
+    "assets/generated/food-2026-10-22/beef-stock.png": {
+      "file": "assets/web/assets/generated/food-2026-10-22/beef-stock.webp",
+      "sourceSha256": "9a212e321e91324fda7ddca3b5a236667673fb166c345926499c4bd41cf92e17",
+      "sourceBytes": 997233,
+      "bytes": 655012,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-22/cottage-pie.png": {
+      "file": "assets/web/assets/generated/food-2026-10-22/cottage-pie.webp",
+      "sourceSha256": "20cd61dc784d89eb9c53f3b6a8701065cd9f055847bf629a2fc1f39a2d31a1dd",
+      "sourceBytes": 1159769,
+      "bytes": 873378,
+      "width": 1254,
+      "height": 1254
+    },
     "reference/meal-lion-assets-batch-02/ingredients-01.png": {
       "file": "assets/web/meal-lion-assets-batch-02/ingredients-01.webp",
       "sourceSha256": "d2a94b0128c86d4a4432cd07ed493a152a84d99fa535329981a3bba0690df412",

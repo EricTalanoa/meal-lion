@@ -256,6 +256,14 @@
       "columns": 1,
       "rows": 1,
       "index": 0
+    },
+    {
+      "id": 32,
+      "name": "Cottage pie",
+      "file": "assets/generated/food-2026-10-22/cottage-pie.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
     }
   ],
   "ingredients": [
@@ -854,6 +862,14 @@
       "label": "Mustard",
       "preferred": true,
       "file": "assets/generated/food-2026-10-21/mustard.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Beef stock",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-22/beef-stock.png",
       "columns": 1,
       "rows": 1,
       "index": 0

@@ -121,6 +121,10 @@
     "20": {
       "file": "assets/web/meals/meal-20.webp",
       "key": "95961148deb1a7bda8cb02a27cd86f8b2288c3c1e57d509d2d11b02bfd1e6aa2"
+    },
+    "32": {
+      "file": "assets/web/meals/meal-32.webp",
+      "key": "a4da0d3564ec6b3b3761f114945bb542e0ff6fbe067af8d0ff606330b056b28c"
     }
   }
 }
