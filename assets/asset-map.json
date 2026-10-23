@@ -280,6 +280,14 @@
       "columns": 1,
       "rows": 1,
       "index": 0
+    },
+    {
+      "id": 31,
+      "name": "Chili con carne",
+      "file": "assets/generated/food-2026-10-22/chili-con-carne.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
     }
   ],
   "ingredients": [
@@ -910,6 +918,22 @@
       "label": "Spinach",
       "preferred": true,
       "file": "assets/generated/food-2026-10-22/spinach.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Kidney beans",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-22/kidney-beans.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Chili powder",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-22/chili-powder.png",
       "columns": 1,
       "rows": 1,
       "index": 0

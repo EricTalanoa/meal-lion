@@ -3,7 +3,7 @@
   "file": "assets/web/icon-atlas.webp",
   "cell": 96,
   "columns": 10,
-  "inputSha256": "29d0a71aab7d7e87a3b94cbd9630b865264875067e5ce01952f23ae3fa91d442",
+  "inputSha256": "62624c90d435596cd53d36a33f188baf7b6c5abe4225fb91b83c6729f7ba03ba",
   "labels": [
     "Tomato",
     "Egg",
@@ -77,6 +77,8 @@
     "Beef stock",
     "Gruy\u00e8re",
     "Paneer",
-    "Spinach"
+    "Spinach",
+    "Kidney beans",
+    "Chili powder"
   ]
 }

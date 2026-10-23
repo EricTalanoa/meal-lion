@@ -241,6 +241,22 @@
       "width": 1254,
       "height": 1254
     },
+    "assets/generated/food-2026-10-22/chili-con-carne.png": {
+      "file": "assets/web/assets/generated/food-2026-10-22/chili-con-carne.webp",
+      "sourceSha256": "7a36ca9cb43f4d0b2f87e553c0cd75563f7bd9e43e0cbf40f6a738eb6475f069",
+      "sourceBytes": 842179,
+      "bytes": 610910,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-22/chili-powder.png": {
+      "file": "assets/web/assets/generated/food-2026-10-22/chili-powder.webp",
+      "sourceSha256": "85389f63cbb137ec8548717ec836093611a9a33915034a257c8337b96b19be09",
+      "sourceBytes": 871271,
+      "bytes": 679768,
+      "width": 1254,
+      "height": 1254
+    },
     "assets/generated/food-2026-10-22/cottage-pie.png": {
       "file": "assets/web/assets/generated/food-2026-10-22/cottage-pie.webp",
       "sourceSha256": "20cd61dc784d89eb9c53f3b6a8701065cd9f055847bf629a2fc1f39a2d31a1dd",
@@ -262,6 +278,14 @@
       "sourceSha256": "6c2d17f706ed880d52db96e6256466867d99fcc6610ef5b2258c0e6fc5f27098",
       "sourceBytes": 884540,
       "bytes": 549762,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-22/kidney-beans.png": {
+      "file": "assets/web/assets/generated/food-2026-10-22/kidney-beans.webp",
+      "sourceSha256": "e02bfe4236ec0cb2cd705b7e65499039e5df4f3ce6a15762e8f59260d110fc2b",
+      "sourceBytes": 725355,
+      "bytes": 449032,
       "width": 1254,
       "height": 1254
     },

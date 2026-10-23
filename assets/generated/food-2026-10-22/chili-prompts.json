@@ -1,0 +1,24 @@
+[
+  {
+    "label": "Kidney beans",
+    "file": "kidney-beans.png",
+    "prompt": "Use case: stylized-concept. Square transparent PNG ingredient clue for Meal-lion cozy retro cooking game. Subject: Kidney beans, a compact pile of seven plump deep burgundy-red kidney-shaped beans, clear curved bean silhouettes and tiny pale hilum marks. Cooked plain beans with subtle highlights, no sauce, no bowl, no tin or packaging, no herbs. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outlines, warm saturated reds, upper-left highlights, limited-palette shadows. Elevated three-quarter view. Centered grouping occupies 65 percent of square canvas with wide transparent padding on all sides. Readable at 64px. No text, labels, watermark, scenery, gradients, blur, glow or external shadow. Genuine transparent background.",
+    "status": "draft",
+    "tool": "built-in image_gen"
+  },
+  {
+    "label": "Chili powder",
+    "file": "chili-powder.png",
+    "prompt": "Use case: stylized-concept. Square transparent PNG ingredient clue for Meal-lion cozy retro cooking game. Subject: Chili powder, a small wooden scoop holding a mound of deep brick-red finely ground chili spice, a little neat pile touching the scoop mouth. One small dried red chili pod beside the scoop to identify the spice. No jar, label, bowl, other spices or herbs. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outline, warm saturated colors, upper-left highlights, limited-palette shadows. Elevated three-quarter view. Centered grouping occupies 65 percent of square canvas, wide clear transparent margins on all sides. Readable at 64px. No text, labels, watermark, scenery, gradients, blur, glow or external shadow. Genuine transparent background.",
+    "status": "draft",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": 31,
+    "name": "Chili con carne",
+    "file": "chili-con-carne.png",
+    "prompt": "Use case: stylized-concept. Square transparent PNG finished-meal illustration for Meal-lion cozy retro cooking game. Subject: Chili con carne, small white ceramic bowl with pale-blue rim filled with thick rich brick-red tomato chili stew, browned ground beef crumbles and clearly visible deep-red kidney beans, small pieces of cooked onion. No rice, bread, sour cream, cheese, herbs, sides or utensils. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outlines, warm saturated food colors, upper-left highlights, limited palette shadows. Elevated three-quarter view. Entire bowl centered within middle 65 percent of square canvas with wide transparent margins on every side; no clipping. Readable at 154px. No text, labels, watermark, scenery, table, gradients, blur, glow or steam. Genuine transparent background.",
+    "status": "draft",
+    "tool": "built-in image_gen"
+  }
+]
