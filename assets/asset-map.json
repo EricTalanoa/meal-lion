@@ -272,6 +272,14 @@
       "columns": 1,
       "rows": 1,
       "index": 0
+    },
+    {
+      "id": 40,
+      "name": "Palak paneer",
+      "file": "assets/generated/food-2026-10-22/palak-paneer.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
     }
   ],
   "ingredients": [
@@ -886,6 +894,22 @@
       "label": "Gruyère",
       "preferred": true,
       "file": "assets/generated/food-2026-10-22/gruyere.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Paneer",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-22/paneer.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Spinach",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-22/spinach.png",
       "columns": 1,
       "rows": 1,
       "index": 0

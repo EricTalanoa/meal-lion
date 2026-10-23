@@ -3,7 +3,7 @@
   "file": "assets/web/icon-atlas.webp",
   "cell": 96,
   "columns": 10,
-  "inputSha256": "25db4fa1ddae88cd9bb52fc3dab4c2dd97c5883b1bc3106d4b710e9bc156b0f2",
+  "inputSha256": "29d0a71aab7d7e87a3b94cbd9630b865264875067e5ce01952f23ae3fa91d442",
   "labels": [
     "Tomato",
     "Egg",
@@ -75,6 +75,8 @@
     "Frankfurter",
     "Mustard",
     "Beef stock",
-    "Gruy\u00e8re"
+    "Gruy\u00e8re",
+    "Paneer",
+    "Spinach"
   ]
 }

@@ -265,6 +265,30 @@
       "width": 1254,
       "height": 1254
     },
+    "assets/generated/food-2026-10-22/palak-paneer.png": {
+      "file": "assets/web/assets/generated/food-2026-10-22/palak-paneer.webp",
+      "sourceSha256": "607e11b9e9370d216638a51d6c665b5057ee489feded88097cfe587fd1ee6754",
+      "sourceBytes": 1142307,
+      "bytes": 872570,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-22/paneer.png": {
+      "file": "assets/web/assets/generated/food-2026-10-22/paneer.webp",
+      "sourceSha256": "638708292cf3ccf82b071a17d0a660b31ccbd6dc92a83b7c31f12b7c542c6a5c",
+      "sourceBytes": 984834,
+      "bytes": 604894,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-22/spinach.png": {
+      "file": "assets/web/assets/generated/food-2026-10-22/spinach.webp",
+      "sourceSha256": "5a2ac2d91779f60f56f6bf81c55d417c5b163d500f4f159662fc6880a87d5fcc",
+      "sourceBytes": 984980,
+      "bytes": 695054,
+      "width": 1254,
+      "height": 1254
+    },
     "reference/meal-lion-assets-batch-02/ingredients-01.png": {
       "file": "assets/web/meal-lion-assets-batch-02/ingredients-01.webp",
       "sourceSha256": "d2a94b0128c86d4a4432cd07ed493a152a84d99fa535329981a3bba0690df412",
