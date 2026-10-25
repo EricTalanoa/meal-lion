@@ -337,6 +337,30 @@
       "width": 1254,
       "height": 1254
     },
+    "assets/generated/food-2026-10-25/basmati-rice.png": {
+      "file": "assets/web/assets/generated/food-2026-10-25/basmati-rice.webp",
+      "sourceSha256": "b97407279e9c7b9e63a64574b5a4ee4a437e3861675bcf47d89bbe667186de15",
+      "sourceBytes": 1061380,
+      "bytes": 788280,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-25/chicken-biryani.png": {
+      "file": "assets/web/assets/generated/food-2026-10-25/chicken-biryani.webp",
+      "sourceSha256": "1adee1224bf82e9b6f6d5512f2f31ec32a81f2e4b88c105c03aa97f3ac9cc505",
+      "sourceBytes": 1487695,
+      "bytes": 1191146,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-25/saffron.png": {
+      "file": "assets/web/assets/generated/food-2026-10-25/saffron.webp",
+      "sourceSha256": "cd402de5d8e632f7ced4e4a2e591a3c44558c01a4b755a1203bdac9fb74c1ccf",
+      "sourceBytes": 905868,
+      "bytes": 673062,
+      "width": 1254,
+      "height": 1254
+    },
     "reference/meal-lion-assets-batch-02/ingredients-01.png": {
       "file": "assets/web/meal-lion-assets-batch-02/ingredients-01.webp",
       "sourceSha256": "d2a94b0128c86d4a4432cd07ed493a152a84d99fa535329981a3bba0690df412",

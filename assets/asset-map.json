@@ -296,6 +296,14 @@
       "columns": 1,
       "rows": 1,
       "index": 0
+    },
+    {
+      "id": 29,
+      "name": "Chicken biryani",
+      "file": "assets/generated/food-2026-10-25/chicken-biryani.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
     }
   ],
   "ingredients": [
@@ -958,6 +966,22 @@
       "label": "Puff pastry",
       "preferred": true,
       "file": "assets/generated/food-2026-10-23/puff-pastry.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Basmati rice",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-25/basmati-rice.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Saffron",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-25/saffron.png",
       "columns": 1,
       "rows": 1,
       "index": 0

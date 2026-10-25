@@ -1,0 +1,18 @@
+{
+  "status": "draft",
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "file": "basmati-rice.png",
+      "prompt": "Use case: stylized-concept. Asset type: Meal-lion game pixel-art sprite. Crisp chunky 16-bit square pixel clusters, dark navy stepped outlines, warm saturated palette, upper-left highlights and limited flat shadows, elevated three-quarter view. Genuinely transparent background. No text, watermark, scenery, blur, gradients, glow or cast shadow outside object. Center complete object occupying about 65 percent of square canvas, generous transparent margins, no clipping. Ingredient clue recognizable at 64px: small wooden scoop filled with uncooked ivory basmati rice and a compact heap of rice below. Make grains conspicuously long, slender and pointed, not short round rice."
+    },
+    {
+      "file": "saffron.png",
+      "prompt": "Use case: stylized-concept. Asset type: Meal-lion game pixel-art sprite. Crisp chunky 16-bit square pixel clusters, dark navy stepped outlines, warm saturated palette, upper-left highlights and limited flat shadows, elevated three-quarter view. Genuinely transparent background. No text, watermark, scenery, blur, gradients, glow or cast shadow outside object. Center complete object occupying about 65 percent of square canvas, generous transparent margins, no clipping. Ingredient clue recognizable at 64px: a small shallow white porcelain dish with pale-blue rim containing a compact nest of fine crimson-red saffron threads, a few threads resting across the rim. Threads thin, curved, with slightly flared orange tips. No flowers or other ingredients."
+    },
+    {
+      "file": "chicken-biryani.png",
+      "prompt": "Use case: stylized-concept. Asset type: Meal-lion game pixel-art sprite. Crisp chunky 16-bit square pixel clusters, dark navy stepped outlines, warm saturated palette, upper-left highlights and limited flat shadows, elevated three-quarter view. Genuinely transparent background. No text, watermark, scenery, blur, gradients, glow or cast shadow outside object. Center complete object occupying about 65 percent of square canvas, generous transparent margins, no clipping. Finished meal illustration recognizable at 154px: chicken biryani in a wide white ceramic bowl with pale-blue rim. Fluffy long basmati grains in ivory and saffron gold, three golden-brown chicken pieces nestled in rice, thin browned onion curls. Full bowl visible, rice texture in readable clusters. No side dishes, cutlery, text or garnish outside the recipe."
+    }
+  ]
+}

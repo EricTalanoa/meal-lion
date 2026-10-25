@@ -87,7 +87,7 @@ test('with an icon sheet, prepare loads it and every icon draws from it', async 
   await flush();
   await ready;
   assert.equal(art.iconState('Onion'), 'ready');
-  assert.equal(art.iconState('Saffron'), 'none', 'no art yet');
+  assert.equal(art.iconState('Unmapped test ingredient'), 'none', 'no mapped art');
   const c = canvas();
   assert.equal(art.drawIngredient(c, 'Pecorino'), true);
   assert.deepEqual(c.draws, ['assets/web/icon-atlas.webp']);
@@ -104,8 +104,8 @@ test('an icon that is still downloading reports pending and draws no letter', as
   assert.equal(art.iconState('Onion'), 'pending');
   assert.equal(art.drawIngredient({...c, ...real}, 'Onion'), false);
   assert.deepEqual(texts, [], 'blank plate while loading');
-  art.drawIngredient({...c, ...real}, 'Saffron');
-  assert.deepEqual(texts, ['S'], 'lettered plate only for ingredients without art');
+  art.drawIngredient({...c, ...real}, 'Unmapped test ingredient');
+  assert.deepEqual(texts, ['U'], 'lettered plate only for ingredients without art');
   await flush();
   assert.equal(art.iconState('Onion'), 'ready');
 });

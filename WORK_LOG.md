@@ -6,12 +6,12 @@ Every AI must read this file before working and update it throughout the session
 
 - Current milestone: game/ is playable with Daily dish (US Eastern midnight, shared clue order, saved on device) and Endless (shuffled deck, excludes today's daily, not saved). Browser-verified in emulation; real-device keyboards untested.
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
-- Available: 45-meal roster, 35 meal illustrations, 77 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
+- Available: 45-meal roster, 36 meal illustrations, 79 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
 - Implemented: responsive game, daily/endless, daily persistence, alias suggestions, streaks, sound and lazy-loaded art. Test deploy live at https://meal-lion-playtest.netlify.app (updated 2026-10-23, public, no password); final product decisions remain open. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
-- Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint c687920 before Chicken pot pie set; deployed source e57c02b on 2026-10-23, pushed to origin/main and origin/codex/missing-food-art. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
+- Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint acffe0d (Chicken pot pie); Biryani set in progress; deployed source e57c02b on 2026-10-23, pushed to origin/main and origin/codex/missing-food-art. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
 - Asset automation: cloud task 6ad7bfe9c2408191b650b820afd8a386 was verified PAUSED on 2026-10-21; local heartbeat is PAUSED to prevent duplicates. 41 icons / 18 meals queued. Outputs require later local import. See docs/ASSET_AUTOMATION.md. Recurring queue/resume behavior remains untested.
 - Confirmed rules: ingredient-count guess budget, one free clue (zero optional), hidden total by default (showing totals is optional), with explicit 'all ingredients revealed' and 'last guess' cues; reveal order shuffled every round; skip policy approved; typo-tolerant suggestions. Open decisions: aliases, timezone/schedule, scoring and storage. See docs/PRODUCT.md.
-- Images: startup downloads kitchen, chef and one 308 KB sheet of all 75 ingredient icons (tools/build-icon-atlas.py), so clue icons no longer pop in; the rest loads on first use; published images are lossless WebP copies in assets/web/ (21.4 MB total). See the 2026-10-19 image-load entry.
+- Images: startup uses a shared ingredient sheet; finished meals use 240px thumbnails. The optimizer rebuilds both from the current map. Live deployment still has 34 meals / 75 icons; newer source artwork awaits a deployment request.
 - Next: user playtesting; deploy to Netlify only on the user's go-ahead (setup ready); set schedule startDate at launch; add dishes + art; real iOS/Android keyboard QA; open: share format, analytics.
 
 ### 2026-10-18 America/Los_Angeles — Codex — Approved rules / implementation start
@@ -374,3 +374,13 @@ Every AI must read this file before working and update it throughout the session
 
 
 - Resume verification: all 79 tests pass; build publishes 117 files / 51.3 MB. Previously inspected the complete 240px pot pie thumbnail. Preparing focused Git checkpoint for Chicken stock, Puff pastry and Chicken pot pie; no new deployment or browser/device QA.
+
+- Chicken pot pie checkpoint acffe0d committed; Git publishing in progress. Starting Basmati rice, Saffron and Chicken biryani sources with exact prompts in food-2026-10-25/prompts.json. Drafts await integration and verification.
+
+- Pot pie checkpoint acffe0d successfully pushed to both branches and main fast-forwarded. Basmati and saffron sources saved and visually inspected, complete objects visible. Biryani meal next.
+
+- Biryani set sources saved and mapped: 36 meals / 79 icons. Full sprites visually inspected; meal includes small green garnish despite prompt, retained as draft cosmetic detail, not gameplay ingredient data. Exact prompts saved. Optimizing next; final halo and browser/device QA pending.
+
+- Biryani source validation: three 1254x1254 RGBA files, alpha 0-255, solid bounds inside canvas. Next planned set after checkpoint: Short-grain rice, Green beans, Chicken paella, reusing Saffron and Chicken stock. Nine meal illustrations and 24 ingredient icons remain.
+
+- Optimizer completed: lossless visible pixels verified, 79-icon sheet (325,884 bytes), 36 meal thumbnails (719,396 bytes). Visually inspected biryani 240px copy: full bowl and readable chicken/rice. Initial suite 77/79: two fallback tests assumed Saffron had no art. Replaced that stale assumption with Unmapped test ingredient in tests/art.test.mjs; no runtime behavior changes. Rerun 79/79 passed; build 121 files / 54.0 MB. Preparing commit and push. Browser/device and final halo QA untested; new sets not deployed.
