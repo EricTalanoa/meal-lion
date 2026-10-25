@@ -6,9 +6,9 @@ Every AI must read this file before working and update it throughout the session
 
 - Current milestone: game/ is playable with Daily dish (US Eastern midnight, shared clue order, saved on device) and Endless (shuffled deck, excludes today's daily, not saved). Browser-verified in emulation; real-device keyboards untested.
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
-- Available: 45-meal roster, 34 meal illustrations, 75 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
+- Available: 45-meal roster, 35 meal illustrations, 77 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
 - Implemented: responsive game, daily/endless, daily persistence, alias suggestions, streaks, sound and lazy-loaded art. Test deploy live at https://meal-lion-playtest.netlify.app (updated 2026-10-23, public, no password); final product decisions remain open. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
-- Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint e57c02b, deployed 2026-10-23, pushed to origin/main and origin/codex/missing-food-art. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
+- Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint c687920 before Chicken pot pie set; deployed source e57c02b on 2026-10-23, pushed to origin/main and origin/codex/missing-food-art. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
 - Asset automation: cloud task 6ad7bfe9c2408191b650b820afd8a386 was verified PAUSED on 2026-10-21; local heartbeat is PAUSED to prevent duplicates. 41 icons / 18 meals queued. Outputs require later local import. See docs/ASSET_AUTOMATION.md. Recurring queue/resume behavior remains untested.
 - Confirmed rules: ingredient-count guess budget, one free clue (zero optional), hidden total by default (showing totals is optional), with explicit 'all ingredients revealed' and 'last guess' cues; reveal order shuffled every round; skip policy approved; typo-tolerant suggestions. Open decisions: aliases, timezone/schedule, scoring and storage. See docs/PRODUCT.md.
 - Images: startup downloads kitchen, chef and one 308 KB sheet of all 75 ingredient icons (tools/build-icon-atlas.py), so clue icons no longer pop in; the rest loads on first use; published images are lossless WebP copies in assets/web/ (21.4 MB total). See the 2026-10-19 image-load entry.
@@ -360,3 +360,17 @@ Every AI must read this file before working and update it throughout the session
 - Live verification: public map exactly matches dist (34 meals, 75-icon atlas); all 14 new full-size images, icon atlas and 5 new 240px thumbnails downloaded and matched local bytes. Root 302 redirects to /game/; CSP preserved; modules served as JavaScript. Browser: game loads, Endless switches correctly, Skip reveals a clue and consumes one guess; no game-console errors. Unrelated Netlify login page emitted an earlier FedCM error before switching to saved CLI authentication.
 - Not tested: every new dish played end-to-end, real-device keyboards, full halo approval. Artwork remains draft. No source/game code changes; ZIP contains only built game files plus _headers/_redirects mirroring netlify.toml. Rejected/unmapped source drafts remain unpublished. Next: resume remaining 11 meals / 28 ingredient icons and real-device playtest.
 
+
+### 2026-10-23 America/Los_Angeles — Codex — Chicken pot pie set
+- User requested continued work after deployment. Branch codex/missing-food-art / c687920; clean tree at start. Previous deployed art remains 34 meals / 75 icons. Starting Chicken stock, Puff pastry and Chicken pot pie (33); built-in image generation, exact prompts and draft status. Commit/merge/push completed set; new deployment requires user request.
+
+- Confirmed origin/main and origin/codex/missing-food-art both c687920. Chicken stock generated, visually inspected and saved; golden broth and drumstick pictogram, full jug visible.
+- Puff pastry generated and saved; raw sheet, rolled edge and folded square visible. Full artwork visually inside canvas, alpha checks pending.
+- Chicken pot pie generated and saved, full crock and visible filling. All three assets mapped with exact prompts; coverage 35/45 meals and 77/103 icons. Starting optimization and verification.
+- Source checks passed: three 1254x1254 RGBA files with alpha 0-255 and solid objects within bounds. Faint-edge/halo approval and browser/device QA remain pending; optimizer still processing.
+
+### 2026-10-25 America/Los_Angeles — Codex — Resume asset checkpoints
+- Branch codex/missing-food-art / c687920. Reconciled pending Chicken pot pie set; optimization completed successfully (77 icons, 35 meal thumbnails). All 79 tests pass on resume. No unrelated edits found. Preparing checkpoint before next set: Basmati rice, Saffron, Chicken biryani.
+
+
+- Resume verification: all 79 tests pass; build publishes 117 files / 51.3 MB. Previously inspected the complete 240px pot pie thumbnail. Preparing focused Git checkpoint for Chicken stock, Puff pastry and Chicken pot pie; no new deployment or browser/device QA.

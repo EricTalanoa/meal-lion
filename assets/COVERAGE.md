@@ -1,6 +1,6 @@
 # Artwork coverage
 
-34/45 meal illustrations; 75/103 canonical ingredient icons; 11 custom animation groups. All draft.
+35/45 meal illustrations; 77/103 canonical ingredient icons; 11 custom animation groups. All draft.
 
 | ID | Meal | Meal art | Missing ingredient icons |
 |---|---|---|---|
@@ -33,10 +33,10 @@
 | 27 | Fish and chips | Available | None |
 | 28 | Egg fried rice | Available | None |
 | 29 | Chicken biryani | Missing | Basmati rice, Saffron |
-| 30 | Chicken paella | Missing | Short-grain rice, Green beans, Saffron, Chicken stock |
+| 30 | Chicken paella | Missing | Short-grain rice, Green beans, Saffron |
 | 31 | Chili con carne | Available | None |
 | 32 | Cottage pie | Available | None |
-| 33 | Chicken pot pie | Missing | Puff pastry, Chicken stock |
+| 33 | Chicken pot pie | Available | None |
 | 34 | French onion soup | Available | None |
 | 35 | Tomato soup | Available | None |
 | 36 | Miso soup | Available | None |

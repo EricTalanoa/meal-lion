@@ -313,6 +313,30 @@
       "width": 1254,
       "height": 1254
     },
+    "assets/generated/food-2026-10-23/chicken-pot-pie.png": {
+      "file": "assets/web/assets/generated/food-2026-10-23/chicken-pot-pie.webp",
+      "sourceSha256": "c40e528eaea00dd25e11dc6b9829f6f0243c8c9554a401c42e17e76c995d70c5",
+      "sourceBytes": 1192155,
+      "bytes": 892032,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-23/chicken-stock.png": {
+      "file": "assets/web/assets/generated/food-2026-10-23/chicken-stock.webp",
+      "sourceSha256": "14767224c580903364bbb10e55c2088266c249696e3f822a12617bbaf9460e94",
+      "sourceBytes": 778377,
+      "bytes": 502142,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-23/puff-pastry.png": {
+      "file": "assets/web/assets/generated/food-2026-10-23/puff-pastry.webp",
+      "sourceSha256": "d38d63e0c55b93e3bfa97b7fe2f4f025c28cddf2d586c344ec67a6abfebfe6e9",
+      "sourceBytes": 965959,
+      "bytes": 659654,
+      "width": 1254,
+      "height": 1254
+    },
     "reference/meal-lion-assets-batch-02/ingredients-01.png": {
       "file": "assets/web/meal-lion-assets-batch-02/ingredients-01.webp",
       "sourceSha256": "d2a94b0128c86d4a4432cd07ed493a152a84d99fa535329981a3bba0690df412",

@@ -1,0 +1,24 @@
+[
+  {
+    "label": "Chicken stock",
+    "file": "chicken-stock.png",
+    "prompt": "Use case: stylized-concept. Square transparent PNG ingredient clue for Meal-lion cozy retro cooking game. Subject: Chicken stock, a small clear glass measuring jug containing pale golden-yellow translucent broth, broad handle and short spout, a tiny simple chicken drumstick pictogram on front without letters or numbers. Clearly cooking stock, no soup bowl or vegetables. Match existing beef-stock jug style with lighter golden broth. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outline, upper-left highlights and limited-palette shadows. Elevated three-quarter view. Centered object occupies 65 percent of square canvas, generous transparent padding on every side. Readable at 64px. No text, labels, watermark, scenery, gradients, blur, glow or outside shadow. Genuine transparent background.",
+    "status": "draft",
+    "tool": "built-in image_gen"
+  },
+  {
+    "label": "Puff pastry",
+    "file": "puff-pastry.png",
+    "prompt": "Use case: stylized-concept. Square transparent PNG ingredient clue for Meal-lion cozy retro cooking game. Subject: Puff pastry, a pale cream uncooked rectangular sheet of laminated pastry with one end loosely rolled back to reveal thin layered edges, a small neat folded square of raw pastry beside it. Clearly raw pastry, no baked croissant or pie, no fillings, plate, rolling pin, flour cloud or packaging. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outline, warm creamy tones, upper-left highlights, limited-palette shadows. Elevated three-quarter view. Centered grouping occupies 65 percent of square canvas with wide transparent margins on all sides. Readable at 64px. No text, labels, watermark, scenery, gradients, blur, glow or outside shadow. Genuine transparent background.",
+    "status": "draft",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": 33,
+    "name": "Chicken pot pie",
+    "file": "chicken-pot-pie.png",
+    "prompt": "Use case: stylized-concept. Square transparent PNG finished-meal illustration for Meal-lion cozy retro cooking game. Subject: Chicken pot pie, a small white ceramic baking crock with pale-blue shaded rim, topped with a golden flaky puff-pastry lid. A small wedge opened at the front reveals creamy ivory chicken filling with distinct chicken pieces, orange diced carrot, green peas and cooked onion. Lid remains mostly intact, delicate browned layers and two small vent slits. No mashed potato topping, side dishes, garnish, cutlery or steam. Crisp chunky 16-bit pixel art, visible square pixel clusters, dark navy stepped outlines, warm saturated food colors, upper-left highlights, limited palette shadows. Elevated three-quarter view. Entire crock centered within middle 65 percent of square canvas, wide transparent padding on every side, no clipping. Readable at 154px. No text, labels, watermark, scenery, table, gradients, blur or glow. Genuine transparent background.",
+    "status": "draft",
+    "tool": "built-in image_gen"
+  }
+]

@@ -288,6 +288,14 @@
       "columns": 1,
       "rows": 1,
       "index": 0
+    },
+    {
+      "id": 33,
+      "name": "Chicken pot pie",
+      "file": "assets/generated/food-2026-10-23/chicken-pot-pie.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
     }
   ],
   "ingredients": [
@@ -934,6 +942,22 @@
       "label": "Chili powder",
       "preferred": true,
       "file": "assets/generated/food-2026-10-22/chili-powder.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Chicken stock",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-23/chicken-stock.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Puff pastry",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-23/puff-pastry.png",
       "columns": 1,
       "rows": 1,
       "index": 0
