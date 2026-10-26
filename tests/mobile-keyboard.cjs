@@ -11,6 +11,7 @@ const base = process.env.BASE_URL || 'http://127.0.0.1:8766';
     for (const [width, height] of [[320, 320], [390, 400], [430, 500]]) {
       const page = await browser.newPage({viewport: {width, height}, hasTouch: true});
       await page.goto(`${base}/game/`);
+      await page.locator('body[data-ready=true]').waitFor();
       await page.locator('#guess').fill('chicken');
       const bounds = await page.evaluate(() => {
         const box = s => { const r = document.querySelector(s).getBoundingClientRect(); return {top:r.top, bottom:r.bottom, height:r.height}; };
@@ -38,6 +39,7 @@ const base = process.env.BASE_URL || 'http://127.0.0.1:8766';
       Object.defineProperty(window, 'visualViewport', {value:viewport});
     });
     await page.goto(`${base}/game/`);
+    await page.locator('body[data-ready=true]').waitFor();
     await page.locator('#guess').fill('chicken');
     assert.deepEqual(await page.locator('.app').evaluate(e => {const r=e.getBoundingClientRect();return [r.top,r.height];}), [35,400], 'uses visual viewport offset and height');
     await page.evaluate(() => {visualViewport.height=320;visualViewport.dispatchEvent(new Event('resize'));});
