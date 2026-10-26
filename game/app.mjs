@@ -449,6 +449,7 @@ function syncViewport() {
   const root = document.documentElement.style;
   root.setProperty('--vvh', `${vv ? vv.height : innerHeight}px`);
   root.setProperty('--vvtop', `${vv ? vv.offsetTop : 0}px`);
+  document.body.classList.toggle('short-viewport', (vv ? vv.height : innerHeight) <= 500);
 }
 function enterTyping() { if (narrow.matches) { syncViewport(); document.body.classList.add('typing'); } }
 function leaveTyping() { document.body.classList.remove('typing'); }
@@ -459,6 +460,7 @@ el.input.addEventListener('blur', () => setTimeout(() => {
 $('doneBtn').addEventListener('click', () => { el.input.blur(); leaveTyping(); });
 window.visualViewport?.addEventListener('resize', syncViewport);
 window.visualViewport?.addEventListener('scroll', syncViewport);
+window.addEventListener('resize', syncViewport);
 narrow.addEventListener('change', () => { if (!narrow.matches) leaveTyping(); });
 
 boot();

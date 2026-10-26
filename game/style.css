@@ -177,6 +177,7 @@ dialog .primary { width: 100%; margin-top: 8px; }
   body.typing .app { position: fixed; left: 0; right: 0; top: var(--vvtop, 0px); height: var(--vvh, 100svh); min-height: 0; display: flex; flex-direction: column; overflow: hidden; gap: 8px; padding-bottom: 8px; }
   body.typing .modes, body.typing .links > :not(.done), body.typing .history, body.typing .foot, body.typing #skipBtn, body.typing .caption .link { display: none; }
   body.typing .done { display: inline-block; text-decoration: none; font-size: 16px; }
+  body.typing .top { flex: none; padding: 0; min-height: 44px; }
   body.typing .kitchen { display: flex; align-items: center; flex: none; }
   body.typing .stage-wrap { width: 46%; flex: none; }
   body.typing #stage { height: 52px; aspect-ratio: auto; }
@@ -193,8 +194,18 @@ dialog .primary { width: 100%; margin-top: 8px; }
   body.typing .play { flex: 1; min-height: 0; gap: 6px; }
   body.typing .round { flex: none; padding: 6px 12px; }
   body.typing .dock { flex: 1; min-height: 0; position: static; border-top: 0; padding: 0; }
-  body.typing .hint { display: block; margin: 0; order: 4; }
+  body.typing .hint { display: block; position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
   body.typing .matches { flex: 1; min-height: 0; overflow-y: auto; }
   body.typing #suggestions { max-height: none; }
-  body.typing .composer { order: 5; }
+  body.typing .composer { order: 5; flex: none; }
+  /* The keyboard can leave only 300–400px. Reserve that space for choices and entry. */
+  body.typing.short-viewport .kitchen { display: none; }
+  body.typing.short-viewport .clues-panel { padding: 4px 6px; }
+  body.typing.short-viewport .clues-panel h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  body.typing.short-viewport .clue { flex-direction: row; width: auto; max-width: 180px; height: 44px; gap: 6px; padding: 4px 8px; }
+  body.typing.short-viewport .clue canvas { width: 28px; flex: none; }
+  body.typing.short-viewport .clue span { font-size: 11px; }
+  body.typing.short-viewport .round { padding: 4px 8px; }
+  body.typing.short-viewport .round .eyebrow { display: none; }
+  body.typing .matches { overscroll-behavior-y: contain; touch-action: pan-y; }
 }
