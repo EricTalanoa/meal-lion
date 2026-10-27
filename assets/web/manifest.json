@@ -353,11 +353,35 @@
       "width": 1254,
       "height": 1254
     },
+    "assets/generated/food-2026-10-25/chicken-paella.png": {
+      "file": "assets/web/assets/generated/food-2026-10-25/chicken-paella.webp",
+      "sourceSha256": "7b208ad511aef0cafd5f106c22d28019c425aba49359f11a3cca273773beb434",
+      "sourceBytes": 1182924,
+      "bytes": 939948,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-25/green-beans.png": {
+      "file": "assets/web/assets/generated/food-2026-10-25/green-beans.webp",
+      "sourceSha256": "4345a47bc1713a7bf7caf95a9595cef4e1a48acf742046cc1b06937c25bf6233",
+      "sourceBytes": 745617,
+      "bytes": 560208,
+      "width": 1254,
+      "height": 1254
+    },
     "assets/generated/food-2026-10-25/saffron.png": {
       "file": "assets/web/assets/generated/food-2026-10-25/saffron.webp",
       "sourceSha256": "cd402de5d8e632f7ced4e4a2e591a3c44558c01a4b755a1203bdac9fb74c1ccf",
       "sourceBytes": 905868,
       "bytes": 673062,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-25/short-grain-rice.png": {
+      "file": "assets/web/assets/generated/food-2026-10-25/short-grain-rice.webp",
+      "sourceSha256": "5f2fdd167c32feb4710fdd52748c08cbe060d9dc97f7c58155afb7dcf8c22d77",
+      "sourceBytes": 814780,
+      "bytes": 588960,
       "width": 1254,
       "height": 1254
     },

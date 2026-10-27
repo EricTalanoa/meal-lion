@@ -1,0 +1,18 @@
+{
+  "status": "draft",
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "file": "short-grain-rice.png",
+      "prompt": "Use case: stylized-concept. Asset type: Meal-lion game pixel-art sprite. Crisp chunky 16-bit square pixel clusters, dark navy stepped outlines, warm saturated palette, upper-left highlights and limited flat shadows, elevated three-quarter view. Genuinely transparent background. No text, watermark, scenery, blur, gradients, glow or cast shadow outside object. Center complete object occupying about 65 percent of square canvas, generous transparent margins, no clipping. Ingredient clue readable at 64px: a small wooden scoop with a compact mound of uncooked ivory short-grain rice below it. Rice grains distinctly plump, short and oval, almost round, unlike long pointed basmati. Only scoop and rice."
+    },
+    {
+      "file": "green-beans.png",
+      "prompt": "Use case: stylized-concept. Asset type: Meal-lion game pixel-art sprite. Crisp chunky 16-bit square pixel clusters, dark navy stepped outlines, warm saturated palette, upper-left highlights and limited flat shadows, elevated three-quarter view. Genuinely transparent background. No text, watermark, scenery, blur, gradients, glow or cast shadow outside object. Center complete object occupying about 65 percent of square canvas, generous transparent margins, no clipping. Ingredient clue readable at 64px: a compact bunch of five fresh green bean pods, slender gently curved bright green pods with pointed ends, one cut segment showing pale interior. No bowl, plate, leaves or other ingredients."
+    },
+    {
+      "file": "chicken-paella.png",
+      "prompt": "Use case: stylized-concept. Asset type: Meal-lion game pixel-art sprite. Crisp chunky 16-bit square pixel clusters, dark navy stepped outlines, warm saturated palette, upper-left highlights and limited flat shadows, elevated three-quarter view. Genuinely transparent background. No text, watermark, scenery, blur, gradients, glow or cast shadow outside object. Center complete object occupying about 65 percent of square canvas, generous transparent margins, no clipping. Finished meal illustration readable at 154px: chicken paella in a shallow dark steel paella pan with two small red loop handles, entire pan and both handles visible. Saffron-gold short-grain rice, browned chicken pieces, green bean segments and small red tomato pieces. Use only those visible food ingredients; no seafood, lemon, peas, herbs or extra garnish. Rice has compact plump grains; rustic Spanish paella, not long-grain biryani. Strong simple pixel clusters."
+    }
+  ]
+}

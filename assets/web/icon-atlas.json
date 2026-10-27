@@ -3,7 +3,7 @@
   "file": "assets/web/icon-atlas.webp",
   "cell": 96,
   "columns": 10,
-  "inputSha256": "33e58e0ff3ad15b4d040b03c589d910f0d95d9c4c14a8cbf5bad804875bd5bea",
+  "inputSha256": "ac8d14350ea1aa2f4b49c29385fc54ff2945673b3685b8184f81651fc6be74ac",
   "labels": [
     "Tomato",
     "Egg",
@@ -83,6 +83,8 @@
     "Chicken stock",
     "Puff pastry",
     "Basmati rice",
-    "Saffron"
+    "Saffron",
+    "Short-grain rice",
+    "Green beans"
   ]
 }

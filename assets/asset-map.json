@@ -304,6 +304,14 @@
       "columns": 1,
       "rows": 1,
       "index": 0
+    },
+    {
+      "id": 30,
+      "name": "Chicken paella",
+      "file": "assets/generated/food-2026-10-25/chicken-paella.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
     }
   ],
   "ingredients": [
@@ -982,6 +990,22 @@
       "label": "Saffron",
       "preferred": true,
       "file": "assets/generated/food-2026-10-25/saffron.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Short-grain rice",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-25/short-grain-rice.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Green beans",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-25/green-beans.png",
       "columns": 1,
       "rows": 1,
       "index": 0
