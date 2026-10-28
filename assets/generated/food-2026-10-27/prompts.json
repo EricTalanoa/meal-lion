@@ -1,0 +1,18 @@
+{
+  "status": "draft",
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "file": "panko.png",
+      "prompt": "Use case: stylized-concept. Asset type: Meal-lion pixel-art game sprite. Crisp chunky 16-bit square pixel clusters, dark navy stepped outlines, warm saturated colors, upper-left highlights and flat limited shadows. Elevated three-quarter view. True transparent background. Center full object at 65 percent of square canvas with generous margins. No clipping, text, watermark, background, scenery, blur, gradients, glow or exterior cast shadow. Ingredient clue readable at 64px: small wooden scoop of dry panko breadcrumbs with a compact heap below. Irregular airy off-white coarse bread flakes, visibly jagged crumb shapes rather than smooth rice grains. Only scoop and breadcrumbs."
+    },
+    {
+      "file": "japanese-curry-roux.png",
+      "prompt": "Use case: stylized-concept. Asset type: Meal-lion pixel-art game sprite. Crisp chunky 16-bit square pixel clusters, dark navy stepped outlines, warm saturated colors, upper-left highlights and flat limited shadows. Elevated three-quarter view. True transparent background. Center full object at 65 percent of square canvas with generous margins. No clipping, text, watermark, background, scenery, blur, gradients, glow or exterior cast shadow. Ingredient clue readable at 64px: a small rectangular slab of solid Japanese curry roux, warm deep golden brown, scored into six thick square blocks like a stock cube bar. One square broken off and placed just in front with a few tiny crumbs. Matte solid dense texture; no chocolate gloss, no packaging, no dish."
+    },
+    {
+      "file": "chicken-katsu-curry.png",
+      "prompt": "Use case: stylized-concept. Asset type: Meal-lion pixel-art game sprite. Crisp chunky 16-bit square pixel clusters, dark navy stepped outlines, warm saturated colors, upper-left highlights and flat limited shadows. Elevated three-quarter view. True transparent background. Center full object at 65 percent of square canvas with generous margins. No clipping, text, watermark, background, scenery, blur, gradients, glow or exterior cast shadow. Finished meal illustration readable at 154px: chicken katsu curry on a white oval ceramic plate with pale blue rim. Golden crispy panko-breaded chicken cutlet sliced into six strips, white rice mound beside it, thick warm brown Japanese curry sauce with carrot and potato chunks around the cutlet. Full plate visible. No green garnish, salad, utensils, extra dishes or lettering."
+    }
+  ]
+}

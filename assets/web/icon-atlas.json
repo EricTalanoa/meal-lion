@@ -3,7 +3,7 @@
   "file": "assets/web/icon-atlas.webp",
   "cell": 96,
   "columns": 10,
-  "inputSha256": "ac8d14350ea1aa2f4b49c29385fc54ff2945673b3685b8184f81651fc6be74ac",
+  "inputSha256": "37519cd60c2f63574cbdfca2e8f4e52c76942d411fc1d3c10ccce08923904021",
   "labels": [
     "Tomato",
     "Egg",
@@ -85,6 +85,8 @@
     "Basmati rice",
     "Saffron",
     "Short-grain rice",
-    "Green beans"
+    "Green beans",
+    "Panko",
+    "Japanese curry roux"
   ]
 }

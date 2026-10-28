@@ -6,7 +6,7 @@ Every AI must read this file before working and update it throughout the session
 
 - Current milestone: game/ is playable with Daily dish (US Eastern midnight, shared clue order, saved on device) and Endless (shuffled deck, excludes today's daily, not saved). Browser-verified in emulation; real-device keyboards untested.
 - Product: daily meal guessing plus endless mode. Approved desktop B split layout and mobile native-keyboard-aware layout.
-- Available: 45-meal roster, 37 meal illustrations, 81 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
+- Available: 45-meal roster, 38 meal illustrations, 83 of 103 canonical ingredient icons, 11 draft custom animation groups, mockups, prompts, visual prototypes and normalized asset map.
 - Implemented: responsive game, daily/endless, daily persistence, alias suggestions, streaks, sound and lazy-loaded art. Test deploy live at https://meal-lion-playtest.netlify.app (updated 2026-10-25, public, no password); final product decisions remain open. reference/meal-lion-demo/pilot.html remains a visual demo that exposes answers.
 - Repository/branch/checkpoint: codex/missing-food-art; latest existing checkpoint bc50e63; paella set verified and pushed; deployed source 4fde015 on 2026-10-25, pushed to origin/main and origin/codex/missing-food-art. Remote: origin = https://github.com/EricTalanoa/meal-lion (private); main, feat/three-meal-game and codex/missing-food-art pushed 2026-10-19.
 - Asset automation: cloud task 6ad7bfe9c2408191b650b820afd8a386 was verified PAUSED on 2026-10-21; local heartbeat is PAUSED to prevent duplicates. 41 icons / 18 meals queued. Outputs require later local import. See docs/ASSET_AUTOMATION.md. Recurring queue/resume behavior remains untested.
@@ -415,3 +415,12 @@ Every AI must read this file before working and update it throughout the session
 - All three sources: 1254x1254 RGBA, alpha 0-255, solid bounds inside canvas. Direct PNG/WebP comparison verified identical visible pixels. Paella 240px thumbnail visually inspected: full pan/handles and recognizable rice, chicken and beans. Coverage 37/45 meals and 81/103 icons; eight meals and 22 icons remain. Final halo approval and browser/device art QA pending; draft artwork, not deployed. Next suggested set: Panko, Japanese curry roux, Chicken katsu curry.
 
 - Paella checkpoint bc50e63 merged by fast-forward into main and pushed to both origin branches; remote hashes verified. No deployment; live remains 36 meals / 79 icons with mobile fix. Next: Chicken katsu curry set.
+
+### 2026-10-27 America/Los_Angeles — Codex — Chicken katsu curry set
+- Branch codex/missing-food-art / 5d0b3a7; clean start. User requested continued asset work. Generate Panko, Japanese curry roux, Chicken katsu curry with built-in imagegen; exact prompts saved. Verify, merge and push set; no deployment.
+
+- Panko and Japanese curry roux generated and saved; full objects visually inspected. Exact prompts retained; finished meal pending.
+
+- Finished katsu plate generated and visually inspected, full plate visible. Three sources mapped; coverage 38/45 meals and 83/103 icons. Exact decorative piece counts vary from prompts, accepted as draft. Optimizing before verification.
+
+- Sources validated: three 1254x1254 RGBA files with alpha 0-255 and solid bounds inside canvas. Optimizer completed with visible-pixel lossless checks, 83-icon sheet (342,768 bytes), 38 thumbnails (758,118 bytes). An early test attempt ran during thumbnail generation and correctly failed missing meal-41 coverage; after completion all 79 tests pass. Build 129 files / 58.2 MB. Visually inspected 240px katsu plate: full plate, readable sliced cutlet/rice/curry. Final halo approval and browser/device art QA untested. Preparing commit/push; seven meals and 20 icons remain.

@@ -385,6 +385,30 @@
       "width": 1254,
       "height": 1254
     },
+    "assets/generated/food-2026-10-27/chicken-katsu-curry.png": {
+      "file": "assets/web/assets/generated/food-2026-10-27/chicken-katsu-curry.webp",
+      "sourceSha256": "8b197536b3cd19f8a9840aea2243c71b1304ed52366b00259bb02776c6e3504a",
+      "sourceBytes": 1072166,
+      "bytes": 815514,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-27/japanese-curry-roux.png": {
+      "file": "assets/web/assets/generated/food-2026-10-27/japanese-curry-roux.webp",
+      "sourceSha256": "a492a9afb46c9d7b08a29df90091fed8580267fcade417a4c56da9bf01c5563e",
+      "sourceBytes": 801622,
+      "bytes": 578134,
+      "width": 1254,
+      "height": 1254
+    },
+    "assets/generated/food-2026-10-27/panko.png": {
+      "file": "assets/web/assets/generated/food-2026-10-27/panko.webp",
+      "sourceSha256": "d8d114688f44a740c4ea4a3c6447732c8db9dc121c45cf3843036b4e93c4e079",
+      "sourceBytes": 831676,
+      "bytes": 642500,
+      "width": 1254,
+      "height": 1254
+    },
     "reference/meal-lion-assets-batch-02/ingredients-01.png": {
       "file": "assets/web/meal-lion-assets-batch-02/ingredients-01.webp",
       "sourceSha256": "d2a94b0128c86d4a4432cd07ed493a152a84d99fa535329981a3bba0690df412",

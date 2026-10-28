@@ -149,6 +149,10 @@
     "30": {
       "file": "assets/web/meals/meal-30.webp",
       "key": "5604acf69115a149ea5669381e41c349435c30762608b323d494f569631a5a77"
+    },
+    "41": {
+      "file": "assets/web/meals/meal-41.webp",
+      "key": "6fdc2187ba53705fe52367b11ca8f5c457fafc1138e7995c11d97ab862e97083"
     }
   }
 }

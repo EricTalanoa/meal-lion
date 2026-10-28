@@ -312,6 +312,14 @@
       "columns": 1,
       "rows": 1,
       "index": 0
+    },
+    {
+      "id": 41,
+      "name": "Chicken katsu curry",
+      "file": "assets/generated/food-2026-10-27/chicken-katsu-curry.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
     }
   ],
   "ingredients": [
@@ -1006,6 +1014,22 @@
       "label": "Green beans",
       "preferred": true,
       "file": "assets/generated/food-2026-10-25/green-beans.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Panko",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-27/panko.png",
+      "columns": 1,
+      "rows": 1,
+      "index": 0
+    },
+    {
+      "label": "Japanese curry roux",
+      "preferred": true,
+      "file": "assets/generated/food-2026-10-27/japanese-curry-roux.png",
       "columns": 1,
       "rows": 1,
       "index": 0

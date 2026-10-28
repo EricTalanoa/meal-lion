@@ -1,6 +1,6 @@
 # Artwork coverage
 
-37/45 meal illustrations; 81/103 canonical ingredient icons; 11 custom animation groups. All draft.
+38/45 meal illustrations; 83/103 canonical ingredient icons; 11 custom animation groups. All draft.
 
 | ID | Meal | Meal art | Missing ingredient icons |
 |---|---|---|---|
@@ -44,7 +44,7 @@
 | 38 | Thai green chicken curry | Missing | Coconut milk, Green curry paste, Eggplant, Bamboo shoots, Thai basil, Fish sauce |
 | 39 | Chana masala | Available | None |
 | 40 | Palak paneer | Available | None |
-| 41 | Chicken katsu curry | Missing | Panko, Japanese curry roux |
+| 41 | Chicken katsu curry | Available | None |
 | 42 | Pad Thai | Missing | Rice noodles, Bean sprouts, Peanuts, Tamarind, Fish sauce, Palm sugar |
 | 43 | Greek salad | Available | None |
 | 44 | Chicken Caesar salad | Missing | Romaine lettuce, Anchovy |
